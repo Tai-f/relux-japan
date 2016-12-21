@@ -4,7 +4,7 @@
 design DB of "relux-japan"
 
 ## **Description**
-design **14** tables
+design **13** tables
 【members, hotels, rooms, courses, hotel_courses, reservations, reviews, requests, tickets,  interviews, foods, photos, cards】
 
 ***~members table~***
