@@ -46,4 +46,11 @@ namespace :unicorn do
       end
     end
   end
+
+  desc "Stop unicorn server immediately"
+  task force_stop: :environment do
+    on roles(:app) do
+      force_stop_unicorn
+    end
+  end
 end
