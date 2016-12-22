@@ -2,7 +2,7 @@
 lock "3.7.0"
 
 set :application, "relux-japan"
-set :repo_url, "git@example.com:me/my_repo.git"
+set :repo_url, "https://github.com/Tai-f/relux-japan.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
