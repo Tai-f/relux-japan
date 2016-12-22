@@ -28,4 +28,11 @@ namespace :unicorn do
       start_unicorn
     end
   end
+
+  desc "Stop unicorn server gracefully"
+  task stop :environment do
+    on roles(:app) do
+      stop_unicorn
+    end
+  end
 end
