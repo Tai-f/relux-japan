@@ -50,6 +50,6 @@ test:
 production:
   <<: *default
   database: relux-japan_production
-  username: tai
+  username: root
   password:
   socket: /var/lib/mysql/mysql.sock
