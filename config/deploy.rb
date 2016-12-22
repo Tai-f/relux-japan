@@ -35,5 +35,8 @@ set :rbenv_ruby, '2.3.1'
 set :keep_releases, 5
 
 namespace :deploy do
-  
+  desc 'restart application'
+  task :restart do
+    invoke 'unicorn:restart'
+  end
 end
