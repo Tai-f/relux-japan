@@ -21,4 +21,11 @@ namespace :unicorn do
   def force_stop_unicorn
     execute :kill, "$(< #{fetch(:unicorn_pid)}"
   end
+
+  desc "Start unicorn server"
+  task start: :environment do
+    on roles(:app) do
+      start_unicorn
+    end
+  end
 end
