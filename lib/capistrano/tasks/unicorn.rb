@@ -19,7 +19,7 @@ namespace :unicorn do
   end
 
   def force_stop_unicorn
-    execute :kill, "$(< #{fetch(:unicorn_pid)}"
+    execute :kill, "$(< #{fetch(:unicorn_pid)})"
   end
 
   desc "Start unicorn server"
