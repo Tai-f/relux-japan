@@ -16,6 +16,7 @@ set :deploy_to, "/var/www/relux-japan"
 # You can configure the Airbrussh format using :format_options.
 # These are the defaults.
 # set :format_options, command_output: true, log_file: "log/capistrano.log", color: :auto, truncate: :auto
+set :log_level, :debug
 
 # Default value for :pty is false
 # set :pty, true
