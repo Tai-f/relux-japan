@@ -1,7 +1,7 @@
 # config valid only for current version of Capistrano
 lock "3.7.0"
 
-set :application, "my_app_name"
+set :application, "relux-japan"
 set :repo_url, "git@example.com:me/my_repo.git"
 
 # Default branch is :master
