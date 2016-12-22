@@ -50,6 +50,6 @@ test:
 production:
   <<: *default
   database: relux-japan_production
-  username: relux-japan
-  password: <%= ENV['RELUX-JAPAN_DATABASE_PASSWORD'] %>
+  username: tai
+  password:
   socket: /var/lib/mysql/mysql.sock
