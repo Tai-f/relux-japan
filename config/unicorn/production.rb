@@ -18,3 +18,6 @@ timeout $timeout
 listen $listen
 pid $pid
 
+preload_app true
+
+
