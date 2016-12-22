@@ -17,4 +17,8 @@ namespace :unicorn do
   def reload_unicorn
     execute :kill, "-s USR2 $(< #{fetch(:unicorn_pid)})"
   end
+
+  def force_stop_unicorn
+    execute :kill, "$(< #{fetch(:unicorn_pid)}"
+  end
 end
