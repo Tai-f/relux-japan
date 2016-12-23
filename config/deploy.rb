@@ -34,6 +34,8 @@ set :rbenv_ruby, '2.3.1'
 # Default value for keep_releases is 5
 set :keep_releases, 5
 
+set :rails_env, 'production'
+
 namespace :deploy do
   desc 'restart application'
   task :restart do
@@ -55,7 +57,7 @@ namespace :deploy do
     on roles(:db) do |host|
       with rails_env: fetch(:rails_env) do
         within current_path do
-          execute :bundle, :exec, :rake, 'db:create','RAILS_ENV=production'
+          execute :bundle, :exec, :rake, 'db:create'
         end
       end
     end
