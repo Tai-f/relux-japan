@@ -38,7 +38,7 @@ has_many :courses, through: :hotel_courses
 has_many :hotel_courses
 has_many :interviews
 t.string :name, null:false
-t.string :name, null:false
+t.string :hiragana_name, null:false
 t.string :prefecture, null:false
 t.string :city, null:false
 t.string :street, null:false
