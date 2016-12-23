@@ -73,7 +73,6 @@ namespace :deploy do
   end
 
   before :starting, :upload
-  before :migrate, :db_create
   after :publishing, :restart
 
   after :restart, :clear_cache do
