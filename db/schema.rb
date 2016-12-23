@@ -10,6 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20161223110943) do
+
+  create_table "hotels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name",                         null: false
+    t.string   "hiragana_name",                null: false
+    t.string   "prefecture",                   null: false
+    t.string   "city",                         null: false
+    t.string   "street",                       null: false
+    t.integer  "phone_number",                 null: false
+    t.string   "url"
+    t.time     "check_in_time"
+    t.time     "check_out_time"
+    t.integer  "total_rooms"
+    t.string   "card_type"
+    t.integer  "grade"
+    t.text     "amenity",        limit: 65535
+    t.text     "cancel",         limit: 65535
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+  end
 
 end
