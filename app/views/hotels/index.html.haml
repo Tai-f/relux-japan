@@ -1,3 +1,11 @@
-%header
+%header#global-header
+  .header-inner
+    .logo
+      %h1.none
+        = link_to root_path do
+          = image_tag "logo-white.png", alt: "高級旅館・高級ホテルの予約ならRelux（リラックス）", class: ".logo"
+        = link_to "https://rlx.jp/cp/xmas2016/"  do
+          = image_tag "logo-cp-fukidashi.png?1481875106", alt: "クリスマスCP！12月25日まで", class: ".fukidashi"
+    
 #wrapper
 #footer
