@@ -1,4 +1,5 @@
-%header#global-header
+%header#global-header.none.header-fixed.header-transparent
+  .header-background
   .header-inner
     .logo
       %h1.none
@@ -18,5 +19,5 @@
           =link_to "ログイン", "#login", id: "popup-login"
         %li.displayLanguage
           =link_to "javascript.void(0)", class: "hover", onclick: "showInboundOverlay(); showLocalePane();"
-#wrapper
+#wrapper.clearfix.bg-white
 #footer
