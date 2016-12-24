@@ -3,15 +3,20 @@
     .logo
       %h1.none
         = link_to root_path do
-          = image_tag "logo-white.png", alt: "高級旅館・高級ホテルの予約ならRelux（リラックス）", class: ".logo"
-        = link_to "https://rlx.jp/cp/xmas2016/"  do
-          = image_tag "logo-cp-fukidashi.png?1481875106", alt: "クリスマスCP！12月25日まで", class: ".fukidashi"
+          = image_tag "logo-white.png", alt: "高級旅館・高級ホテルの予約ならRelux（リラックス）", class: "logo"
+        = link_to "https://rlx.jp/cp/xmas2016/", target: "_blank"  do
+          = image_tag "logo-cp-fukidashi.png?1481875106", alt: "クリスマスCP！12月25日まで", class: "fukidashi"
     .sub
       %ul.before-menu
         %li.concept
+          =link_to "私たちの想い", "/brandstory/"
         %li.service
+          =link_to "Reluxとは", "/hotels/service", target: "_blank"
         %li.regest
+          =link_to "会員登録", "#regist"
         %li.login
+          =link_to "ログイン", "#login", id: "popup-login"
         %li.displayLanguage
+          =link_to "javascript.void(0)", class: "hover", onclick: "showInboundOverlay(); showLocalePane();"
 #wrapper
 #footer
