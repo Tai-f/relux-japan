@@ -143,18 +143,22 @@ p {
   clear: both;
 }
 
-a:link,
-a:visited {
+a.link  {
   color: #555555;
   text-decoration: underline;
 }
 
-a:hover {
+a.visited {
+  color: #555555;
+  text-decoration: underline;
+}
+
+a.hover {
   color: #555555;
   text-decoration: none;
 }
 
-a:active {
+a.active {
   color: #555555;
 }
 
