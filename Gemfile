@@ -53,6 +53,9 @@ group :production, :staging do
 end
 
 gem 'pry-rails'
+gem 'haml-rails'
+gem 'erb2haml'
+gem 'bootstrap-sass'
 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

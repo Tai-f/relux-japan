@@ -1,0 +1,272 @@
+%header#global-header.header-fixed.header-transparent
+  .header-inner
+    .logo
+      %h1.theme
+        = link_to root_path do
+          = image_tag "logo.png", alt: "高級旅館・高級ホテルの予約ならRelux（リラックス）", class: "logo"
+    .sub
+      %ul.before-menu
+        %li.concept
+          =link_to "私たちの想い", "/brandstory/"
+        %li.service
+          =link_to "Reluxとは", "/hotels/service", target: "_blank"
+        %li.regest
+          =link_to "会員登録", "#regist"
+        %li.login
+          =link_to "ログイン", "#login", id: "popup-login"
+        %li.displayLanguage
+          %i.fa.fa-language
+#wrapper.clearfix.bg-white
+  .indexPage
+    .mainPart
+      .mainImage
+    .indexContents
+      .merit.clearfix
+        .melitArea
+          .titleHeader
+            %h2 Reluxの特徴
+          .melitBoxWrap.clearfix
+            .melitBox
+              %p.icon
+                =image_tag "icon-merit-01.png", alt: "5%のポイント還元"
+              %p.title どこよりもお得に
+              %p.description 宿泊プランはすべて、会員限定価格。<br>万が一、Reluxのほうが高い場合は差額をいたします。
+            .melitBox
+              %p.icon
+                =image_tag "icon-merit-02.png", alt: "どこよりもお得に"
+              %p.title 5%のポイント還元
+              %p.description 業界最高、宿泊費の5%をReluxポイントとして還元。<br>貯まったポイントは1P=1円で、次の旅行でお使いいただけます。
+            .melitBox
+              %p.icon
+                =image_tag "icon-merit-03.png", alt: "特別なおもてなし"
+              %p.title 特別なおもてなし
+              %p.description お料理/お部屋の無料アップグレードなど、<br>Relux特典付きのプランを体験いただけます。
+          %p.melitLink
+            =link_to "Reluxとは", "/hotels/service/", class: "btn btn--relux"
+      .selections.clearfix
+        .selectionsArea
+          .titleHeader
+            %h2 Relux selections
+          %ul.container.clearfix
+            .row
+              %li.col-sm-6
+                =link_to "/hotels/selections", class: "hover clearfix" do
+                  %p.thum
+                    = image_tag "sougyou100.jpg", alt: "hotel", size: "150x100"
+                  .info
+                    %i.fa.fa-angle-right
+                    %p.title 創業100年以上の老舗旅館でタイムトラベル
+                    %p.date 2017/01/04
+              %li.col-sm-6
+                =link_to "/hotels/selections", class: "hover clearfix" do
+                  %p.thum
+                    = image_tag "fujisan.jpg", alt: "hotel", size: "150x100"
+                  .info
+                    %i.fa.fa-angle-right
+                    %p.title 富士山をのぞむ絶景宿７選
+                    %p.date 2017/01/01
+              %li.col-sm-6
+                =link_to "/hotels/selections", class: "hover clearfix" do
+                  %p.thum
+                    = image_tag "petto100.jpg", alt: "hotel", size: "150x100"
+                  .info
+                    %i.fa.fa-angle-right
+                    %p.title 愛犬と旅を楽しむ！ペットと泊まれる宿８選
+                    %p.date 2016/12/27
+              %li.col-sm-6
+                =link_to "/hotels/selections", class: "hover clearfix" do
+                  %p.thum
+                    = image_tag "kani.jpg", alt: "hotel", size: "150x100"
+                  .info
+                    %i.fa.fa-angle-right
+                    %p.title 冬の味覚に舌鼓！カニを堪能できる宿
+                    %p.date 2017/01/02
+              %li.col-sm-6
+                =link_to "/hotels/selections", class: "hover clearfix" do
+                  %p.thum
+                    = image_tag "activity.jpg", alt: "hotel", size: "150x100"
+                  .info
+                    %i.fa.fa-angle-right
+                    %p.title 冬のアクティビティが楽しめる宿
+                    %p.date 2016/12/29
+              %li.col-sm-6
+                =link_to "/hotels/selections", class: "hover clearfix" do
+                  %p.thum
+                    = image_tag "oceanview.jpg", alt: "hotel", size: "150x100"
+                  .info
+                    %i.fa.fa-angle-right
+                    %p.title 冬の熱海を満喫する、オーシャンビューの宿
+                    %p.date 2016/12/26
+      .service.clearfix
+        .serviceArea
+          .titleHeader
+            %h2 Reluxのサービス
+          .serviceBoxWrap.container
+            .service-box.row
+              %p.thum.col-sm-3
+                =link_to "/r/ranking/", class: "hover", target: "_blank" do
+                  = image_tag "Ranking.jpg", alt: "ランキング"
+              %p.thum.col-sm-3
+                =link_to "/concierges/request", class: "hover", target: "_blank" do
+                  = image_tag "Concierge.jpg", alt: "コンシェルジュ"
+              %p.thum.col-sm-3
+                =link_to "/gift/", class: "hover", target: "_blank" do
+                  = image_tag "Gift.jpg", alt: "ギフト"
+              %p.thum.col-sm-3
+                =link_to "/theater/", class: "hover", target: "_blank" do
+                  = image_tag "Theater.jpg", alt: "シアター"
+        .other.clearfix
+          .left
+            %h2 高級旅館・ホテルをエリアから探す
+            %table
+              %tbody
+                %tr
+                  %th
+                    =link_to "北海道", "/hokkaido", target: "_blank", class: "hover"
+                  %td
+                    =link_to "北海道", "/hokkaido", target: "_blank", class: "hover"
+                %tr
+                  %th
+                    =link_to "東北", "/tohoku", target: "_blank", class: "hover"
+                  %td
+                    =link_to "青森県", "/aomori", target: "_blank", class: "hover"
+                    =link_to "岩手県", "/iwate", target: "_blank", class: "hover"
+                    =link_to "宮城県", "/miyagi", target: "_blank", class: "hover"
+                    =link_to "秋田県", "/akita", target: "_blank", class: "hover"
+                    =link_to "山形県", "/yamagata", target: "_blank", class: "hover"
+                    =link_to "福島県", "/fukushima", target: "_blank", class: "hover"
+                %tr
+                  %th
+                    =link_to "北関東", "/kitakanto", target: "_blank", class: "hover"
+                  %td
+                    =link_to "茨城県", "/ibaraki", target: "_blank", class: "hover"
+                    =link_to "栃木県", "/tochigi", target: "_blank", class: "hover"
+                    =link_to "群馬県", "/gunma", target: "_blank", class: "hover"
+                %tr
+                  %th
+                    =link_to "首都圏", "/shutoken", target: "_blank", class: "hover"
+                  %td
+                    =link_to "埼玉県", "/saitama", target: "_blank", class: "hover"
+                    =link_to "千葉県", "/chiba", target: "_blank", class: "hover"
+                    =link_to "東京都", "/tokyo", target: "_blank", class: "hover"
+                    =link_to "神奈川県", "/kanagawa", target: "_blank", class: "hover"
+                    =link_to "埼玉県", "/saitama", target: "_blank", class: "hover"
+                %tr
+                  %th
+                    =link_to "甲信越", "/koushinetsu", target: "_blank", class: "hover"
+                  %td
+                    =link_to "新潟県", "/niigata", target: "_blank", class: "hover"
+                    =link_to "山梨県", "/yamanashi", target: "_blank", class: "hover"
+                    =link_to "長野県", "/nagano", target: "_blank", class: "hover"
+                %tr
+                  %th
+                    =link_to "北陸", "/hokuriku", target: "_blank", class: "hover"
+                  %td
+                    =link_to "富山県", "/toyama", target: "_blank", class: "hover"
+                    =link_to "石川県", "/ishikawa", target: "_blank", class: "hover"
+                    =link_to "福井県", "/fukui", target: "_blank", class: "hover"
+
+                %tr
+                  %th
+                    =link_to "東海", "/tokai", target: "_blank", class: "hover"
+                  %td
+                    =link_to "静岡県", "/shizuoka", target: "_blank", class: "hover"
+                    =link_to "岐阜県", "/gifu", target: "_blank", class: "hover"
+                    =link_to "愛知県", "/aichi", target: "_blank", class: "hover"
+                    =link_to "三重県", "/mie", target: "_blank", class: "hover"
+                %tr
+                  %th
+                    =link_to "近畿", "/kinki", target: "_blank", class: "hover"
+                  %td
+                    =link_to "滋賀県", "/shiga", target: "_blank", class: "hover"
+                    =link_to "京都府", "/kyoto", target: "_blank", class: "hover"
+                    =link_to "大阪府", "/osaka", target: "_blank", class: "hover"
+                    =link_to "兵庫県", "/hyogo", target: "_blank", class: "hover"
+                    =link_to "奈良県", "/nara", target: "_blank", class: "hover"
+                    =link_to "和歌山県", "/wakayama", target: "_blank", class: "hover"
+
+                %tr
+                  %th
+                    =link_to "山陰・山陽", "/saninsanyou", target: "_blank", class: "hover"
+                  %td
+                    =link_to "鳥取県", "tottori", target: "_blank", class: "hover"
+                    =link_to "島根県", "shimane", target: "_blank", class: "hover"
+                    =link_to "岡山県", "okayama", target: "_blank", class: "hover"
+                    =link_to "広島県", "hiroshima", target: "_blank", class: "hover"
+                    =link_to "山口県", "yamaguchi", target: "_blank", class: "hover"
+                %tr
+                  %th
+                    =link_to "四国", "/shikoku", target: "_blank", class: "hover"
+                  %td
+                    =link_to "徳島県", "tokushima", target: "_blank", class: "hover"
+                    =link_to "香川県", "kagawa", target: "_blank", class: "hover"
+                    =link_to "愛媛県", "ehime", target: "_blank", class: "hover"
+                    =link_to "高知県", "kouchi", target: "_blank", class: "hover"
+                %tr
+                  %th
+                    =link_to "九州", "/kyushu", target: "_blank", class: "hover"
+                  %td
+                    =link_to "佐賀県", "saga", target: "_blank", class: "hover"
+                    =link_to "長崎県", "nagasaki", target: "_blank", class: "hover"
+                    =link_to "熊本県", "kumamoto", target: "_blank", class: "hover"
+                    =link_to "大分県", "oita", target: "_blank", class: "hover"
+                    =link_to "宮崎県", "miyazaki", target: "_blank", class: "hover"
+                    =link_to "鹿児島県", "kagoshima", target: "_blank", class: "hover"
+                %tr
+                  %th
+                    =link_to "沖縄県", "/okinawa", target: "_blank", class: "hover"
+                  %td
+                    =link_to "沖縄県", "okinawa", target: "_blank", class: "hover"
+          .right
+
+#footer
+  %footer#global-footer
+    .footer-inner
+      .col-wrap
+        .col.inbound
+          %ul.inbound
+            %li.displayLanguage
+              = link_to "Language", class: "hover"
+        .col.menu
+          .title Reluxへようこそ
+          %ul.nav
+            %li
+              =link_to "Reluxとは", "/hotels/service", class: "hover"
+              =link_to "宿泊施設様へ", "/hotels/client", class: "hover"
+              =link_to "パートナー募集", "/hotels/partner", class: "hover"
+              =link_to "スマートフォンアプリ", "/lp/app", class: "hover"
+              =link_to "Relux Magazine", "https://rlx.jp/magazine/", class: "hover"
+        .col.menu
+          .title 見つける、予約する
+          %ul.nav
+            %li
+              =link_to "コンシェルジュ", "/concierges/request", class: "hover"
+              =link_to "全国人気ランキング", "/r/ranking/", class: "hover"
+              =link_to "ギフトを贈る", "/gift/", class: "hover"
+              =link_to "ビジネスサポート", "/business/", class: "hover"
+              =link_to "セレクションズ", "/hotels/selection", class: "hover"
+              =link_to "Relux Studio 360°", "/studio360/", class: "hover"
+        .col.menu
+          .title Reluxをもっと知る
+          %ul.nav
+            %li
+              =link_to "あたらしい、Reluxへ。", "/brandstory/", class: "hover"
+              =link_to "", "/faq", class: "hover"
+              =link_to "運営会社", "/hotels/company", class: "hover"
+              =link_to "採用情報", "/hotels/company/reruit", class: "hover"
+              =link_to "株式会社Loco Partners", "/hotels/company", class: "hover"
+      .info
+        =link_to "/", class: "logo" do
+          = image_tag "logo_footer.png", alt: "Relux", class: "logo"
+        %ul.nav-info
+          %li
+            =link_to "サイト利用規約", "/hotels/guide", class: "hover"
+            =link_to "個人情報保護方針", "/hotels/privacy", class: "hover"
+            =link_to "旅行業登録表", "/hotels/agreement", class: "hover"
+        %small 2013 Loco Partners Inc.
+
+
+
+
+
+
