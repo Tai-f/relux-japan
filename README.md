@@ -34,6 +34,7 @@ add_index :members, [:family_name, first_name, email]
 has_many :foods
 has_many :photos
 has_many :rooms
+belongs_to :course
 has_many :courses, through: :hotel_courses
 has_many :hotel_courses
 has_many :interviews
@@ -82,6 +83,20 @@ has_many :hotels
 has_many :courses
 t.references :hotel
 t.references :course
+
+***~courses table~***
+
+|id|name|kanji_name|price|theme|body|
+|:--:|:--:|:--:|:--:|:--:|:--:|
+|||||||
+
+has_many :tickets
+has_many :hotels
+t.string :name, null:false
+t.string :kanji_name, null:false
+t.integer :price, null:false
+t.string :theme, null:false
+t.text :body, null:false
 
 ***~reservations table~***
 
