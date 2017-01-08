@@ -28,6 +28,7 @@ h2 {
     margin: 5px auto 0;
     .logo {
       height: 50px;
+      margin-left: 60px;
       .theme {
         padding-top: 5px;
       }
@@ -35,7 +36,7 @@ h2 {
     .sub {
       position: absolute;
       top: 0px;
-      right: 0px;
+      right: 120px;
       ul {
         margin-top: 18px;
         margin-right: 10px;
@@ -46,7 +47,9 @@ h2 {
           margin-left: 15px;
           vertical-align: middle;
           a {
+            font-weight: bold;
             text-decoration: none;
+            color: #000099;
           }
           .fa-language {
             display: inline-block;
@@ -59,7 +62,7 @@ h2 {
 }
 
 #wrapper {
-  background-color: #FFF;
+  background-color: #FFFFFF;
   padding-bottom: 30px;
   .indexPage {
     .mainPart {
@@ -296,3 +299,4 @@ h2 {
     }
   }
 }
+
