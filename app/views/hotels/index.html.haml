@@ -1,4 +1,4 @@
-%header#global-header.header-fixed.header-transparent
+%header#global-header.header-fixed
   .header-inner
     .logo
       %h1.theme
@@ -9,7 +9,7 @@
         %li.concept
           =link_to "私たちの想い", "/brandstory/"
         %li.service
-          =link_to "Reluxとは", "/hotels/service", target: "_blank"
+          =link_to "Reluxとは", service_hotels_path
         %li.regest
           =link_to "会員登録", "#regist"
         %li.login
@@ -231,7 +231,7 @@
           .title Reluxへようこそ
           %ul.nav
             %li
-              =link_to "Reluxとは", "/hotels/service", class: "hover"
+              =link_to "Reluxとは", service_hotels_path, class: "hover"
               =link_to "宿泊施設様へ", "/hotels/client", class: "hover"
               =link_to "パートナー募集", "/hotels/partner", class: "hover"
               =link_to "スマートフォンアプリ", "/lp/app", class: "hover"
