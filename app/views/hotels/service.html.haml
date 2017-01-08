@@ -1,0 +1,220 @@
+%header#global-header.header-fixed.hex-header
+  .header-inner
+    .logo
+      %h1.theme
+        = link_to root_path do
+          = image_tag "logo.png", alt: "高級旅館・高級ホテルの予約ならRelux（リラックス）", class: "logo"
+    .sub
+      %ul.before-menu
+        %li.concept
+          =link_to "私たちの想い", "/brandstory/"
+        %li.service
+          =link_to "Reluxとは", service_hotels_path
+        %li.regest
+          =link_to "会員登録", "#regist"
+        %li.login
+          =link_to "ログイン", "#login", id: "popup-login"
+        %li.displayLanguage
+          %i.fa.fa-language
+#wrapper.clearfix
+  #subPage.servicePage
+    .mainPart
+      .logoArea
+        %h1 about Relux
+    .mainBlock
+      .eachBlock.promise
+        %h2 Reluxについて
+        .right
+          %p.explain もっと心地よい旅を
+          %p
+            Reluxをご覧いただき、誠にありがとうございます。<br><br>Reluxは旅館・ホテルのみを厳選した、会員制の宿泊予約サービスです。全国各地の一流旅館・ホテルを泊り歩いてきたReluxの審査委員による厳しい審査を通して、心からお薦めできる宿泊施設だけを厳選してご紹介しています。<br><br>また、ただ宿泊施設をご紹介するだけではなく、すべての宿泊施設との交渉・打ち合わせを重ね、よりお得に特別な宿泊を体験できるRelux限定プランをご提供いたします。<br><br>Reluxで、もっと心地よい旅をおたのしみください。わたしたちが、責任をもってご紹介いたします。
+      .eachBlock.promise
+        %h2 Reluxの三つのお約束
+        .right
+          %p.explain 大切な人と過ごすかけがえのない時間が、より素晴らしいものとなるように、わたしたちは3つのお約束をいたします。
+          .section
+            %h3 1. 満足度の高い宿泊施設
+            %p
+              わたしたちは、掲載される宿泊施設の審査を極めて厳格におこない、100項目にもおよぶ審査基準をクリアした本当におすすめできる宿泊施設を厳選しています。<br>さらに、Reluxグレードによって、より分かりやすい比較をもとに宿泊施設えらびをおたのしみいただけます。  （詳しくはこちら）
+          .section
+            %h3 2. 最低価格の保証（差額返金システム）
+            %p
+              Reluxの宿泊プランなら、どのオンラインの宿泊予約サイトよりもお得な価格でご宿泊いただけます。万が一、同一内容の宿泊プランにおいてReluxが最低価格ではなかった場合、差額を返金いたします。（返金規定）
+          .section
+            %h3 3. より特別なおもてなし
+            %p
+              Reluxを通じて宿泊すると、5％のReluxポイントを還元します。1ポイント＝1円単位で、次回の宿泊予約からご利用いただけます。また、特別な旅行の相談にReluxコンシェルジュデスクをご利用いただけるほか、Relux会員様だけにご利用いただける特別な宿泊プランをご提供。  大切な日を彩るための、さまざまなサービスをご体験ください。 （詳しくはこちら）
+      .eachBlock.advantage
+        %h2 Relux会員のメリット
+        .right
+          %ol
+            %li 次回の宿泊予約でつかえるReluxポイントが、毎回5％貯まります。
+            %li 会員限定の特別価格でご宿泊いただけます。（最低価格保証）
+            %li 万が一、Reluxが最低価格でない場合には差額を返金いたします。
+            %li 特典が付いた宿泊プランでご宿泊いただけます。
+            %li 会員限定のお得な情報や特別キャンペーンにご招待いたします。
+
+      .eachBlock.hotel
+        %h2 Reluxの掲載施設
+        .right
+          %p
+            Reluxの選定委員会によって選ばれた、満足度の高い一流の旅館・ホテルのみをご紹介。すべての会員様は、そんな宿泊施設を検索・予約することができます。<br><br>さらに、館内のしつらえやお部屋、お料理、お風呂、おもてなしなどの観点から宿泊施設を評価し、5つに分類したRelux独自の指標としてReluxグレードもご用意。すべては、皆さまにぴったりの宿泊施設を見つけていただくため。どうぞ、旅行の目的や期待する体験にあわせて宿泊施設をお選びください。<br>(詳しくはこちら）
+          %h4 掲載施設例（一部）
+          %ul.hotelList
+            %li
+              = link_to "/23625/", class: "thum hover" do
+                = image_tag "hotel1.jpg", alt: "別邸 仙寿庵"
+              %p.name
+                =link_to "別邸 仙寿庵", "/23625/", class: "thum hover"
+              %p.text
+                名峰・谷川岳の懐に抱かれたシャトー加盟宿
+            %li
+              =link_to "/23625/", class: "thum hover" do
+                = image_tag "hotel1.jpg", alt: "別邸 仙寿庵"
+              %p.name
+                =link_to "別邸 仙寿庵", "/23625/", class: "thum hover"
+              %p.text
+                名峰・谷川岳の懐に抱かれたシャトー加盟宿
+            %li
+              =link_to "/23625/", class: "thum hover" do
+                = image_tag "hotel1.jpg", alt: "別邸 仙寿庵"
+              %p.name
+                =link_to "別邸 仙寿庵", "/23625/", class: "thum hover"
+              %p.text
+                名峰・谷川岳の懐に抱かれたシャトー加盟宿
+            %li
+              =link_to "/23625/", class: "thum hover" do
+                = image_tag "hotel1.jpg", alt: "別邸 仙寿庵"
+              %p.name
+                =link_to "別邸 仙寿庵", "/23625/", class: "thum hover"
+              %p.text
+                名峰・谷川岳の懐に抱かれたシャトー加盟宿
+            %li
+              =link_to "/23625/", class: "thum hover" do
+                = image_tag "hotel1.jpg", alt: "別邸 仙寿庵"
+              %p.name
+                =link_to "別邸 仙寿庵", "/23625/", class: "thum hover"
+              %p.text
+                名峰・谷川岳の懐に抱かれたシャトー加盟宿
+            %li
+              =link_to "/23625/", class: "thum hover" do
+                = image_tag "hotel1.jpg", alt: "別邸 仙寿庵"
+              %p.name
+                =link_to "別邸 仙寿庵", "/23625/", class: "thum hover"
+              %p.text
+                名峰・谷川岳の懐に抱かれたシャトー加盟宿
+            %li
+              =link_to "/23625/", class: "thum hover" do
+                = image_tag "hotel1.jpg", alt: "別邸 仙寿庵"
+              %p.name
+                =link_to "別邸 仙寿庵", "/23625/", class: "thum hover"
+              %p.text
+                名峰・谷川岳の懐に抱かれたシャトー加盟宿
+            %li
+              =link_to "/23625/", class: "thum hover" do
+                = image_tag "hotel1.jpg", alt: "別邸 仙寿庵"
+              %p.name
+                =link_to "別邸 仙寿庵", "/23625/", class: "thum hover"
+              %p.text
+                名峰・谷川岳の懐に抱かれたシャトー加盟宿
+      .eachBlock.brand
+        %h2 Reluxのブランドロゴ
+        .right
+          %p
+            2016年7月。わたしたちは、旅のすべての瞬間に特別な体験を届けるために、新たな一歩を踏みだし、Reluxのブランドロゴをリニューアルしました。<br><br>「Relux Japan Blue」と名付けたブランドカラーや、旅に関する様々なイメージを表す7本のライン。そこには、わたしたちの決意や思いを込めました。旅のひとときが一人ひとりの特別な日であることを願って。Reluxは、さらなる進化を続けていきます。<br><br>(詳しくはこちら）
+      .eachBlock.smartphone
+        %h2 Reluxのスマートフォンアプリ
+        .right
+          .thumb
+            = image_tag "iphone.png", alt: "Relux"
+          %p.explain いつものReluxを、スマートフォンでも。
+          %p
+            いつでもどこでも、一流旅館・ホテルの検索・予約ができる、便利なスマートフォンアプリもご用意。シンプルな操作で、地域や日付から泊まってみたかった旅館・ホテルがすぐに見つかります。気になる旅館・ホテルが見つかったら、その場でお気に入りに登録。旅館・ホテルの情報を家族や友人と共有することもできます。スマートフォンのReluxで、快適で素敵な旅をおたのしみください。
+          %p.otherDevice
+            iOS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:高級旅館・高級ホテルの宿泊予約サービス ReluxのiOSアプリ<br>Android&nbsp;&nbsp;&nbsp;:高級旅館・高級ホテルの宿泊予約サービス ReluxのAndroidアプリ<br>WEB&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;:http://rlx.jp/sp/
+      .eachBlock.push
+        %h2 Reluxからのおすすめ情報
+        .right
+          %p.explain おすすめの宿泊施設や旬の情報は、Reluxメールマガジン（会員限定）をはじめ、Facebook、Twitter、Instagram、LINE＠でも配信しております。たくさんある中から宿泊施設をさがすのは大変、という方にもおすすめ。ぜひチェックしてみてください。
+          %ul.socialLink
+            %li
+              =link_to "https://www.facebook.com/rlx.jp", class: "hover" do
+                =image_tag "icon-facebook.png", alt: "Facebook"
+            %li
+              =link_to "https://www.twitter.com/relux_jp", class: "hover" do
+                =image_tag "icon-twitter.png", alt: "Twitter"
+            %li
+              =link_to "https://www.instagram.com/relux_jp", class: "hover" do
+                =image_tag "icon-instagram.png", alt: "Instagram"
+            %li
+              =link_to "https://line.me/R/ti/p/%40zus0399u", class: "hover" do
+                =image_tag "icon-line.png", alt: "Line", class: "line"
+      .eachBlock
+        %h2 よくあるご質問
+        .right
+          %p.explain Q１. Reluxとは？
+          %p.explain Q２. Reluxの旅館・ホテルは信頼できるの？
+          %p.explain Q３. Reluxへの会員登録は無料？
+          %p.explain Q４. 万が一、最低価格ではない場合は？
+          %p.explain Q５. Reluxクーポンとは？
+          %p.explain Q６. Reluxポイントとは？
+          %p.explain Q７. Reluxコンシェルジュとは？
+          %p その他の質問はこちら
+      .eachBlock
+        %h2 新規会員登録
+        .right
+      .eachBlock
+        %h2 メディア掲載
+        .right
+          =image_tag "media-logos.png", alt: "Relux"
+#footer
+  %footer#global-footer
+    .footer-inner
+      .col-wrap
+        .col.inbound
+          %ul.inbound
+            %li.displayLanguage
+              = link_to "Language", class: "hover"
+        .col.menu
+          .title Reluxへようこそ
+          %ul.nav
+            %li
+              =link_to "Reluxとは", "/hotels/service", class: "hover"
+              =link_to "宿泊施設様へ", "/hotels/client", class: "hover"
+              =link_to "パートナー募集", "/hotels/partner", class: "hover"
+              =link_to "スマートフォンアプリ", "/lp/app", class: "hover"
+              =link_to "Relux Magazine", "https://rlx.jp/magazine/", class: "hover"
+        .col.menu
+          .title 見つける、予約する
+          %ul.nav
+            %li
+              =link_to "コンシェルジュ", "/concierges/request", class: "hover"
+              =link_to "全国人気ランキング", "/r/ranking/", class: "hover"
+              =link_to "ギフトを贈る", "/gift/", class: "hover"
+              =link_to "ビジネスサポート", "/business/", class: "hover"
+              =link_to "セレクションズ", "/hotels/selection", class: "hover"
+              =link_to "Relux Studio 360°", "/studio360/", class: "hover"
+        .col.menu
+          .title Reluxをもっと知る
+          %ul.nav
+            %li
+              =link_to "あたらしい、Reluxへ。", "/brandstory/", class: "hover"
+              =link_to "", "/faq", class: "hover"
+              =link_to "運営会社", "/hotels/company", class: "hover"
+              =link_to "採用情報", "/hotels/company/reruit", class: "hover"
+              =link_to "株式会社Loco Partners", "/hotels/company", class: "hover"
+      .info
+        =link_to "/", class: "logo" do
+          = image_tag "logo_footer.png", alt: "Relux", class: "logo"
+        %ul.nav-info
+          %li
+            =link_to "サイト利用規約", "/hotels/guide", class: "hover"
+            =link_to "個人情報保護方針", "/hotels/privacy", class: "hover"
+            =link_to "旅行業登録表", "/hotels/agreement", class: "hover"
+        %small 2013 Loco Partners Inc.
+
+
+
+
+
+
