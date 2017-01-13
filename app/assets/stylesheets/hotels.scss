@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.header-fixed {
+.fixed-header {
   position: fixed;
   top: 0;
 }
@@ -23,15 +23,11 @@ h2 {
 #global-header {
   width: 100%;
   z-index: 3;
-  .header-inner{
+  .inner-header {
     min-width: 960px;
-    margin: 5px auto 0;
     .logo {
       height: 50px;
       margin-left: 60px;
-      .theme {
-        padding-top: 5px;
-      }
     }
     .sub {
       position: absolute;
@@ -62,6 +58,7 @@ h2 {
 }
 
 #wrapper {
+  @include clearfix();
   background-color: #FFFFFF;
   padding-bottom: 30px;
   .indexPage {
@@ -234,7 +231,7 @@ h2 {
     }
   }
 }
-
+/*footerの装飾*/
 #footer {
   background-color: #FFF;
   clear: both;
@@ -253,7 +250,13 @@ h2 {
         border-bottom: 1px solid #393C3E;
         padding-bottom: 30px;
         margin-bottom: 10px;
-        .col {
+        .inbound {
+          display: table-cell;
+          width: 25%;
+          vertical-align: top;
+        }
+
+        .menu {
           display: table-cell;
           width: 25%;
           vertical-align: top;
