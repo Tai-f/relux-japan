@@ -1,0 +1,131 @@
+/*ページ全体の装飾*/
+#wrapper {
+  @include clearfix();
+  background-color: #FFF;
+/*背景画像等の装飾*/
+  .topBlock {
+    background: url("/assets/hotel5.jpg") center bottom / cover no-repeat;
+    margin-bottom: 20px;
+    text-align: center;
+/*ロゴの装飾*/
+    .logoArea {
+      padding: 0px 5% 0px;
+      height: 580px;
+      h1 {
+        padding-top: 220px;
+        img {
+          width: 200px;
+          vertical-align: center;
+        }
+      }
+    }
+  }
+/*メインブロックの装飾*/
+  .mainBlock {
+    max-width: 960px;
+    margin: 0 auto;
+/*目次の装飾*/
+    .contents {
+      margin-bottom: 80px;
+      .li_content {
+        float: left;
+        padding-right: 10px;
+      }
+    }
+/*コンセプトの装飾*/
+    .concept {
+      margin: 30px auto;
+      border-bottom: 1px solid #EFEFEF;
+      .title {
+        margin-bottom: 60px;
+      }
+      .text {
+        text-align: center;
+        line-height: 1.8;
+        margin-bottom: 60px;
+        color: #000;
+      }
+    }
+/*メッセージの装飾*/
+    .message {
+      height: 100%;
+      margin: 0 auto 30px;
+      border-bottom: 1px solid #EFEFEF;
+      .logo {
+        float: left;
+        width: 40%;
+        text-align: center;
+        margin: 300px 0;
+        img {
+          width: 75%;
+        }
+      }
+      .body {
+        float: right;
+        margin-right: 80px;
+        .title {
+          color: #0F0A64;
+          margin-bottom: 30px;
+          text-align: left;
+          font-size: 15px;
+          font-weight: bold;
+        }
+        .text {
+          line-height: 1.8;
+          margin-bottom: 30px;
+          color: #0F0A64;
+        }
+      }
+    }
+/*ソーシャルボタン等の装飾*/
+    .social {
+      padding: 0 5%;
+      .shareBtn {
+        list-style: none;
+        margin: 0 auto 30px;
+        width: 100%;
+        li {
+          width: 25%;
+          display: inline-block;
+          text-align: center;
+          a {
+            text-align: center;
+            text-decoration: none;
+            line-height: 44px;
+            outline: none;
+            position: relative;
+            color: #FFF;
+            vertical-align: middle;
+            letter-spacing: 0;
+          }
+          .facebook {
+            background-color: #265A96;
+          }
+          .twitter {
+            background-color: #00ACEC;
+          }
+          .google {
+            background-color: #DE4D3B;
+          }
+          .line {
+            background-color: #2CBF13;
+          }
+          .like {
+            display: block;
+            padding-top: 20px;
+            text-align: left;
+          }
+        }
+      }
+    }
+/*リンク等の装飾*/
+    .link {
+      margin: 0 auto 30px;
+      padding: 0 5% 30px;
+      p {
+        font-size: 11px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
