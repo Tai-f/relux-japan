@@ -74,8 +74,8 @@ namespace :deploy do
     end
   end
 
-  before :starting, :upload
-  before :starting, :db_create
+  # before :starting, :upload
+  # before :starting, :db_create
 
   after :publishing, :restart
 
