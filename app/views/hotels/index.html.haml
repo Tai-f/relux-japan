@@ -12,17 +12,17 @@
           .melitBoxWrap.clearfix
             .melitBox
               %p.icon
-                =image_tag "/../assets/icon-merit-01.png", alt: "5%のポイント還元"
+                =image_tag asset_path "icon-merit-01.png", alt: "5%のポイント還元"
               %p.title どこよりもお得に
               %p.description 宿泊プランはすべて、会員限定価格。<br>万が一、Reluxのほうが高い場合は差額をいたします。
             .melitBox
               %p.icon
-                =image_tag "/../assets/icon-merit-02.png", alt: "どこよりもお得に"
+                =image_tag asset_path "icon-merit-02.png", alt: "どこよりもお得に"
               %p.title 5%のポイント還元
               %p.description 業界最高、宿泊費の5%をReluxポイントとして還元。<br>貯まったポイントは1P=1円で、次の旅行でお使いいただけます。
             .melitBox
               %p.icon
-                =image_tag "/../assets/icon-merit-03.png", alt: "特別なおもてなし"
+                =image_tag asset_path "icon-merit-03.png", alt: "特別なおもてなし"
               %p.title 特別なおもてなし
               %p.description お料理/お部屋の無料アップグレードなど、<br>Relux特典付きのプランを体験いただけます。
           %p.melitLink
@@ -36,7 +36,7 @@
               %li.col-sm-6
                 =link_to "/hotels/selections", class: "hover clearfix" do
                   %p.thum
-                    = image_tag "/../assets/sougyou100.jpg", alt: "hotel", size: "150x100"
+                    = image_tag asset_path "sougyou100.jpg", alt: "hotel", size: "150x100"
                   .info
                     %i.fa.fa-angle-right
                     %p.title 創業100年以上の老舗旅館でタイムトラベル
@@ -44,7 +44,7 @@
               %li.col-sm-6
                 =link_to "/hotels/selections", class: "hover clearfix" do
                   %p.thum
-                    = image_tag "/../assets/fujisan.jpg", alt: "hotel", size: "150x100"
+                    = image_tag asset_path "fujisan.jpg", alt: "hotel", size: "150x100"
                   .info
                     %i.fa.fa-angle-right
                     %p.title 富士山をのぞむ絶景宿７選
@@ -52,7 +52,7 @@
               %li.col-sm-6
                 =link_to "/hotels/selections", class: "hover clearfix" do
                   %p.thum
-                    = image_tag "/../assets/petto100.jpg", alt: "hotel", size: "150x100"
+                    = image_tag asset_path "petto100.jpg", alt: "hotel", size: "150x100"
                   .info
                     %i.fa.fa-angle-right
                     %p.title 愛犬と旅を楽しむ！ペットと泊まれる宿８選
@@ -60,7 +60,7 @@
               %li.col-sm-6
                 =link_to "/hotels/selections", class: "hover clearfix" do
                   %p.thum
-                    = image_tag "/../assets/kani.jpg", alt: "hotel", size: "150x100"
+                    = image_tag asset_path "kani.jpg", alt: "hotel", size: "150x100"
                   .info
                     %i.fa.fa-angle-right
                     %p.title 冬の味覚に舌鼓！カニを堪能できる宿
@@ -68,7 +68,7 @@
               %li.col-sm-6
                 =link_to "/hotels/selections", class: "hover clearfix" do
                   %p.thum
-                    = image_tag "/../assets/activity.jpg", alt: "hotel", size: "150x100"
+                    = image_tag asset_path "activity.jpg", alt: "hotel", size: "150x100"
                   .info
                     %i.fa.fa-angle-right
                     %p.title 冬のアクティビティが楽しめる宿
@@ -76,7 +76,7 @@
               %li.col-sm-6
                 =link_to "/hotels/selections", class: "hover clearfix" do
                   %p.thum
-                    = image_tag "/../assets/oceanview.jpg", alt: "hotel", size: "150x100"
+                    = image_tag asset_path "oceanview.jpg", alt: "hotel", size: "150x100"
                   .info
                     %i.fa.fa-angle-right
                     %p.title 冬の熱海を満喫する、オーシャンビューの宿
@@ -89,16 +89,16 @@
             .service-box.row
               %p.thum.col-sm-3
                 =link_to "/r/ranking/", class: "hover", target: "_blank" do
-                  = image_tag "/../assets/Ranking.jpg", alt: "ランキング"
+                  = image_tag asset_path "Ranking.jpg", alt: "ランキング"
               %p.thum.col-sm-3
                 =link_to "/concierges/request", class: "hover", target: "_blank" do
-                  = image_tag "/../assets/Concierge.jpg", alt: "コンシェルジュ"
+                  = image_tag asset_path "Concierge.jpg", alt: "コンシェルジュ"
               %p.thum.col-sm-3
                 =link_to "/gift/", class: "hover", target: "_blank" do
-                  = image_tag "/../assets/Gift.jpg", alt: "ギフト"
+                  = image_tag asset_path "Gift.jpg", alt: "ギフト"
               %p.thum.col-sm-3
                 =link_to "/theater/", class: "hover", target: "_blank" do
-                  = image_tag "/../assets/Theater.jpg", alt: "シアター"
+                  = image_tag asset_path "Theater.jpg", alt: "シアター"
         .other.clearfix
           .left
             %h2 高級旅館・ホテルをエリアから探す
