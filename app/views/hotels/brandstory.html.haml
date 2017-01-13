@@ -1,0 +1,54 @@
+%header#global-header.fixed-header
+  =render partial: "header"
+#wrapper.clearfix
+  .topBlock
+    .logoArea
+      %h1
+        =image_tag "logo2.png", alt: "あたらしい、Reluxへ。"
+  .mainBlock
+    %ul.contents.clearfix
+      %li.li_content.hover
+        =link_to "トップページ", root_path
+      %li.li_content.hover
+        あたらしい、Reluxへ。
+    .concept
+      %h2.title 日本の贅沢を、心の豊かさに。
+      %p.text
+        高価な服を着て、高価な車に乗り、高価な贈りものをする。<br><br>そういうことが贅沢だった時代もありました。<br><br>そんな時代がとうの昔に過ぎ去ったにもかかわらず、<br><br>贅沢という言葉を聞くと、わたしたちは高価なものを連想します。<br><br><br>贅沢という言葉を耳にしたとき、<br><br>大切な人と一緒に過ごす時間や、人とふれあって得る感動が、<br><br>まず初めに連想される国にしたい。<br><br><br>わたしたちは、そんな想いでReluxを運営しています。<br><br><br>いつか、日本各地のすばらしい旅館やホテルで、<br><br>大切な人と過ごすひとときを選ぶことが当たり前になるように、<br><br>わたしたちは、このサービスをたくさんの人に伝えつづけます。<br><br><br>安息（relax）こそが贅沢（luxury）であると、誰もが思うようになる日まで。<br><br>わたしたちが、責任をもって旅をお手伝いいたします。
+    .message.clearfix
+      .logo
+        =image_tag "logo-relux.jpg", alt: "Relux"
+      .body
+        %h2.title あたらしい、Reluxへ。
+        %p.text
+          わたしたちReluxがめざすのは、安息こそが贅沢であると実感できる、<br>特別な旅の体験をみなさまへお届けすること。<br>その想いや未来への希望を込めて、サービスの開始から3年が経った<br>2016年7月、ブランドロゴをリニューアルしました。<br><br><br>ブランドカラーの藍色は、日本を代表する伝統色。<br>日本を代表する宿泊予約サービスを目指すという決意を、<br>「Relux Japan Blue」と名付けたこの色に託しています。<br><br><br>そして、7本のラインが表すのは週7日の1日1日や、<br>楽しいとき、安心したときなどの感情のバイオリズム、<br>そよぐ風、流れる雲、揺れる木々といったイメージ。<br>旅に関する様々なイメージを図案化し、<br><br><br>いつでもReluxがあなたのそばにいるという意味を込めました。<br>澄みわたる晴れの日も。すっきりしない曇りの日も。<br>傘が距離を縮める雨の日も。しんしんと降りつもる雪の日も。<br><br><br>旅は、癒す。勇気をくれる。笑顔を生む。<br>そんな旅のひとときが一人ひとりの特別な日であることを願って。<br>Reluxは、さらなる進化を続けていきます。
+    .social
+      %ul.shareBtn
+        %li.facebook.hover
+          =link_to "https://www.facebook.com/share.php?u=https://goo.gl/uwAmRB" do
+            %i
+        %li.twitter.hover
+          =link_to "http://twitter.com/intent/tweet?text=2016年7月、ブランドロゴをリニューアルし、Reluxは新たな一歩を踏みだします。 → https://goo.gl/12K1de&via=Relux_jp&hashtags=Relux" do
+            %i
+        %li.google.hover
+          =link_to "https://plus.google.com/share?url=https://goo.gl/qeIAQ0" do
+            %i
+        %li.line.hover
+          =link_to "line://msg/text/2016年7月、ブランドロゴをリニューアルし、Reluxは新たな一歩を踏みだします。→ https://goo.gl/YjB6Rd" do
+            %i
+        %li.like.hover
+          =link_to "トップページ" do
+            %i
+    .link
+      %p
+        以下のリンクより、Reluxのブランドロゴのマニュアルをご覧いただけます。<br>ご利用の際は、マニュアルのルールをよく読み、適切に使用してください。
+      %p
+        URL:
+        =link_to "http://rlx.jp/brandstory/rule", "/brandstory/rule"
+
+
+
+
+
+
+=render partial: "footer"

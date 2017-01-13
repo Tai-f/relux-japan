@@ -1,0 +1,51 @@
+#footer
+  %footer#global-footer
+    .footer-inner
+      .col-wrap
+        .col.inbound
+          %ul.inbound
+            %li.displayLanguage
+              = link_to "Language", class: "hover"
+        .col.menu
+          .title Reluxへようこそ
+          %ul.nav
+            %li
+              =link_to "Reluxとは", service_hotels_path, class: "hover"
+              =link_to "宿泊施設様へ", "/hotels/client", class: "hover"
+              =link_to "パートナー募集", "/hotels/partner", class: "hover"
+              =link_to "スマートフォンアプリ", "/lp/app", class: "hover"
+              =link_to "Relux Magazine", "https://rlx.jp/magazine/", class: "hover"
+        .col.menu
+          .title 見つける、予約する
+          %ul.nav
+            %li
+              =link_to "コンシェルジュ", "/concierges/request", class: "hover"
+              =link_to "全国人気ランキング", "/r/ranking/", class: "hover"
+              =link_to "ギフトを贈る", "/gift/", class: "hover"
+              =link_to "ビジネスサポート", "/business/", class: "hover"
+              =link_to "セレクションズ", "/hotels/selection", class: "hover"
+              =link_to "Relux Studio 360°", "/studio360/", class: "hover"
+        .col.menu
+          .title Reluxをもっと知る
+          %ul.nav
+            %li
+              =link_to "あたらしい、Reluxへ。", brandstory_hotels_path, class: "hover"
+              =link_to "", "/faq", class: "hover"
+              =link_to "運営会社", "/hotels/company", class: "hover"
+              =link_to "採用情報", "/hotels/company/reruit", class: "hover"
+              =link_to "株式会社Loco Partners", "/hotels/company", class: "hover"
+      .info
+        =link_to "/", class: "logo" do
+          = image_tag "logo_footer.png", alt: "Relux", class: "logo"
+        %ul.nav-info
+          %li
+            =link_to "サイト利用規約", "/hotels/guide", class: "hover"
+            =link_to "個人情報保護方針", "/hotels/privacy", class: "hover"
+            =link_to "旅行業登録表", "/hotels/agreement", class: "hover"
+        %small 2013 Loco Partners Inc.
+
+
+
+
+
+

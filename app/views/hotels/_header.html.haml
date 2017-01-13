@@ -1,0 +1,17 @@
+.inner-header
+  .logo
+    %h1.theme
+      = link_to root_path do
+        = image_tag "logo.png", alt: "高級旅館・高級ホテルの予約ならRelux（リラックス）", class: "logo"
+  .sub
+    %ul.before-menu
+      %li.concept
+        =link_to "私たちの想い", brandstory_hotels_path
+      %li.service
+        =link_to "Reluxとは", service_hotels_path
+      %li.regest
+        =link_to "会員登録", "#regist"
+      %li.login
+        =link_to "ログイン", "#login", id: "popup-login"
+      %li.displayLanguage
+        %i.fa.fa-language
