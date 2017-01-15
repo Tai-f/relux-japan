@@ -67,7 +67,10 @@ h2 {
       width: 100%;
       margin-bottom: 60px;
       position: relative;
-      background: url("hotel3.jpg") center bottom / cover no-repeat;
+      background-image: image-url("hotel3.jpg");
+      background-position: center bottom;
+      background-size: cover;
+      background-repeat: no-repeat;
       .mainImage {
         #overlay.common-overlay {
           display: none;

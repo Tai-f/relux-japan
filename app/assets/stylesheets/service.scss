@@ -7,7 +7,10 @@
   padding-bottom: 40px;
   background-color: #F2F2F0;
   .mainPart {
-    background: url("hotel4.jpg") center bottom / cover no-repeat;
+    background-image: image-url("hotel4.jpg");
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
     min-height: 400px;
     margin-top: 50px;
     margin-bottom: 60px;
