@@ -4,7 +4,10 @@
   background-color: #FFF;
 /*背景画像等の装飾*/
   .topBlock {
-    background: url("hotel5.jpg") center bottom / cover no-repeat;
+    background-image: image-url("hotel5.jpg");
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
     margin-bottom: 20px;
     text-align: center;
 /*ロゴの装飾*/
