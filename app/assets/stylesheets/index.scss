@@ -1,0 +1,328 @@
+// Place all the styles related to the hotels controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*ヘッダー固定*/
+.fixed-header {
+  position: fixed;
+  top: 0;
+}
+/*タイトルのブロック*/
+.titleHeader {
+  margin-bottom: 50px;
+}
+
+/*各ブロックのタイトル*/
+h2 {
+  font-size: 18px;
+  letter-spacing: 3px;
+  padding: 6px 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+/*白の背景色*/
+.white {
+  background-color: #FFF;
+}
+
+/*灰色の背景色*/
+.grey {
+  background-color: #F2F2F0;
+}
+
+/*透明度0.8の背景色*/
+.transparent {
+  opacity: 0.8;
+}
+
+/*メインブロックの装飾*/
+#wrapper {
+  @include clearfix();
+  padding-bottom: 30px;
+}
+
+/*ヘッダーの装飾*/
+#global-header {
+  width: 100%;
+  z-index: 3;
+  .inner-header {
+    min-width: 960px;
+/*ロゴの装飾*/
+    .logo {
+      height: 50px;
+      margin-left: 60px;
+    }
+/*サブタイトルの装飾*/
+    .sub {
+      position: absolute;
+      top: 0px;
+      right: 120px;
+      ul {
+        margin-top: 18px;
+        margin-right: 10px;
+        list-style: none;
+        li {
+          display: inline;
+          font-size: 14px;
+          margin-left: 15px;
+          vertical-align: middle;
+          a {
+            font-weight: bold;
+            text-decoration: none;
+            color: #000099;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*インデックスのメインパート（背景画像等）の装飾*/
+.mainPart {
+  height: 600px;
+  width: 100%;
+  margin-bottom: 60px;
+  position: relative;
+  background-image: image-url("index_picture.jpg");
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .mainImage {
+    #overlay.common-overlay {
+      display: none;
+    }
+    .searchBoxArea {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      overflow: hidden;
+    }
+  }
+}
+
+/*インデックスのメインコンテンツの装飾*/
+.indexContents {
+  .merit {
+    @include clearfix();
+    border-bottom: 1px solid #EFEFEF;
+    padding: 0 10px 30px;
+    margin: 0 0 50px;
+/*コンテンツ（メリット）の装飾*/
+    .melitArea {
+      .melitBoxWrap {
+        @include clearfix();
+        display: table;
+        width: 100%;
+        .melitBox {
+          width:33%;
+          display: table-cell;
+          vertical-align: middle;
+          text-align: center;
+          p {
+            line-height: 1.5;
+            margin: 10px 0;
+          }
+          .icon {
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            img {
+              width: 140px;
+            }
+          }
+          .title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+          }
+          .description {
+            font-size: 12px;
+            line-height: 1.8;
+          }
+        }
+      }
+      .melitLink {
+        margin-top: 50px;
+        text-align: center;
+        line-height: 1.5;
+        .btn {
+          display: inline-block;
+          padding-left: 6em;
+          padding-right: 6em;
+          margin-bottom: 0;
+          font-size: 14px;
+          vertical-align: middle;
+          cursor: pointer;
+          border-radius: 2px;
+          &--relux {
+            background-color: #0F0A64;
+            color: #FFF;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+/*コンテンツ（セレクション）の装飾*/
+  .selections {
+    @include clearfix();
+    border-bottom: 1px solid #EFEFEF;
+    padding: 0 10px 30px;
+    margin: 0 0 50px;
+    .selectionsArea {
+      margin: 0 20px;
+      .container {
+        @include clearfix();
+        list-style: none;
+        li {
+          a {
+            @include clearfix();
+            padding: 10px;
+            text-decoration: none;
+            .thum {
+              float: left;
+              margin: 0 15px 0 0;
+              img {
+                width: 130px;
+                order: 1px solid #EFEFEF;
+                background-color: #FFF;
+                padding: 5px;
+                vertical-align: middle;
+              }
+            }
+            .info {
+              i {
+                padding-top: 50px;
+                float: right;
+                vertical-align: middle;
+              }
+              .title {
+                font-size: 16px;
+                line-height: 1.6;
+                font-weight: normal;
+                color: #000;
+                padding-right: 20px;
+                margin: 5px 0 5px 0;
+              }
+              .date {
+                font-size: 11px;
+                line-height: 1.6;
+                color: #666;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+/*コンテンツ（各サービス）の装飾*/
+  .service {
+    @include clearfix();
+    padding: 0 10px 0;
+    .serviceArea {
+      margin: 0 20px;
+      .serviceBoxWrap {
+        .service-box {
+          margin-right: 20px;
+          margin-bottom: 50px;
+          p {
+            img {
+              width: 225px;
+              vertical-align: bottom;
+            }
+          }
+        }
+      }
+    }
+    .other {
+      @include clearfix();
+      h2 {
+        font-weight: bold;
+        margin-bottom: 24px;
+        background-size: 12px auto;
+        padding-left: 22px;
+      }
+      table {
+        font-size: 12px;
+        th {
+          font-weight: bold;
+          padding-bottom: 8px;
+          width: 16%;
+          vertical-align: top;
+        }
+      }
+    }
+  }
+}
+/*footerの装飾*/
+#footer {
+  background-color: #FFF;
+  clear: both;
+  #global-footer {
+    background-color: #303233;
+    color: #FFF;
+    clear: both;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    .footer-inner {
+      padding: 40px 0 0px;
+      max-width: 960px;
+      margin: 0 auto;
+      .col-wrap {
+        display: table;
+        width: 100%;
+        border-bottom: 1px solid #393C3E;
+        padding-bottom: 30px;
+        margin-bottom: 10px;
+        .inbound {
+          display: table-cell;
+          width: 25%;
+          vertical-align: top;
+        }
+
+        .menu {
+          display: table-cell;
+          width: 25%;
+          vertical-align: top;
+          .title {
+            padding: 0;
+            margin-bottom: 15px;
+            border-bottom: none;
+            background: none;
+            background-size: auto;
+            text-align: left;
+          }
+          .nav {
+            li {
+              margin-bottom: 10px;
+              a {
+                text-decoration: none;
+                color: #CCC;
+                background-color: inherit;
+                padding: 0;
+                border-bottom: none;
+              }
+            }
+          }
+        }
+      }
+      .info {
+        text-align: center;
+        padding: 20px 10px;
+        .logo {
+          width: 38px;
+        }
+        .nav-info {
+          margin: 10px 0 15px;
+          li {
+            margin: 0 5px;
+          }
+        }
+        small {
+          font-size: 11px;
+          color: #CCC;
+        }
+      }
+    }
+  }
+}
+

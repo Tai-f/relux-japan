@@ -59,6 +59,7 @@ gem 'erb2haml'
 gem 'bootstrap-sass'
 gem 'carrierwave'
 gem 'fog'
+gem 'font-awesome-rails'
 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

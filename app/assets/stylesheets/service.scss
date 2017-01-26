@@ -1,19 +1,22 @@
+/*#F2F2F0色のヘッダーの装飾*/
 .hex-header {
   background-color: #F2F2F0;
   opacity: 0.8;
 }
-
+/*サービスぺージの装飾*/
 #subPage {
   padding-bottom: 40px;
   background-color: #F2F2F0;
+/*背景画像等の装飾*/
   .mainPart {
-    background-image: image-url("hotel4.jpg");
+    background-image: image-url("service_picture.jpg");
     background-position: center bottom;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 400px;
     margin-top: 50px;
     margin-bottom: 60px;
+/*ロゴの装飾*/
     .logoArea {
       background-color: #FFF;
       width: 180px;
@@ -32,6 +35,7 @@
       }
     }
   }
+/*メインブロックの装飾*/
   .mainBlock {
     width: 940px;
     margin: 0 auto;

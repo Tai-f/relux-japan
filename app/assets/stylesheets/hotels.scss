@@ -1,308 +1,611 @@
-// Place all the styles related to the hotels controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-
-.fixed-header {
-  position: fixed;
-  top: 0;
+/*上部余白の装飾*/
+.margin-top {
+  margin-top: 30px;
+}
+/*アメニティがない時の色の装飾*/
+.off {
+  color: #999;
+}
+/*ホテルの目次、タイトルブロックの装飾*/
+.mainContentArea {
+  width: 960px;
+  margin: 0px auto 30px;
+  padding-top: 60px;
+  /*目次の装飾*/
+  .contents {
+    padding: 8px 0 0 3px;
+    color: #555;
+    .li_content {
+      float: left;
+      padding-right: 10px;
+    }
+  }
+}
+/*左右の画像移動ボタンの装飾*/
+.slick-prev:before {
+  color: #000;
+}
+.slick-next:before {
+  color: #000;
+}
+/*左右の画像移動ボタンの位置の装飾*/
+.slick-prev {
+  left: 10px;
+}
+.slick-next {
+  right: 2px;
 }
 
-.titleHeader {
-  margin-bottom: 50px;
+button.slick-prev, button.slick-next {
+  z-index: 2;
 }
 
-h2 {
-  font-size: 18px;
-  letter-spacing: 3px;
-  padding: 6px 0;
+.slick-arrow {
+  z-index: 10;
+}
+/*GoogleMapの装飾*/
+#map {
+  width: 600px ;
+  height: 450px ;
+  margin: 10px 0 10px;
+}
+.googleMap {
+  display: block;
+  text-align: right;
+  margin-bottom: 30px;
+  clear: both;
+}
+/*ホテルタイトルの装飾*/
+.hotelTitle {
+  margin: 15px 0 15px 0;
+  font-size: 32px;
+  color: #1A1A1A;
+  letter-spacing: 0;
+  font-weight: normal;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+/*タブエリアのサブタイトルの装飾*/
+.subTitle {
+  font-size: 19px;
+  padding: 0 0 20px;
+  margin-bottom: 30px;
   font-weight: bold;
+  border-bottom: 1px solid #333;
+  color: #333;
   text-align: center;
 }
-
-#global-header {
-  width: 100%;
-  z-index: 3;
-  .inner-header {
-    min-width: 960px;
-    .logo {
-      height: 50px;
-      margin-left: 60px;
+/*宿泊プランの説明の装飾*/
+.relux-p {
+  line-height: 2.0;
+}
+/*評価ボックスの装飾*/
+.gradeBox {
+  position: relative;
+  border: 2px solid #EFEFEF;
+  margin: 30px 0 50px;
+  width: 607px;
+  display: table;
+  padding: 15px 0 20px;
+  .left {
+    display: table-cell;
+    width: 220px;
+    text-align: center;
+    border-right: 1px solid #EFEFEF;
+    vertical-align: middle;
+    .title {
+      margin-bottom: 5px;
+      img {
+        width: 95px;
+      }
     }
-    .sub {
+    .star {
+      margin-bottom: 15px;
+      img {
+        width: 135px;
+      }
+    }
+  }
+  .right {
+    display: table-cell;
+    width: 327px;
+    vertical-align: middle;
+    padding: 0 30px 0 30px;
+    .description {
+      font-size: 10px;
+      line-height: 2.0;
+    }
+    .gradeLink {
       position: absolute;
-      top: 0px;
-      right: 120px;
-      ul {
-        margin-top: 18px;
-        margin-right: 10px;
-        list-style: none;
-        li {
-          display: inline;
-          font-size: 14px;
-          margin-left: 15px;
-          vertical-align: middle;
-          a {
-            font-weight: bold;
-            text-decoration: none;
-            color: #000099;
-          }
-          .fa-language {
-            display: inline-block;
-            font: normal normal normal 14px/1 FontAwesome;
-          }
-        }
+      right: 0px;
+      bottom: -32px;
+      a {
+        padding-left: 25px;
+        font-size: 10px;
+        text-decoration: none;
       }
     }
   }
 }
-
-#wrapper {
-  @include clearfix();
-  background-color: #FFFFFF;
-  padding-bottom: 30px;
-  .indexPage {
-    .mainPart {
-      height: 600px;
+/* レビューのの装飾*/
+.face {
+  width: 70px;
+  border-radius: 70px;
+}
+/*--------------------------------------左エリアの装飾-------------------------------------------------*/
+.detailLeft {
+  width: 693px;
+  float: left;
+/*スライドショーの装飾*/
+  .slideshow {
+    width: 100%;
+    position: relative;
+    .slideshow-main {
       width: 100%;
-      margin-bottom: 60px;
-      position: relative;
-      background-image: image-url("hotel3.jpg");
-      background-position: center bottom;
-      background-size: cover;
-      background-repeat: no-repeat;
-      .mainImage {
-        #overlay.common-overlay {
-          display: none;
-        }
-        .searchBoxArea {
-          position: absolute;
-          width: 100%;
-          bottom: 0;
-          overflow: hidden;
-        }
-      }
-    }
-  }
-
-  .indexContents {
-    .merit {
-      @include clearfix();
-      border-bottom: 1px solid #EFEFEF;
-      padding: 0 10px 30px;
-      margin: 0 0 50px;
-      .melitArea {
-        .melitBoxWrap {
-          @include clearfix();
-          display: table;
-          width: 100%;
-          .melitBox {
-            width:33%;
-            display: table-cell;
-            vertical-align: middle;
-            text-align: center;
-            p {
-              line-height: 1.5;
-              margin: 10px 0;
-            }
-            .icon {
-              padding-bottom: 10px;
-              margin-bottom: 20px;
-              img {
-                width: 140px;
-              }
-            }
-            .title {
-              font-size: 18px;
-              font-weight: bold;
-              margin-bottom: 15px;
-            }
-            .description {
-              font-size: 12px;
-              line-height: 1.8;
-            }
-          }
-        }
-        .melitLink {
-          margin-top: 50px;
-          text-align: center;
-          line-height: 1.5;
-          .btn {
-            display: inline-block;
-            padding: 8px 12px;
-            margin-bottom: 0;
-            font-size: 14px;
-            vertical-align: middle;
-            cursor: pointer;
-            border-radius: 2px;
-            &--relux {
-              background-color: #0F0A64;
-              color: #FFF;
-              text-decoration: none;
-            }
-          }
-        }
-      }
-    }
-    .selections {
-      @include clearfix();
-      border-bottom: 1px solid #EFEFEF;
-      padding: 0 10px 30px;
-      margin: 0 0 50px;
-      .selectionsArea {
-        margin: 0 20px;
-        .container {
-          @include clearfix();
-          list-style: none;
-          li {
-            a {
-              @include clearfix();
-              padding: 10px;
-              text-decoration: none;
-              .thum {
-                float: left;
-                margin: 0 15px 0 0;
-                img {
-                  width: 130px;
-                  order: 1px solid #EFEFEF;
-                  background-color: #FFFFFF;
-                  padding: 5px;
-                  vertical-align: middle;
-                }
-              }
-              .info {
-                i {
-                  padding-top: 50px;
-                  float: right;
-                  vertical-align: middle;
-                }
-                .title {
-                  font-size: 16px;
-                  line-height: 1.6;
-                  font-weight: normal;
-                  color: #000000;
-                  padding-right: 20px;
-                  margin: 5px 0 5px 0;
-                }
-                .date {
-                  font-size: 11px;
-                  line-height: 1.6;
-                  color: #666666;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    .service {
-      @include clearfix();
-      padding: 0 10px 0;
-      .serviceArea {
-        margin: 0 20px;
-        .serviceBoxWrap {
-          .service-box {
-            margin-right: 20px;
-            margin-bottom: 50px;
-            p {
-              img {
-                width: 225px;
-                vertical-align: bottom;
-              }
-            }
-          }
-        }
-      }
-      .other {
-        @include clearfix();
-        h2 {
-          font-weight: bold;
-          margin-bottom: 24px;
-          background-size: 12px auto;
-          padding-left: 22px;
-        }
-        table {
-          font-size: 12px;
-          th {
-            font-weight: bold;
-            padding-bottom: 8px;
-            width: 16%;
-            vertical-align: top;
-          }
-        }
-      }
-    }
-  }
-}
-/*footerの装飾*/
-#footer {
-  background-color: #FFF;
-  clear: both;
-  #global-footer {
-    background-color: #303233;
-    color: #FFF;
-    clear: both;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-    .footer-inner {
-      padding: 40px 0 0px;
-      max-width: 960px;
+      height:430px;
       margin: 0 auto;
-      .col-wrap {
-        display: table;
-        width: 100%;
-        border-bottom: 1px solid #393C3E;
-        padding-bottom: 30px;
-        margin-bottom: 10px;
-        .inbound {
-          display: table-cell;
-          width: 25%;
-          vertical-align: top;
+      overflow: hidden;
+      .slideshow-image {
+        background-color: #170A03;
+        text-align: center;
+      }
+    }
+    .slideshow-nav {
+      width: 100%;
+      margin: 0 auto;
+      .slideshow-image {
+        background-color: #170A03;
+        text-align: center;
+        img {
+          width: 100%;
+          height: 60px;
+          border: 3px solid #000;
         }
-
-        .menu {
-          display: table-cell;
-          width: 25%;
-          vertical-align: top;
-          .title {
-            padding: 0;
-            margin-bottom: 15px;
-            border-bottom: none;
-            background: none;
-            background-size: auto;
-            text-align: left;
+      }
+    }
+  }
+/*タブの装飾*/
+  .detail_tabwrapper {
+    margin-top: 30px;
+    .tabArea {
+      width: 100%;
+      border-bottom: 1px solid #DEDEDE;
+      li {
+        padding: 18px 0;
+        text-align: center;
+        display: block;
+        float: left;
+        border: 1px solid #DEDEDE;
+        line-height: 1.0;
+        font-size: 14px;
+        margin-bottom: -1px;
+        text-decoration: none;
+        background-color: #FFF;
+        width: 25%;
+        position: relative;
+      }
+    }
+/*各タブ詳細エリアの装飾*/
+    .tabContent {
+      width: 100%;
+      background-color: #FFF;
+      padding: 20px 40px 60px;
+      border: 1px solid #DEDEDE;
+      border-top: none;
+/*施設詳細の装飾*/
+      .introduction {
+        margin-bottom: 60px;
+        .description {
+          line-height: 2.8;
+        }
+        .hotel_detail {
+          th {
+            height: 16px;
+            padding: 5px 10px;
+            background: #EFEFEF;
+            font-size: 12px;
+            width: 170px;
           }
-          .nav {
-            li {
-              margin-bottom: 10px;
-              a {
-                text-decoration: none;
-                color: #CCCCCC;
-                background-color: inherit;
-                padding: 0;
-                border-bottom: none;
-              }
-            }
+          td {
+            padding-left: 20px;
+          }
+          .space {
+            height: 20px;
+          }
+        }
+        .amenity {
+          th {
+            padding: 5px 0;
+            width: 30%;
+          }
+          td {
+            font-size: 16px;
+            padding-top: 5px;
+            padding-right: 40px;
+          }
+        }
+        .notes {
+          font-size: 12px;
+          margin-bottom: 20px;
+          line-height: 1.6;
+          color: #777;
+        }
+        .childnotes {
+          line-height: 2.0;
+        }
+        .hotel_cancel {
+          th {
+            height: 16px;
+            padding: 5px 10px;
+            background: #EFEFEF;
+            font-size: 12px;
+            width: 170px;
+          }
+          td {
+            padding-left: 20px;
+          }
+          .space {
+            height: 20px;
           }
         }
       }
-      .info {
+/*プラン詳細の装飾*/
+      .plan-theme {
+        padding: 30px 30px;
+        border: 2px solid #EFEFEF;
+        margin-top: 30px;
+        margin-bottom: 10px;
         text-align: center;
-        padding: 20px 10px;
-        .logo {
-          width: 38px;
+        line-height: 2.2;
+        font-size: 16px;
+      }
+      .food-plan {
+        text-align: left;
+        margin-bottom: 40px;
+        .plan-icon {
+          background: image-url("icon_food.gif");
+          background-position: 0 50%;
+          background-repeat: no-repeat;
+          padding: 3px 0 0 20px;
         }
-        .nav-info {
-          margin: 10px 0 15px;
-          li {
-            margin: 0 5px;
-          }
+      }
+      .relux-theme {
+        width: 100%;
+        font-size: 24px;
+        text-align: center;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+        background-image: image-url("line_plan.png");
+        background-position: center bottom;
+        background-repeat: no-repeat;
+      }
+      .priviledge {
+        margin-bottom: 50px;
+      }
+    }
+/* 会員登録の装飾*/
+    .registration {
+      margin: 20px auto 30px;
+      text-align: center;
+      border: 2px solid #EFEFEF;
+      padding: 20px 10px 30px;
+      background-color: #FFF;
+      p {
+        font-size: 20px;
+        span {
+          font-size: 13px;
+          padding-top: 20px;
+          display: block;
         }
-        small {
-          font-size: 11px;
-          color: #CCCCCC;
+      }
+      .btn {
+        display: inline-block;
+        padding: 8px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        vertical-align: middle;
+        cursor: pointer;
+        border-radius: 2px;
+        &--relux {
+          background-color: #0F0A64;
+          color: #FFF;
+          text-decoration: none;
         }
       }
     }
   }
 }
+.reviewList {
+  @include clearfix();
+  padding-bottom: 20px;
+  border-bottom: 1px dotted #CCC;
+  .avatar {
+    float: left;
+    margin-right: 30px;
+  }
+  .review-body {
+    float: left;
+    width: 505px;
+    .review-header {
+      width: 100%;
+      margin-bottom: 10px;
+      .review-rate {
+        float: left;
+        font-size: 16px;
+        color: #333;
+        .on {
+          color: #F39D10;
+        }
+      }
+      .review-name {
+        float: right;
+        font-size: 11px;
+        color: #666;
+        margin-top: 13px;
+      }
+    }
+    .review-text {
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+/*------------------右エリアの装飾-----------------------------------------------------------*/
+.detailRight {
+  width: 250px;
+  float: right;
+  position: relative;
+/*予約詳細の装飾*/
+  .reserveArea {
+    border: 2px solid #EFEFEF;
+    padding: 10px;
+    background-color: #FFF;
+    .btn {
+      display: inline-block;
+      padding-right: 4em;
+      padding-left: 4em;
+      margin-bottom: 0;
+      font-size: 14px;
+      vertical-align: middle;
+      cursor: pointer;
+      border-radius: 2px;
+      &--relux {
+        background-color: #0F0A64;
+        color: #FFF;
+        text-decoration: none;
+      }
+    }
+  }
+  .reserve-phone {
+    margin-top: 10px;
+    border: 2px solid #EFEFEF;
+    padding: 10px 10px;
+    background-color: #FFF;
+  }
+}
+/*チェックイン日の装飾*/
+.checkin-area {
+  padding: 5px 0;
+  text-align: center;
+  position: relative;
+}
+.check-in {
+  width: 204px;
+  height: 40px;
+  border: 1px solid #CCC;
+  line-height: 30px;
+  padding: 5px 10px;
+  background: image-url("top_icon_cal.png");
+  background-position: 90% 50%;
+  background-repeat: no-repeat;
+  background-color: #FFF;
+  background-size: auto 40%;
+}
+/*チェックアウト日の装飾*/
+.checkout-area {
+  padding: 5px 0;
+  text-align: center;
+  position: relative;
+}
+.check-out {
+  width: 204px;
+  border: 1px solid #CCC;
+  height: 40px;
+  line-height: 30px;
+  padding: 5px 10px;
+  background: image-url("top_icon_cal.png");
+  background-position: 90% 50%;
+  background-repeat: no-repeat;
+  background-color: #FFF;
+  background-size: auto 40%;
+}
+/*メッセージの装飾*/
+.check-message {
+  margin-bottom: 20px;
+  border-left: 2px solid #DDD;
+  padding-left: 10px;
+}
+
+/*予約人数エリアの装飾*/
+.reservednum-area {
+  padding: 10px 0 15px 35px;
+  border-top: 1px solid #EFEFEF;
+  border-bottom: 1px solid #EFEFEF;
+  position: relative;
+}
+/*予約部屋エリアの装飾*/
+.reservedroom-area {
+  position: relative;
+}
+/*各部屋の装飾*/
+.eachroom-area {
+  position: relative;
+  display: inline-block;
+  padding: 10px 5px 10px 5px;
+  border-bottom: 1px solid #EFEFEF;
+  width: 216px;
+  .radioarea {
+    height: 18px;
+    width: 18px;
+    line-height: 18px;
+  }
+  .info {
+    margin-top: -17px;
+    .detail {
+      margin-left: 25px;
+      h4 {
+        font-weight: bold;
+        line-height: 20px;
+        font-size: 13px;
+        margin-bottom: 5px;
+      }
+      span {
+        padding-right: 10px;
+        text-align: right;
+        display: block;
+        font-weight: 100;
+        font-size: 14px;
+        line-height: 20px;
+      }
+      .roomP {
+        padding-right: 10px;
+        text-align: right;
+        display: block;
+        font-weight: 100;
+        font-size: 10px;
+        line-height: 20px;
+      }
+      .description {
+        clear: both;
+        font-size: 10px;
+        line-height: 1.6;
+        color: #666;
+      }
+    }
+  }
+}
+/*食事エリアの装飾*/
+.food-area {
+  margin-top: 20px;
+  border-bottom: 1px solid #EFEFEF;
+  li {
+    height: 30px;
+    float: left;
+    padding: 6px 10px;
+    margin-bottom: 10px;
+    border: 1px solid #FFF;
+  }
+/*選択可の装飾*/
+  .food {
+    border: 1px solid #0F0A64;
+    color: #0F0A64;
+    label {
+      margin-top: -6px;
+      margin-bottom: 0;
+    }
+  }
+/*不選択の装飾*/
+  .no_food {
+    label {
+      font-size: 13px;
+      font-weight: normal;
+      margin-top: -6px;
+      margin-bottom: 0;
+      opacity: 0.5;
+      text-decoration: line-through;
+    }
+  }
+}
+/*料金エリアの装飾*/
+.price-area {
+  padding-top: 15px;
+  text-align: center;
+  clear: both;
+  span {
+    font-size: 15px;
+    color: #333;
+    display: block;
+  }
+  .totalP {
+    font-size: 23px;
+    font-weight: 100;
+  }
+  .tax {
+    font-size: 11px;
+    padding-bottom: 3px;
+  }
+  .point-area {
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 15px;
+    p {
+      span {
+        font-size: 11px;
+      }
+      .total_point {
+        margin-left: 4em;
+        font-weight: bold;
+        color: #CC0000;
+        float: left;
+      }
+    }
+    .relux_point {
+      border: 1px solid #CCCCCC;
+      padding: 5px 10px;
+      text-align: center;
+      display: inline;
+    }
+  }
+  .assurance {
+    font-size: 11px;
+    color: #707070;
+    font-weight: 100;
+    margin-bottom: 10px;
+  }
+}
+/*予約電話番号の装飾*/
+.reserve-phone {
+  margin-top: 10px;
+  border: 2px solid #EFEFEF;
+  padding: 10px 10px;
+  background-color: #FFF;
+  .title {
+    border-bottom: 1px solid #EFEFEF;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 14px;
+  }
+  .number {
+    text-align: center;
+    font-size: 18px;
+  }
+  .status {
+    margin: 0 4em 0 4em;
+    text-align: center;
+    background-color: #87C23C;
+    border-radius: 100px;
+    span {
+      color: #FFF;
+      font-size: 11px;
+    }
+  }
+  .time {
+    text-align: center;
+  }
+  .reception {
+    font-size: 11px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .body {
+    font-size: 11px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
+
 

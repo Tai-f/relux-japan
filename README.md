@@ -27,13 +27,14 @@ add_index :members, [:family_name, first_name, email]
 
 ***~hotels table~***
 
-|id|name|hiragana_name|prefecture|city|street|phone_number|url|check-in_time|check-out_time|total_rooms|card_type|grade|amenity|cancel|
-|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-||||||||||||||||
+|id|name|hiragana_name|prefecture|city|street|phone_number|url|check-in_time|check-out_time|total_rooms|card_type|plan|grade|amenity|cancel|location_latitude|location_longitude|access_by_public|access_by_car|
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|||||||||||||||||||
 
 has_many :foods
 has_many :photos
 has_many :rooms
+has_many :reviews
 belongs_to :course
 has_many :courses, through: :hotel_courses
 has_many :hotel_courses
@@ -100,7 +101,7 @@ t.text :body, null:false
 
 ***~reservations table~***
 
-|id|member_id|room_id|food_id|family_name|first_name|furigana_family|furigana_first|postal_code|address|email|phone-number|check-in_date|check-out_date|male_number|female_number|total_number|total_price|comment|reminder_mail|coupon|pay_type|card_id|
+|id|member_id|room_id|food_id|family_name|first_name|furigana_family|furigana_first|postal_code|address|email|phone-number|check-in_date|check-out_date|adult_number|child_number|total_number|total_price|comment|reminder_mail|coupon|pay_type|card_id|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 ||||||||||||||||||||||
 
@@ -126,12 +127,14 @@ add_index :reservations, [:family_name, :first_name, :room_id]
 
 ***~reviews table~***
 
-|id|member_id|body|
-|:--:|:--:|:--:|
-||||
+|id|member_id|hotel_id|accommodation_date|body|
+|:--:|:--:|:--:|:--:|:--:|
+||||||
 
 belongs_to :member
+belongs_to :hotel
 t.references :member
+t.references :hotel
 t.string :theme, null:false
 
 ***~requests table~***
