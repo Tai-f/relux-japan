@@ -618,9 +618,6 @@ $(document).on('turbolinks:load', function(){
   });
 
   $('.facility').css('border-bottom-color', '#FFF');
-
-});
-$(function() {
 //プランタブをクリックした時//
   $('.plan').on('click', function() {
     planPart();
