@@ -4,8 +4,8 @@
 design DB of "relux-japan"
 
 ## **Description**
-design **13** tables
-【members, hotels, rooms, courses, hotel_courses, reservations, reviews, requests, tickets,  interviews, foods, photos, cards】
+design **14** tables
+【members, hotels, rooms, selections, hotel_selections, courses, reservations, reviews, requests, tickets,  interviews, foods, photos, cards】
 
 ***~members table~***
 
@@ -27,17 +27,17 @@ add_index :members, [:family_name, first_name, email]
 
 ***~hotels table~***
 
-|id|name|hiragana_name|prefecture|city|street|phone_number|url|check-in_time|check-out_time|total_rooms|card_type|plan|grade|amenity|cancel|location_latitude|location_longitude|access_by_public|access_by_car|
-|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-|||||||||||||||||||
+|id|name|hiragana_name|prefecture|city|street|phone_number|url|check-in_time|check-out_time|total_rooms|card_type|plan|grade|amenity|cancel|location_latitude|location_longitude|access_by_public|access_by_car|concept|course_id|
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|||||||||||||||||||||
 
 has_many :foods
 has_many :photos
 has_many :rooms
 has_many :reviews
 belongs_to :course
-has_many :courses, through: :hotel_courses
-has_many :hotel_courses
+has_many :selections, through: :hotel_selections
+has_many :hotel_selections
 has_many :interviews
 t.string :name, null:false
 t.string :hiragana_name, null:false
@@ -45,6 +45,7 @@ t.string :prefecture, null:false
 t.string :city, null:false
 t.string :street, null:false
 t.integer :phone_number, null:false
+t.references :course
 add_index :hotels, :name
 add_index :hotels, :prefecture
 
@@ -61,29 +62,28 @@ t.integer :price, null:false
 t.references :hotel
 add_index :rooms, :name
 
-***~courses table~***
+***~selections table~***
 
-|id|name|price|theme|body|
-|:--:|:--:|:--:|:--:|:--:|
-||||||
+|id|name|image|body|
+|:--:|:--:|:--:|:--:|
+|||||
 
-has_many :tickets
-has_many :hotels, through: :hotel_courses
-has_many :hotel_courses
+has_many :hotels, through: :hotel_selections
+has_many :hotel_selections
 t.string :name, null:false
-t.string :theme, null:false
-add_index :rooms, :name
+t.string :image, null:false
+t.text :body, null:false
 
-***~hotel_courses table~***
+***~hotel_selections table~***
 
-|id|hotel_id|course_id|
+|id|hotel_id|selection_id|
 |:--:|:--:|:--:|
 ||||
 
-has_many :hotels
-has_many :courses
+belongs_to :hotel
+belongs_to :selection
 t.references :hotel
-t.references :course
+t.references :selection
 
 ***~courses table~***
 
