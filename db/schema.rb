@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170106131707) do
+ActiveRecord::Schema.define(version: 20170129121850) do
 
   create_table "courses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",                     null: false
@@ -22,23 +22,61 @@ ActiveRecord::Schema.define(version: 20170106131707) do
     t.datetime "updated_at",               null: false
   end
 
+  create_table "hotel_selections", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "hotel_id"
+    t.integer  "selection_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["hotel_id"], name: "index_hotel_selections_on_hotel_id", using: :btree
+    t.index ["selection_id"], name: "index_hotel_selections_on_selection_id", using: :btree
+  end
+
   create_table "hotels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name",                         null: false
-    t.string   "hiragana_name",                null: false
-    t.string   "prefecture",                   null: false
-    t.string   "city",                         null: false
-    t.string   "street",                       null: false
-    t.integer  "phone_number",                 null: false
+    t.string   "name",                                            null: false
+    t.string   "hiragana_name",                                   null: false
+    t.string   "prefecture",                                      null: false
+    t.string   "city",                                            null: false
+    t.string   "street",                                          null: false
+    t.string   "phone_number",                                    null: false
     t.string   "url"
     t.time     "check_in_time"
     t.time     "check_out_time"
     t.integer  "total_rooms"
     t.string   "card_type"
     t.integer  "grade"
-    t.text     "amenity",        limit: 65535
-    t.text     "cancel",         limit: 65535
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.text     "amenity",            limit: 65535
+    t.text     "cancel",             limit: 65535
+    t.datetime "created_at",                                      null: false
+    t.datetime "updated_at",                                      null: false
+    t.integer  "course_id"
+    t.decimal  "location_latitude",                precision: 10
+    t.decimal  "location_longitude",               precision: 10
+    t.text     "access_by_public",   limit: 65535
+    t.text     "access_by_car",      limit: 65535
+    t.text     "concept",            limit: 65535
+    t.text     "description",        limit: 65535
+    t.text     "plan",               limit: 65535
+    t.index ["course_id"], name: "index_hotels_on_course_id", using: :btree
   end
 
+  create_table "photos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "image",      null: false
+    t.integer  "hotel_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["hotel_id"], name: "index_photos_on_hotel_id", using: :btree
+  end
+
+  create_table "selections", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name",                     null: false
+    t.string   "image",                    null: false
+    t.text     "body",       limit: 65535, null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  add_foreign_key "hotel_selections", "hotels"
+  add_foreign_key "hotel_selections", "selections"
+  add_foreign_key "hotels", "courses"
+  add_foreign_key "photos", "hotels"
 end
