@@ -1,6 +1,7 @@
 class HotelsController < ApplicationController
 
   def index
+    @selections = Selection.order("id ASC")
   end
 
   def show
