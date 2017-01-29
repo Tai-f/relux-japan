@@ -1,0 +1,173 @@
+%header#global-header.fixed-header.white.transparent
+  =render partial: "hotels/header"
+#wrapper.clearfix.grey
+  .mainSelectionArea.white
+    %ul.contents.clearfix
+      %li.li_content.hover
+        =link_to "トップページ", root_path
+        %i.fa.fa-angle-right
+      %li.li_content.hover
+        =link_to "Reluxセレクションズトップ", selections_path
+        %i.fa.fa-angle-right
+      %li.li_content.hover
+        =@selection.name
+    .selectionArea.clearfix
+      .thumb
+        =image_tag @selection.image, alt: @selection.name
+      .info
+        %h2.title
+          =@selection.name
+        %p.description
+          =@selection.body
+      .snsArea
+        %ul.shareBtn
+          %li.facebook
+            =link_to "https://www.facebook.com/share.php?u=https://goo.gl/uwAmRB", class: "hover" do
+              %i
+          %li.twitter
+            =link_to "http://twitter.com/intent/tweet?text=2016年7月、ブランドロゴをリニューアルし、Reluxは新たな一歩を踏みだします。 → https://goo.gl/12K1de&via=Relux_jp&hashtags=Relux", class: "hover" do
+              %i
+          %li.google
+            =link_to "https://plus.google.com/share?url=https://goo.gl/qeIAQ0", class: "hover" do
+              %i
+          %li.line
+            =link_to "line://msg/text/2016年7月、ブランドロゴをリニューアルし、Reluxは新たな一歩を踏みだします。→ https://goo.gl/YjB6Rd" , class: "hover" do
+              %i
+  .hotelListArea.clearfix
+    .hotel.clearfix
+      .thumb
+        =link_to "/hotels/1", class: "hover" do
+          =image_tag asset_path "hakone.jpg", alt: "箱根花紋"
+      .info
+        %p.name 箱根花紋
+        %p.grade
+          =image_tag asset_path "grade_star.jpg"
+          =image_tag asset_path "grade_star.jpg"
+        %p.area 首都圏 > 神奈川県
+        %p.description 箱根旧街道に佇む、自家源泉が自慢の湯宿
+        %p.detail
+          =link_to "つづきをよむ", "/hotels/1/", class: "btn btn--relux"
+    .hotel.clearfix
+      .thumb
+        =link_to "/hotels/1", class: "hover" do
+          =image_tag asset_path "hakone.jpg", alt: "箱根花紋"
+      .info
+        %p.name 箱根花紋
+        %p.grade
+          =image_tag asset_path "grade_star.jpg"
+          =image_tag asset_path "grade_star.jpg"
+        %p.area 首都圏 > 神奈川県
+        %p.description 箱根旧街道に佇む、自家源泉が自慢の湯宿
+        %p.detail
+          =link_to "つづきをよむ", "/hotels/1/", class: "btn btn--relux"
+    .hotel.clearfix
+      .thumb
+        =link_to "/hotels/1", class: "hover" do
+          =image_tag asset_path "hakone.jpg", alt: "箱根花紋"
+      .info
+        %p.name 箱根花紋
+        %p.grade
+          =image_tag asset_path "grade_star.jpg"
+          =image_tag asset_path "grade_star.jpg"
+        %p.area 首都圏 > 神奈川県
+        %p.description 箱根旧街道に佇む、自家源泉が自慢の湯宿
+        %p.detail
+          =link_to "つづきをよむ", "/hotels/1/", class: "btn btn--relux"
+    .hotel.clearfix
+      .thumb
+        =link_to "/hotels/1", class: "hover" do
+          =image_tag asset_path "hakone.jpg", alt: "箱根花紋"
+      .info
+        %p.name 箱根花紋
+        %p.grade
+          =image_tag asset_path "grade_star.jpg"
+          =image_tag asset_path "grade_star.jpg"
+        %p.area 首都圏 > 神奈川県
+        %p.description 箱根旧街道に佇む、自家源泉が自慢の湯宿
+        %p.detail
+          =link_to "つづきをよむ", "/hotels/1/", class: "btn btn--relux"
+    .hotel.clearfix
+      .thumb
+        =link_to "/hotels/1", class: "hover" do
+          =image_tag asset_path "hakone.jpg", alt: "箱根花紋"
+      .info
+        %p.name 箱根花紋
+        %p.grade
+          =image_tag asset_path "grade_star.jpg"
+          =image_tag asset_path "grade_star.jpg"
+        %p.area 首都圏 > 神奈川県
+        %p.description 箱根旧街道に佇む、自家源泉が自慢の湯宿
+        %p.detail
+          =link_to "つづきをよむ", "/hotels/1/", class: "btn btn--relux"
+    .hotel.clearfix
+      .thumb
+        =link_to "/hotels/1", class: "hover" do
+          =image_tag asset_path "hakone.jpg", alt: "箱根花紋"
+      .info
+        %p.name 箱根花紋
+        %p.grade
+          =image_tag asset_path "grade_star.jpg"
+          =image_tag asset_path "grade_star.jpg"
+        %p.area 首都圏 > 神奈川県
+        %p.description 箱根旧街道に佇む、自家源泉が自慢の湯宿
+        %p.detail
+          =link_to "つづきをよむ", "/hotels/1/", class: "btn btn--relux"
+    .hotel.clearfix
+      .thumb
+        =link_to "/hotels/1", class: "hover" do
+          =image_tag asset_path "hakone.jpg", alt: "箱根花紋"
+      .info
+        %p.name 箱根花紋
+        %p.grade
+          =image_tag asset_path "grade_star.jpg"
+          =image_tag asset_path "grade_star.jpg"
+        %p.area 首都圏 > 神奈川県
+        %p.description 箱根旧街道に佇む、自家源泉が自慢の湯宿
+        %p.detail
+          =link_to "つづきをよむ", "/hotels/1/", class: "btn btn--relux"
+    .hotel.clearfix
+      .thumb
+        =link_to "/hotels/1", class: "hover" do
+          =image_tag asset_path "hakone.jpg", alt: "箱根花紋"
+      .info
+        %p.name 箱根花紋
+        %p.grade
+          =image_tag asset_path "grade_star.jpg"
+          =image_tag asset_path "grade_star.jpg"
+        %p.area 首都圏 > 神奈川県
+        %p.description 箱根旧街道に佇む、自家源泉が自慢の湯宿
+        %p.detail
+          =link_to "つづきをよむ", "/hotels/1/", class: "btn btn--relux"
+  .registrationArea
+    .registration
+      %p.message Reluxは一流旅館・ホテルだけを厳選した宿泊予約サイトです。<br>最低価格保証プラン、Reluxポイントは業界最大の5％還元などが魅力です。<br>会員登録、年会費などは一切無料ですのでご安心くださいませ。
+      %p.txt ※会員登録する前に、サイト利用規約、個人情報保護方針をご確認ください。
+      %p.loginBtn
+        =link_to "Relux 会員ログイン", "#login", class: "btn btn--relux"
+  .navArea.container
+    .row
+      .col-xs-4
+        %i.fa.fa-angle-left
+        =link_to "前のselections", "/hotels/1"
+      .col-xs-4
+        =link_to "selectionsトップ", "/selections"
+      .col-xs-4
+        =link_to "次のselections", "/hotels/1"
+        %i.fa.fa-angle-right
+  .recommendArea.darkGrey
+    %h3.title おすすめのselections
+    .selectionList.clearfix.container
+      .row
+        - @selections.each do |selection|
+          .selectionBox.col-xs-4.darkGrey
+            .thumb
+              =link_to selection_path(id: selection.id), class: "hover" do
+                =image_tag selection.image, alt: "hotel"
+            .info
+              %p.theme
+                =selection.name
+              %p.description
+                =selection.body
+              =link_to "詳細ページを見る", selection_path(id: selection.id), class: "btn btn--relux"
+
+=render partial: "hotels/footer"
