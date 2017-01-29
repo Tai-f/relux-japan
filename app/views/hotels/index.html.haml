@@ -26,61 +26,24 @@
               %p.title 特別なおもてなし
               %p.description お料理/お部屋の無料アップグレードなど、<br>Relux特典付きのプランを体験いただけます。
           %p.melitLink
-            =link_to "Reluxとは", "/hotels/service/", class: "btn btn--relux"
+            =link_to "Reluxとは", service_hotels_path, class: "btn btn--relux"
       .selections.clearfix
         .selectionsArea
           .titleHeader
             %h2 Relux selections
           %ul.container.clearfix
             .row
-              %li.col-sm-6
-                =link_to "/hotels/selections", class: "hover clearfix" do
-                  %p.thum
-                    = image_tag asset_path "sougyou100.jpg", alt: "hotel", size: "150x100"
-                  .info
-                    %i.fa.fa-angle-right
-                    %p.title 創業100年以上の老舗旅館でタイムトラベル
-                    %p.date 2017/01/04
-              %li.col-sm-6
-                =link_to "/hotels/selections", class: "hover clearfix" do
-                  %p.thum
-                    = image_tag asset_path "fujisan.jpg", alt: "hotel", size: "150x100"
-                  .info
-                    %i.fa.fa-angle-right
-                    %p.title 富士山をのぞむ絶景宿７選
-                    %p.date 2017/01/01
-              %li.col-sm-6
-                =link_to "/hotels/selections", class: "hover clearfix" do
-                  %p.thum
-                    = image_tag asset_path "petto100.jpg", alt: "hotel", size: "150x100"
-                  .info
-                    %i.fa.fa-angle-right
-                    %p.title 愛犬と旅を楽しむ！ペットと泊まれる宿８選
-                    %p.date 2016/12/27
-              %li.col-sm-6
-                =link_to "/hotels/selections", class: "hover clearfix" do
-                  %p.thum
-                    = image_tag asset_path "kani.jpg", alt: "hotel", size: "150x100"
-                  .info
-                    %i.fa.fa-angle-right
-                    %p.title 冬の味覚に舌鼓！カニを堪能できる宿
-                    %p.date 2017/01/02
-              %li.col-sm-6
-                =link_to "/hotels/selections", class: "hover clearfix" do
-                  %p.thum
-                    = image_tag asset_path "activity.jpg", alt: "hotel", size: "150x100"
-                  .info
-                    %i.fa.fa-angle-right
-                    %p.title 冬のアクティビティが楽しめる宿
-                    %p.date 2016/12/29
-              %li.col-sm-6
-                =link_to "/hotels/selections", class: "hover clearfix" do
-                  %p.thum
-                    = image_tag asset_path "oceanview.jpg", alt: "hotel", size: "150x100"
-                  .info
-                    %i.fa.fa-angle-right
-                    %p.title 冬の熱海を満喫する、オーシャンビューの宿
-                    %p.date 2016/12/26
+              - @selections.each do |selection|
+                %li.col-xs-6
+                  =link_to selection_path(id: selection.id), class: "hover clearfix" do
+                    %p.thum
+                      = image_tag selection.image, alt: "hotel", size: "150x100"
+                    .info
+                      %i.fa.fa-angle-right
+                      %p.title
+                        =selection.name
+                      %p.date
+                        =selection.created_at.strftime('%Y/%m/%d')
       .service.clearfix
         .serviceArea
           .titleHeader
