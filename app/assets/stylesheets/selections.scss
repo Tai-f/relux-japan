@@ -1,0 +1,225 @@
+/*セレクションの装飾*/
+.mainSelectionArea {
+  margin-bottom: 20px;
+  padding: 60px 0 10px;
+  .contents {
+    width: 940px;
+    margin: 0 auto;
+    padding: 8px 0 0 3px;
+    color: #555;
+    .li_content {
+      float: left;
+      padding-right: 10px;
+      a {
+        vertical-align: middle;
+        color: #555;
+      }
+    }
+  }
+  .selectionArea {
+    @include clearfix();
+    width: 940px;
+    margin: 0 auto;
+    overflow: hidden;
+    .thumb {
+      float: left;
+      width: 258px;
+      margin-right: 20px;
+      padding-top: 10px;
+      img {
+        width: 258px;
+        border: 1px solid #DDD;
+        padding: 3px;
+      }
+    }
+    .info {
+      float: left;
+      width: 650px;
+      .title {
+        text-align: left;
+        font-size: 28px;
+        font-weight: normal;
+        margin-bottom: 10px;
+        margin-top: 5px;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+      }
+      .description {
+        line-height: 2.2;
+      }
+    }
+  }
+}
+/*各ホテル情報の装飾*/
+.hotelListArea {
+  @include clearfix();
+  width: 940px;
+  margin: 0 auto;
+  overflow: hidden;
+  .hotel {
+    @include clearfix();
+    margin-bottom: 30px;
+    position: relative;
+    background-color: #FFF;
+    .thumb {
+      width: 50%;
+      float: left;
+      img {
+        display: block;
+        width: 470px;
+        height: 319px;
+      }
+    }
+    .info {
+      float: right;
+      width: 48%;
+      padding: 20px 10px 10px;
+      padding-right: 2%;
+      .name {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      .grade {
+        float: right;
+        img {
+          height: 13px;
+          margin-right: 2px;
+        }
+      }
+      .area {
+        margin-bottom: 20px;
+        font-size: 11px;
+        line-height: 1.8;
+      }
+      .description {
+        line-height: 2.2;
+        margin-bottom: 10px;
+        font-size: 11px;
+      }
+      .detail {
+        float: right;
+        .btn {
+          display: inline-block;
+          font-size: 12px;
+          vertical-align: middle;
+          border-radius: 2px;
+          &--relux {
+            background-color: #0F0A64;
+            color: #FFF;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+.registrationArea {
+  width: 940px;
+  margin: 0 auto;
+  overflow: hidden;
+  .registration {
+    margin-bottom: 20px;
+    background-color: #FFF;
+    color: #333;
+    padding: 50px 50px;
+    .message {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 14px;
+      line-height: 2.0;
+    }
+    .txt {
+      clear: both;
+      text-align: center;
+      font-size: 12px;
+      margin-bottom: 20px;
+      padding-top: 10px;
+    }
+    .loginBtn {
+      text-align: center;
+      .btn {
+        display: inline-block;
+        font-size: 12px;
+        vertical-align: middle;
+        border-radius: 2px;
+        &--relux {
+          background-color: #0F0A64;
+          color: #FFF;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+.navArea {
+  width: 940px;
+  padding: 20px;
+  margin-bottom: 30px;
+  clear: both;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.0;
+  background-color: #FFF;
+  a {
+    color: #000;
+  }
+}
+.recommendArea {
+  margin-bottom: 50px;
+  .title {
+    font-size: 26px;
+    padding: 50px 0;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  }
+  .selectionList {
+    width: 940px;
+    margin: 0 auto 30px;
+    overflow: hidden;
+    .selectionBox {
+      margin-bottom: 20px;
+      .thumb {
+        margin: 0 auto;
+        img {
+          width: 100%;
+        }
+      }
+      .info {
+        background-color: #FFF;
+        padding: 20px;
+        .theme {
+          height: 48px;
+          margin-bottom: 10px;
+          font-size: 16px;
+        }
+        .description {
+          height: 114px;
+          margin-bottom: 10px;
+          font-size: 11px;
+          line-height: 1.8;
+          overflow: hidden;
+        }
+        .btn {
+          width: 100%;
+          display: inline-block;
+          font-size: 12px;
+          vertical-align: middle;
+          border-radius: 2px;
+          &--relux {
+            background-color: #0F0A64;
+            color: #FFF;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+.moreBtn {
+  clear: both;
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 30px;
+  font-size: 18px;
+  background-color: #FFF;
+  color: #333;
+}
