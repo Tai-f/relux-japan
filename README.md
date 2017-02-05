@@ -51,9 +51,9 @@ add_index :hotels, :prefecture
 
 ***~rooms table~***
 
-|id|hotel_id|name|price|body|maximum_member|
-|:--:|:--:|:--:|:--:|:--:|:--:|
-|||||||
+|id|hotel_id|name|image|price|body|feature|room_type|maximum_room_number|
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+||||||||||
 
 has_many :reservations
 belongs_to :hotel
@@ -127,7 +127,7 @@ add_index :reservations, [:family_name, :first_name, :room_id]
 
 ***~reviews table~***
 
-|id|member_id|hotel_id|accommodation_date|body|
+|id|member_id|hotel_id|accommodation_date|body|rate|
 |:--:|:--:|:--:|:--:|:--:|
 ||||||
 
@@ -135,7 +135,8 @@ belongs_to :member
 belongs_to :hotel
 t.references :member
 t.references :hotel
-t.string :theme, null:false
+t.text :body, null:false
+t.integer :rate, null:false
 
 ***~requests table~***
 
@@ -181,7 +182,7 @@ t.integer :postal_code, null:false
 t.references :course
 t.references :card
 add_index :tickets, [:buyer_name, :email]
-add_index :hotels, [:receiver_name, :address]
+add_index :tickets, [:receiver_name, :address]
 
 ***~interviews table~***
 
@@ -198,7 +199,7 @@ t.string :carrier, null:false
 t.string :theme, null:false
 t.string :body, null:false
 t.references :hotel
-add_index :rooms, :name
+add_index :interviews, :name
 
 ***~foods table~***
 
@@ -211,7 +212,7 @@ belongs_to :hotel
 t.references :hotel
 t.string :name, null:false
 t.integer :price, null:false
-add_index :rooms, [:name, :price]
+add_index :foods, [:name, :price]
 
 ***~photos table~***
 
