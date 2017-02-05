@@ -1,0 +1,31 @@
+%header#global-header.fixed-header.white.transparent
+  =render partial: "hotels/header"
+#wrapper.clearfix.grey
+  .mainSelectionArea.white
+    %ul.contents.clearfix
+      %li.li_content.hover
+        =link_to "トップページ", root_path
+        %i.fa.fa-angle-right
+      %li.li_content.hover
+        =link_to "Reluxセレクションズトップ", selections_path
+    .selectionArea.clearfix
+      .info
+        %h2.title Reluxセレクションズ
+        %p.description Reluxが厳選した一流旅館・ホテルをテーマごとにご紹介します。<br>つぎの旅行で訪れてみたい一軒に、出会ってみませんか。
+  .recommendArea
+    .selectionList.clearfix.container
+      .row
+        - @selections.each do |selection|
+          .selectionBox.col-xs-4
+            .thumb
+              =link_to selection_path(id: selection.id), class: "hover" do
+                =image_tag selection.image, alt: "hotel"
+            .info
+              %p.theme
+                =selection.name
+              %p.description
+                =selection.body
+              =link_to "詳細ページを見る", selection_path(id: selection.id), class: "btn btn--relux"
+  %p.moreBtn もっとみる
+
+=render partial: "hotels/footer"

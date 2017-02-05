@@ -40,7 +40,6 @@
     width: 940px;
     margin: 0 auto;
     .eachBlock {
-      @include clearfix();
       margin-bottom: 60px;
       padding-bottom: 60px;
       border-bottom: 1px solid #CCC;
@@ -93,14 +92,21 @@
             .name {
               font-size: 12px;
               margin: 10px 0px 10px;
-              line-height: 1.5
+              line-height: 1.5;
+              text-overflow: ellipsis;
+              white-space: nowrap;
               a {
                 text-decoration: none;
               }
             }
             .text {
+              height: 50px;
               font-size: 10px;
               line-height: 1.6;
+              overflow: hidden;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 3
             }
           }
         }

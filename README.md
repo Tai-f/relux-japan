@@ -4,8 +4,8 @@
 design DB of "relux-japan"
 
 ## **Description**
-design **13** tables
-【members, hotels, rooms, courses, hotel_courses, reservations, reviews, requests, tickets,  interviews, foods, photos, cards】
+design **14** tables
+【members, hotels, rooms, selections, hotel_selections, courses, reservations, reviews, requests, tickets,  interviews, foods, photos, cards】
 
 ***~members table~***
 
@@ -27,17 +27,17 @@ add_index :members, [:family_name, first_name, email]
 
 ***~hotels table~***
 
-|id|name|hiragana_name|prefecture|city|street|phone_number|url|check-in_time|check-out_time|total_rooms|card_type|plan|grade|amenity|cancel|location_latitude|location_longitude|access_by_public|access_by_car|
-|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-|||||||||||||||||||
+|id|name|hiragana_name|prefecture|city|street|phone_number|url|check-in_time|check-out_time|total_rooms|card_type|plan|grade|amenity|cancel|location_latitude|location_longitude|access_by_public|access_by_car|concept|course_id|
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|||||||||||||||||||||
 
 has_many :foods
 has_many :photos
 has_many :rooms
 has_many :reviews
 belongs_to :course
-has_many :courses, through: :hotel_courses
-has_many :hotel_courses
+has_many :selections, through: :hotel_selections
+has_many :hotel_selections
 has_many :interviews
 t.string :name, null:false
 t.string :hiragana_name, null:false
@@ -45,14 +45,15 @@ t.string :prefecture, null:false
 t.string :city, null:false
 t.string :street, null:false
 t.integer :phone_number, null:false
+t.references :course
 add_index :hotels, :name
 add_index :hotels, :prefecture
 
 ***~rooms table~***
 
-|id|hotel_id|name|price|body|maximum_member|
-|:--:|:--:|:--:|:--:|:--:|:--:|
-|||||||
+|id|hotel_id|name|image|price|body|feature|room_type|maximum_room_number|
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+||||||||||
 
 has_many :reservations
 belongs_to :hotel
@@ -61,29 +62,28 @@ t.integer :price, null:false
 t.references :hotel
 add_index :rooms, :name
 
-***~courses table~***
+***~selections table~***
 
-|id|name|price|theme|body|
-|:--:|:--:|:--:|:--:|:--:|
-||||||
+|id|name|image|body|
+|:--:|:--:|:--:|:--:|
+|||||
 
-has_many :tickets
-has_many :hotels, through: :hotel_courses
-has_many :hotel_courses
+has_many :hotels, through: :hotel_selections
+has_many :hotel_selections
 t.string :name, null:false
-t.string :theme, null:false
-add_index :rooms, :name
+t.string :image, null:false
+t.text :body, null:false
 
-***~hotel_courses table~***
+***~hotel_selections table~***
 
-|id|hotel_id|course_id|
+|id|hotel_id|selection_id|
 |:--:|:--:|:--:|
 ||||
 
-has_many :hotels
-has_many :courses
+belongs_to :hotel
+belongs_to :selection
 t.references :hotel
-t.references :course
+t.references :selection
 
 ***~courses table~***
 
@@ -127,7 +127,7 @@ add_index :reservations, [:family_name, :first_name, :room_id]
 
 ***~reviews table~***
 
-|id|member_id|hotel_id|accommodation_date|body|
+|id|member_id|hotel_id|accommodation_date|body|rate|
 |:--:|:--:|:--:|:--:|:--:|
 ||||||
 
@@ -135,7 +135,8 @@ belongs_to :member
 belongs_to :hotel
 t.references :member
 t.references :hotel
-t.string :theme, null:false
+t.text :body, null:false
+t.integer :rate, null:false
 
 ***~requests table~***
 
@@ -181,7 +182,7 @@ t.integer :postal_code, null:false
 t.references :course
 t.references :card
 add_index :tickets, [:buyer_name, :email]
-add_index :hotels, [:receiver_name, :address]
+add_index :tickets, [:receiver_name, :address]
 
 ***~interviews table~***
 
@@ -198,7 +199,7 @@ t.string :carrier, null:false
 t.string :theme, null:false
 t.string :body, null:false
 t.references :hotel
-add_index :rooms, :name
+add_index :interviews, :name
 
 ***~foods table~***
 
@@ -211,7 +212,7 @@ belongs_to :hotel
 t.references :hotel
 t.string :name, null:false
 t.integer :price, null:false
-add_index :rooms, [:name, :price]
+add_index :foods, [:name, :price]
 
 ***~photos table~***
 

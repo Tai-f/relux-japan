@@ -18,6 +18,10 @@
     .li_content {
       float: left;
       padding-right: 10px;
+      a {
+        vertical-align: middle;
+        color: #555;
+      }
     }
   }
 }
@@ -42,6 +46,10 @@ button.slick-prev, button.slick-next {
 
 .slick-arrow {
   z-index: 10;
+}
+/*フォントタイプの装飾*/
+.mincho {
+  font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HGS明朝E",serif, "ＭＳ Ｐ明朝";
 }
 /*GoogleMapの装飾*/
 #map {
@@ -101,9 +109,6 @@ button.slick-prev, button.slick-next {
     }
     .star {
       margin-bottom: 15px;
-      img {
-        width: 135px;
-      }
     }
   }
   .right {
@@ -220,17 +225,17 @@ button.slick-prev, button.slick-next {
           }
           td {
             font-size: 16px;
-            padding-top: 5px;
-            padding-right: 40px;
+            padding: 5px 40px 5px 0;
+            vertical-align: top;
           }
         }
-        .notes {
+        .remarks {
           font-size: 12px;
           margin-bottom: 20px;
           line-height: 1.6;
           color: #777;
         }
-        .childnotes {
+        .childremarks {
           line-height: 2.0;
         }
         .hotel_cancel {
@@ -258,6 +263,7 @@ button.slick-prev, button.slick-next {
         text-align: center;
         line-height: 2.2;
         font-size: 16px;
+        font-weight: bold;
       }
       .food-plan {
         text-align: left;
@@ -316,7 +322,6 @@ button.slick-prev, button.slick-next {
   }
 }
 .reviewList {
-  @include clearfix();
   padding-bottom: 20px;
   border-bottom: 1px dotted #CCC;
   .avatar {
@@ -335,6 +340,7 @@ button.slick-prev, button.slick-next {
         color: #333;
         .on {
           color: #F39D10;
+          padding-left: 10px;
         }
       }
       .review-name {
@@ -342,6 +348,9 @@ button.slick-prev, button.slick-next {
         font-size: 11px;
         color: #666;
         margin-top: 13px;
+        i {
+          padding: 0 5px;
+        }
       }
     }
     .review-text {
@@ -469,7 +478,7 @@ button.slick-prev, button.slick-next {
         line-height: 20px;
       }
       .roomP {
-        padding-right: 10px;
+        padding-right: 0;
         text-align: right;
         display: block;
         font-weight: 100;
@@ -481,7 +490,89 @@ button.slick-prev, button.slick-next {
         font-size: 10px;
         line-height: 1.6;
         color: #666;
+        overflow: hidden;
       }
+    }
+  }
+}
+/*予約ルームの詳細の装飾*/
+.roomBox {
+  position: absolute;
+  top: -20px;
+  left: -600px;
+  z-index: 100;
+  padding: 10px 20px 10px 10px;
+  display: none;
+  .room-detail {
+    position: relative;
+    padding: 20px;
+    width: 570px;
+    background-color: #FFF;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2), 0 1px 5px rgba(0, 0, 0, 0.2), 0 0 0 10px rgba(200, 200, 200, 0.4);
+    .roomPhoto {
+      float: left;
+      width: 210px;
+      margin-right: 20px;
+    }
+    .smoke {
+      margin: 10px 0 0;
+      li {
+        display: inline;
+        border: 1px solid #E8E8E8;
+        padding: 4px 8px;
+        font-weight: bold;
+        line-height: 1.0;
+      }
+    }
+    .right {
+      width: 300px;
+      overflow: hidden;
+      .room-description {
+        width: 100%;
+        font-size: 12px;
+        line-height: 1.8;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        overflow: hidden;
+        border-bottom: solid 1px #EFEFEF;
+        .title {
+          font-weight: bold;
+          padding-bottom: 5px;
+        }
+        .body {
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+        }
+      }
+      .room-amenity {
+        width: 100%;
+        padding-left: 10px;
+        margin-bottom: 5px;
+        .title {
+          font-weight: bold;
+          padding-bottom: 5px;
+        }
+        .body {
+          font-size: 12px;
+          list-style: none;
+          li {
+            float: left;
+            width: 140px;
+            padding-left: 10px;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+  .room_arrow {
+    position: absolute;
+    top: 18px;
+    right: -20px;
+    img {
+      width: 50%;
+      height: 50%;
     }
   }
 }
@@ -607,5 +698,4 @@ button.slick-prev, button.slick-next {
     text-align: center;
   }
 }
-
 

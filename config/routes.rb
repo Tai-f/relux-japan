@@ -5,7 +5,8 @@ Rails.application.routes.draw do
       get :brandstory
     end
   end
-  resources :courses, only: [:index,:new, :create, :show]
+  resources :courses, only: [:index, :new, :create, :show]
+  resources :selections, only: [:index, :show]
 
   root to: 'hotels#index'
 

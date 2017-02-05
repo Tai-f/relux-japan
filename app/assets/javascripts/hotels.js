@@ -1,45 +1,50 @@
 //プランの内容//
-function planPart() {
+function planPart(data) {
   $('.plan').css('border-bottom-color', '#FFF');
   $('.facility').css('border-bottom-color', '#DEDEDE');
   $('.access').css('border-bottom-color', '#DEDEDE');
   $('.review').css('border-bottom-color', '#DEDEDE');
-  var eachPlan =  '<h3 class = "plan-theme">' +
-                    "Stay at The Ritz Cariton" +
-                  '</h3>' +
-                  '<div class = "food-plan">' +
-                    '<span class = "plan-icon">' +
-                      "朝食付き" +
-                    '</span>' +
-                  '</div>' +
-                  '<div class = "relux-theme">' +
-                    "Relux 特典" +
-                  '</div>' +
-                  '<div class = "priviledge">' +
-                    '<p class= "relux-p">' +
-                      "ご宿泊のお客様は、下記施設を無料でご利用いただけます。<br>・フィットネスジム（24時間営業）<br>※ご利用は16歳以上のお客様とさせていただきます。<br><br>・屋内プール（通年営業、09:00～21:00、子供用プールなし）<br>※16歳未満のお子様の屋内プールのご利用時間はとさせていただきます。16歳未満のお客様は保護者の同伴が必要です。<br><br>・屋外プール（2015/4/4～2015/10/31の08:00から日没まで、子供用プールなし）<br>※16歳未満のお客様は保護者の同伴が必要です。" +
-                    '</p>' +
-                  '</div>' +
-                  '<h3 class ="subTitle">' +
-                    "プラン内容" +
-                  '</h3>' +
-                  '<p class="relux-p">' +
-                    "＜内容＞<br>沖縄本島で最も美しい海・名護湾に臨む、ザ・リッツ・カールトン沖縄。沖縄随一のラグジュアリーホテルとして、多くのゲストを迎えてきました。個性豊かなゲストルームや、現代のエッセンスが香るダイニング＆バーなど、滞在のすべてを贅沢にお楽しみいただけます。<br><br>《お部屋》<br>◆カバナルーム（45平米）<br>屋外プールに面したカバナルームは、客室から直接、屋外プールへのアクセスが可能で、泳ぎ疲れたらドアひとつで緑陰のプライベートジャグジーもお使いいただけます。水着で気ままにデイベッドでまどろむひとときは、都会では味わえない非日常です。<br><br>◆プレミアデラックス（58平米）<br>58平米の客室にはすべて、緑越しに海と空を望むことができるバス、自然の光と風を肌で感じる広いテラスが配されています。ザ・リッツ・カールトンならではの上質なアメニティが用意された快適な空間で、沖縄の大自然を満喫しながらゆっくりと流れる時間をご堪能いただけます。<br><br>◆ベイデラックス（45平米）<br>ホテル5・6階の高層階に位置し、東シナ海・名護湾や本部半島、晴れた日には遠く伊江島までを見渡せる、豊かな眺望を誇る客室です。ザ・リッツ・カールトンならではの上質なアメニティが用意された快適な空間で、沖縄の大自然を満喫しながらゆっくりと流れる時間をご堪能いただけます。<br><br>◆デラックス（45平米）<br>45平米の客室にはすべて、緑越しに海と空を望むことができるバス、自然の光と風を肌で感じる広いテラスが配されています。ザ・リッツ・カールトンならではの上質なアメニティが用意された快適な空間で、沖縄の大自然を満喫しながらゆっくりと流れる時間をご堪能いただけます。<br><br>《レストラン＆バー》<br>枠にとらわれない現代感覚で島独特の食材の個性を引き出した3つのレストラン。イタリアンレストラン“ちゅらぬうじ”、鉄板焼きレストラン“喜瀬”、そして、洋食と和食がおたのしみいただけるダイニング“グスク”。<br>レストランのみならず、エメラルドグリーンに輝く美しい海や眼下にゴルフコースを眺めながらフィンガーフードお飲物などのカフェメニューをおたのしみいただけるラウンジ、満ち足りた夜のくつろぎを演出する風格のあるバーなど、館内のすべてにおいて美味をご提供しております。ザ・リッツ・カールトン沖縄で思い出に残るパーソナルなダイニング体験をご堪能ください。<br><br>◆ご朝食について（※朝食付きプランを選択の場合）<br>和洋ブッフェをご用意いたします。シェフが目の前で作るオムレツや焼きたてのベーカリー、地元食材をふんだんに使った和食小鉢など、目にも鮮やかな和洋食ブッフェを、柔らかな光にあふれるオールデイダイニングにてお楽しみいただけます。<br><br>◆イタリアンレストラン「ちゅらぬうじ」<br><営業時間>ディナー 17:30-22:00<br>沖縄の言葉で“美しい虹”を意味する“ちゅらぬうじ”。トラディショナルなスタイルでありながら、主に沖縄県産食材を使用した本格的なイタリア料理をおたのしみいただけます。<br>テラス席もございますので天候やお好みに合わせてお食事をお召し上がりいただけます。<br>※6歳以上のお客様のご利用となります。<br><br>◆鉄板焼レストラン「喜瀬」<br><営業時間>ディナー 17:30-22:00<br>主に地元の魚介や沖縄県産黒毛和牛を使った鉄板焼レストラン“喜瀬”。調理はもちろん、食材の説明もすべてシェフが行います。最高の食材とともに、あたたかい心のこもったシェフのサービスと贅沢で寛ぎのある空間がお客様をお迎えいたします。<br><br>◆ダイニング「グスク」<br><営業時間>朝食 7:00-10:30 / ランチ・ディナー 10:30-22:00<br>朝食、ランチにて気軽にご利用いただけるダイニングです。沖縄料理はもちろん、洋食・和食とも豊富なメニューを取り揃え、特におすすめなのは数多くの小鉢料理とバラエティに富んだ洋食が並ぶブッフェ形式の朝食です。広々としたテラスで席でのお食事もお楽しみいただけます。<br><br>◆ザ・ロビーラウンジ<br><営業時間>月曜〜日曜 11:00-20:00 / アフタヌーンティー 14:00-18:00<br>エメラルドグリーンに輝く美しい海や、眼下にゴルフコースを眺めながら、沖縄的要素を取り入れたアフタヌーンティーと県産食材を使用したスイーツ、フィンガーフードをお楽しみいただけます。<br><br>◆ザ・バー<br><営業時間>月曜〜木曜 19:00-23:00 / 金曜〜日曜 19:00-25:00<br>沖縄独自のお酒・泡盛から豊富な種類のお酒をご用意した、クラシックなバーです。カウンター、テーブル席そして個室と、お客様のシーンに合わせたご利用が可能です。シガーも取り揃え、満ち足りた夜の寛ぎを演出するバーで、思い出にのこる時間をお過ごしください。<br><br>◆ライブラリー<br><営業時間>10:00-19:00<br>屋外プール・プールバーに隣接し、気軽なお飲物やフィンガーフードとともに優雅なお時間をお過ごしいただけます。美しい写真集や沖縄に関連する書物など、知的好奇心を満たす空間です。<br><br>《ご案内》<br>◆ザ・リッツ・カールトン スパ by ESPA<br><営業 / 施術時間>9:00-21:00 ※ご希望のお客様は、事前にお問い合わせください。<br>“ザ・リッツ・カールトン スパ by ESPA”は、最高品質の植物エキスやマリンアクティブなどを原料とした英国ESPA（‐エスパ‐）製品を取り入れたスパです。<br>東シナ海を見渡せる喜瀬カントリークラブと、豊かな自然が息づく“やんばる”の森に囲まれた、極めて贅沢なロケーションで、至福のリラクゼーションをご堪能いただけます。<br><br>スパのデザインは、素晴らしいロケーションにインスパイアされた、隣接する森林と調和するデザインになっています。スパのレセプションは自然の素材を用いた造りになっており、ゆるやかに差し込む自然の光によって、まるで森林の天蓋の下にいるかのように感じていただけます。ほぼ全ての共有スペースとトリートメントルームからは“やんばる”の森の景観を見渡すことができ、スパ全体で自然を感じていただけます。スパ棟はホテル棟とは別棟となる独立した2階建てで、ホテル棟1階からスパのエントランスへつながる美しい庭園の通路を経由して徒歩で、またはホテル棟玄関より送迎車やカートでお越しいただけます。<br><br>トリートメントルームを10室、屋外に指圧式ボデイマッサージが受けられるカバナ（デイベッドスペース）を有する他、ネイルサロン、リラクゼーションルーム、屋内プール、ジャグジー、ドライサウナ、オリジナルの風化珊瑚タイル岩盤浴、そして最新のマシンを揃えたフィットネスジムも備え、優雅で贅沢な、そしてトータルなスパ体験をご提供いたします。また、プライベートエントランスを有する、オーシャンスイート、フォレストスイートは、更衣室や化粧台、リラクゼーションラウンジ、森林を見下ろせるスチームシャワーや外のテラスを眺めながらお入りいただけるバスなどが完備されており、プライベートな空間でゆったりとした時間をお過ごしいただけます。<br><br>◆フィットネス＆プール<br>・フィットネスジム（24時間営業、宿泊者無料）<br>※ご利用は16歳以上のお客様とさせていただきます。<br><br>・屋内プール（通年営業、09:00～21:00、宿泊者無料、子供用プールなし）<br>※16歳未満のお子様の屋内プールのご利用時間は9：00-14：00とさせていただきます。16歳未満のお客様は保護者の同伴が必要です。<br><br>・屋外プール（2015/4/4～2015/10/31の08:00から日没まで、宿泊者無料、子供用プールなし）<br>※16歳未満のお客様は保護者の同伴が必要です。<br><br>・ヒートエクスペリエンス（09:00～21:00、１日3,000円）<br>広い浴槽、シャワー、ドライサウナや、マイナスイオンを多く発生するといわれる風化珊瑚タイル岩盤浴を備える男女別の温浴施設。女性専用ゾーンには細かい気泡を発生するシルキーバスも設置されています。特にトリートメント前にご利用により、体を温め、基礎代謝をアップさせることで、トリートメントの効果を高めます。<br>※16歳未満の方は、ご利用いただけませんのでご了承ください。<br>※料金には税金が含まれております。別途サービス料13％を申受けます。<br><br>《その他》<br>・本プランは、素泊まりもしくは朝食付きプランからお選びいただけます。<br><br>《注意事項》<br>・写真のお部屋や料理、景色などは季節によって異なることを予めご了承ください。" +
-                  '</p>'
+    var eachPlan = data.plan
   $('.tabContent').html(eachPlan);
 };
-
-function facilityPart() {
+//施設の内容//
+function facilityPart(data) {
   $('.plan').css('border-bottom-color', '#DEDEDE');
   $('.facility').css('border-bottom-color', '#FFF');
   $('.access').css('border-bottom-color', '#DEDEDE');
   $('.review').css('border-bottom-color', '#DEDEDE');
+  var grade1 =  '<a src="/grade", class="hover">' +
+                  '<img src="/assets/grade_star.jpg" alt="The STAR" width="30" height="28">' +
+                  '</img>' +
+                '</a>'
+  var grade2 =  '<a src="/grade", class="hover">' +
+                  '<img src="/assets/grade_star.jpg" alt="The STAR" width="30" height="28">' +
+                  '</img>' +
+                  '<img src="/assets/grade_star.jpg" alt="The STAR" width="30" height="28">' +
+                  '</img>' +
+                '</a>'
+  var grade3 =  '<a src="/grade", class="hover">' +
+                  '<img src="/assets/grade_star.jpg" alt="The STAR" width="30" height="28">' +
+                  '</img>' +
+                  '<img src="/assets/grade_star.jpg" alt="The STAR" width="30" height="28">' +
+                  '</img>' +
+                  '<img src="/assets/grade_star.jpg" alt="The STAR" width="30" height="28">' +
+                  '</img>' +
+                '</a>'
+  var grade_museum =  '<a src="/grade", class="hover">' +
+                        '<img src="/assets/grade_museum.jpg" alt="The MUSEUM" width="100" height="21">' +
+                        '</img>' +
+                      '</a>'
+  var grade_casual =  '<a src="/grade", class="hover">' +
+                        '<img src="/assets/grade_casual.jpg" alt="The CASUAL" width="100" height="21">' +
+                        '</img>' +
+                      '</a>'
   var eachFacility =  '<div class="introduction margin-top">' +
                         '<h3 class="subTitle">' +
                           "施設の紹介" +
                         '</h3>' +
                         '<p class="description">' +
-                          "沖縄本島で最も美しいといわれる名護湾を一望し、<br>海のブルーとゴルフヤードのグリーンが溶け合う場所。<br>そんな喜瀬の高台に佇むのがザ・リッツ・カールトン沖縄です。<br><br>最高の”癒・食・泊”、そのすべてをお届けするために、<br>こころ温まるおもてなしで皆さまをお迎えいたします。<br><br>陽光を弾いて輝くプール、涼やかな風の流れるライブラリー、<br>そして木々の茂る庭の一角に佇むスパエリア。<br>そこは、喧騒をわすれて過ごすための上質な空間。<br>お気に入りの場所で、あなただけの非日常を体験しましょう。<br><br>枠に捉われない現代感覚で島独特の個性を引き出すレストラン、<br>開放的なラウンジ、夜のくつろぎを演出する風格あるバーなど、<br>いずれの場所でも至福の味と時間をご堪能ください。<br><br>全97室のゲストルームは、名護湾を望むロケーションが魅力。<br>ブルーとグリーンのコントラストを愉しみながら過ごす、<br>誰にも気兼ねのいらない夢のようなホテルステイが叶います。<br><br>自分らしい沖縄ステイを愉しむためのリゾートホテルで、<br>ゆったりと流れる時間とともに、心から満足できる1日を。<br>ザ・リッツ・カールトン沖縄が、そのお手伝いをいたします。" +
+                          data.description +
                         '</p>' +
                       '</div>' +
                       '<div class="introduction">' +
@@ -53,7 +58,7 @@ function facilityPart() {
                                 "施設名" +
                               '</th>' +
                               '<td>' +
-                                "ザ・リッツ・カールトン沖縄" +
+                                data.name +
                               '</td>' +
                             '</tr>' +
                             '<tr class="space">' +
@@ -63,7 +68,7 @@ function facilityPart() {
                                 "ふりがな" +
                               '</th>' +
                               '<td>' +
-                                "ざ・りっつ・かーるとんおきなわ" +
+                                data.hiragana_name +
                               '</td>' +
                             '</tr>' +
                             '<tr class="space">' +
@@ -73,7 +78,7 @@ function facilityPart() {
                                 "住所" +
                               '</th>' +
                               '<td>' +
-                                "沖縄県名護市喜瀬1343-1" +
+                                (data.prefecture + data.city + data.street) +
                               '</td>' +
                             '</tr>' +
                             '<tr class="space">' +
@@ -93,7 +98,7 @@ function facilityPart() {
                                 "電話番号（質問専用）" +
                               '</th>' +
                               '<td>' +
-                                "0980-43-5555" +
+                                data.phone_number +
                               '</td>' +
                             '</tr>' +
                             '<tr class="space">' +
@@ -103,8 +108,8 @@ function facilityPart() {
                                 "ホームページ" +
                               '</th>' +
                               '<td>' +
-                                '<a href="https://www.ritzcarltonjapan.com/">' +
-                                  "www.ritzcarltonjapan.com" +
+                                '<a href="'+ data.url +'">' +
+                                  data.url +
                                 '</a>' +
                               '</td>' +
                             '</tr>' +
@@ -115,7 +120,7 @@ function facilityPart() {
                                 "チェックイン時間" +
                               '</th>' +
                               '<td>' +
-                                "15:00" +
+                                data.check_in_time +
                               '</td>' +
                             '</tr>' +
                             '<tr class="space">' +
@@ -125,7 +130,7 @@ function facilityPart() {
                                 "チェックアウト時間" +
                               '</th>' +
                               '<td>' +
-                                "12:00" +
+                                data.check_out_time +
                               '</td>' +
                             '</tr>' +
                             '<tr class="space">' +
@@ -135,7 +140,7 @@ function facilityPart() {
                                 "総部屋数" +
                               '</th>' +
                               '<td>' +
-                                "97室" +
+                                (data.total_rooms + "室") +
                               '</td>' +
                             '</tr>' +
                             '<tr class="space">' +
@@ -145,7 +150,7 @@ function facilityPart() {
                                 "クレジットカード" +
                               '</th>' +
                               '<td>' +
-                                "VISA / MASTER / AMEX / JCB / DINERS / NICOS / UC / DC" +
+                                data.card_type +
                               '</td>' +
                             '</tr>' +
                             '<tr class="space">' +
@@ -157,172 +162,15 @@ function facilityPart() {
                         '<h3 class="subTitle">' +
                           "施設の特徴" +
                         '</h3>' +
-                        '<table class="amenity">' +
-                          '<tbody>' +
-                            '<tr>' +
-                              '<th class="off">' +
-                                "入湯税" +
-                              '</th>' +
-                              '<td class="off">' +
-                                "×" +
-                              '</td>' +
-                              '<th>' +
-                                "お子様の宿泊" +
-                              '</th>' +
-                              '<td>' +
-                                "○" +
-                              '</td>' +
-                              '<th class="off">' +
-                                "ルームサービス" +
-                              '</th>' +
-                              '<td class="off">' +
-                                "×" +
-                              '</td>' +
-                            '</tr>' +
-                            '<tr>' +
-                              '<th class="off">' +
-                                "送迎サービス" +
-                              '</th>' +
-                              '<td class="off">' +
-                                "×" +
-                              '</td>' +
-                              '<th>' +
-                                "パーキング" +
-                              '</th>' +
-                              '<td>' +
-                                "○" +
-                              '</td>' +
-                              '<th class="off">' +
-                                "温泉" +
-                              '</th>' +
-                              '<td class="off">' +
-                                "×" +
-                              '</td>' +
-                            '</tr>' +
-                            '<tr>' +
-                              '<th class="off">' +
-                                "源泉掛け流し" +
-                              '</th>' +
-                              '<td class="off">' +
-                                "×" +
-                              '</td>' +
-                              '<th class="off">' +
-                                "露天風呂付き客室" +
-                              '</th>' +
-                              '<td class="off">' +
-                                "×" +
-                              '</td>' +
-                              '<th class="off">' +
-                                "大浴場" +
-                              '</th>' +
-                              '<td class="off">' +
-                                "×" +
-                              '</td>' +
-                            '</tr>' +
-                            '<tr>' +
-                              '<th class="off">' +
-                                "貸切風呂" +
-                              '</th>' +
-                              '<td class="off">' +
-                                "×" +
-                              '</td>' +
-                              '<th>' +
-                                "プールあり（屋内）" +
-                              '</th>' +
-                              '<td>' +
-                                "○" +
-                              '</td>' +
-                              '<th>' +
-                                "プールあり（屋外）" +
-                              '</th>' +
-                              '<td>' +
-                                "○" +
-                              '</td>' +
-                            '</tr>' +
-                            '<tr>' +
-                              '<th>' +
-                                "エステ・スパ施設" +
-                              '</th>' +
-                              '<td>' +
-                                "○" +
-                              '</td>' +
-                              '<th>' +
-                                "フィットネス施設" +
-                              '</th>' +
-                              '<td>' +
-                                "○" +
-                              '</td>' +
-                              '<th>' +
-                                "バリアフリー対応" +
-                              '</th>' +
-                              '<td>' +
-                                "○" +
-                              '</td>' +
-                            '</tr>' +
-                            '<tr>' +
-                              '<th class="off">' +
-                                "ペットもOK" +
-                              '</th>' +
-                              '<td class="off">' +
-                                "×" +
-                              '</td>' +
-                              '<th class="off">' +
-                                "お部屋で朝食" +
-                              '</th>' +
-                              '<td class="off">' +
-                                "×" +
-                              '</td>' +
-                              '<th class="off">' +
-                                "お部屋で夕食" +
-                              '</th>' +
-                              '<td class="off">' +
-                                "×" +
-                              '</td>' +
-                            '</tr>' +
-                            '<tr>' +
-                              '<th class="off">' +
-                                "大浴場に露天風呂" +
-                              '</th>' +
-                              '<td class="off">' +
-                                "×" +
-                              '</td>' +
-                              '<th class="off">' +
-                                "夜景自慢の客室" +
-                              '</th>' +
-                              '<td class="off">' +
-                                "×" +
-                              '</td>' +
-                              '<th>' +
-                                "海が見える客室" +
-                              '</th>' +
-                              '<td>' +
-                                "○" +
-                              '</td>' +
-                            '</tr>' +
-                            '<tr>' +
-                              '<th class="off">' +
-                                "離れ/コテージ" +
-                              '</th>' +
-                              '<td class="off">' +
-                                "×" +
-                              '</td>' +
-                              '<th>' +
-                                "割引が使える" +
-                              '</th>' +
-                              '<td>' +
-                                "○" +
-                              '</td>' +
-                            '</tr>' +
-                          '</tbody>' +
-                        '</table>' +
-                        '<p class ="notes">' +
+                        data.amenity +
+                        '<p class ="remarks">' +
                           "施設の特徴は一般的な設備を表すもので、宿泊施設によって設備内容やサービスの範囲は異なります。<br>詳細は宿泊施設へ直接ご確認のうえ、ご予約くださいませ。" +
                         '</p>' +
-                        '<p class ="notes">' +
+                        '<p class ="remarks">' +
                           "◆備考" +
                         '</p>' +
-                        '<p class ="childnotes">' +
-                          "《お子様のご宿泊料金について》<br>・小学生（低・高学年）のお子様：添い寝の場合は、施設使用料5,000円／税・サービス料別を現地にてご清算いただきます。ご予約時、ご利用人数に含めずご予約ください。<br>・幼児のお子様：添い寝の場合は、無料にてご利用いただけます。" +
+                        '<p class ="childremarks">' +
+                          data.remark +
                         '</p>' +
                         '<div class="gradeBox">' +
                           '<div class="left">' +
@@ -331,17 +179,12 @@ function facilityPart() {
                               '</img>' +
                             '</p>' +
                             '<p class ="star">' +
-                              '<a src="/grade", class="hover">' +
-                                '<img src="/assets/grade_museum.jpg", alt="The MUSEUM">' +
-                                '</img>' +
-                              '</a>' +
                             '</p>' +
                             '<img src="/assets/grade_verified.jpg", alt="Relux verified">' +
                             '</img>' +
                           '</div>' +
                           '<div class="right">' +
                             '<p class ="description">' +
-                              "芸術といえるほどの、極上の宿泊体験を提供する、世界屈指の宿泊施設です。人々にインスピレーションを与えるおもてなしは、まさに宿泊可能なインスタレーションアート。<br><br>誰もがその価値を認める、宿泊施設コレクションです。" +
                             '</p>' +
                             '<p class ="gradeLink">' +
                               '<a src="/grade", class="hover">' +
@@ -355,58 +198,33 @@ function facilityPart() {
                         '<h3 class="subTitle">' +
                           "キャンセルポリシー" +
                         '</h3>' +
-                        '<table class="hotel_cancel">' +
-                          '<tbody>' +
-                            '<tr>' +
-                              '<th>' +
-                                "7日〜4日前" +
-                              '</th>' +
-                              '<td>' +
-                                "宿泊料金の20%" +
-                              '</td>' +
-                            '</tr>' +
-                            '<tr class="space">' +
-                            '</tr>' +
-                            '<tr>' +
-                              '<th>' +
-                                "3日〜1日前" +
-                              '</th>' +
-                              '<td>' +
-                                "宿泊料金の50%" +
-                              '</td>' +
-                            '</tr>' +
-                            '<tr class="space">' +
-                            '</tr>' +
-                            '<tr>' +
-                              '<th>' +
-                                "当日" +
-                              '</th>' +
-                              '<td>' +
-                                "宿泊料金の100%" +
-                              '</td>' +
-                            '</tr>' +
-                            '<tr class="space">' +
-                            '</tr>' +
-                            '<tr>' +
-                              '<th>' +
-                                "無連絡キャンセル" +
-                              '</th>' +
-                              '<td>' +
-                                "宿泊料金の100%" +
-                              '</td>' +
-                            '</tr>' +
-                            '<tr class="space">' +
-                            '</tr>' +
-                          '</tbody>' +
-                        '</table>' +
+                        data.cancel +
                         '<p class ="notes">' +
                           "やむをえない理由によりキャンセル頂く場合は、ご予約頂いた料金に対して、キャンセル料金を頂戴しております。<br>予めご確認の上、ご予約をお願いいたします。" +
                         '</p>' +
                       '</div>'
   $('.tabContent').html(eachFacility);
+//ホテルのグレードの条件分岐//
+  switch (data.grade){
+    case 1: $('.star').html(grade1);
+            $('.right').find('.description').text("都道府県下を代表する旅館・ホテルであり、ちかくに寄る際は、訪れてみたい宿泊施設。");
+            break;
+    case 2: $('.star').html(grade2);
+            $('.right').find('.description').text("その地方を代表する旅館・ホテルであり、すこし遠まわりをしてでも、訪れてみたい宿泊施設。");
+            break;
+    case 3: $('.star').html(grade3);
+            $('.right').find('.description').text("日本を代表する旅館・ホテルであり、どんなに遠くても、人生に一度は訪れてみたい宿泊施設。");
+            break;
+    case 1: $('.star').html(grade_museum);
+            $('.right').find('.description').text("芸術といえるほどの、極上の宿泊体験を提供する、世界屈指の宿泊施設です。人々にインスピレーションを与えるおもてなしは、まさに宿泊可能なインスタレーションアート。<br><br>誰もがその価値を認める、宿泊施設コレクションです。");
+            break;
+    default: $('.star').html(grade_casual);
+            $('.right').find('.description').text("その地区では満足度がとても高い旅館・ホテルであり、カジュアルにもお楽しみいただける宿泊施設。");
+            break;
+  }
 };
-
-function accessPart() {
+//アクセスの内容//
+function accessPart(data) {
   $('.plan').css('border-bottom-color', '#DEDEDE');
   $('.facility').css('border-bottom-color', '#DEDEDE');
   $('.access').css('border-bottom-color', '#FFF');
@@ -424,7 +242,7 @@ function accessPart() {
                               "施設名" +
                             '</th>' +
                             '<td>' +
-                              "ザ・リッツ・カールトン沖縄" +
+                              data.name +
                             '</td>' +
                           '</tr>' +
                           '<tr class="space">' +
@@ -434,7 +252,7 @@ function accessPart() {
                               "住所" +
                             '</th>' +
                             '<td>' +
-                              "沖縄県名護市喜瀬1343-1" +
+                              (data.prefecture + data.city + data.street) +
                             '</td>' +
                           '</tr>' +
                           '<tr class="space">' +
@@ -445,7 +263,7 @@ function accessPart() {
                             '</th>' +
                             '<td>' +
                               '<p class ="description">' +
-                                "【空港リムジンバス】<br>・那覇空港（国内線）－ザ･リッツ･カールトン沖縄<br>※大人 2,100円（中学生以上）小人 1,050円 （3歳から12歳未満）<br><br>【中型ハイヤー4名乗り】<br>・片道15,000円 （所要時間約75分）<br>ハイヤーのお手配は、ご到着日の前日までにフライト情報と合わせザ・リッツ・カールトン沖縄まで直接お申し付けください。お迎えはご到着出口にて、ホテルのロゴを掲げてお待ちしております。<br><br>※混雑状況により手配が困難な場合もございますので、なるべくお早めのご予約をお願いいたします。<br>※午後9時から午前6時までは深夜料金が適応されます。詳しくはご予約時にお問い合わせください。<br>※ご予約の変更・キャンセルにつきましては、ご到着2日前までにホテルまでご連絡をいただけますようお願い申し上げます。ご到着前日より100%のキャンセル料金を申し受けます。予めご了承ください。" +
+                                data.access_by_public +
                               '</p>' +
                             '</td>' +
                           '</tr>' +
@@ -457,7 +275,7 @@ function accessPart() {
                             '</th>' +
                             '<td>' +
                               '<p class ="description">' +
-                                "・那覇から北へ約70km<br>那覇空港より沖縄自動車道をご利用で約75分（終点の許田I.C.を降りて部瀬名岬方面へ約3km南下）。一般道をご利用の場合は、西海岸に沿って走る国道58号線を車で約90分（道路状況により変動）。<br>※国道58号線喜瀬交差点よりホテルまでは約1kmほどございます。" +
+                                data.access_by_car +
                               '</p>' +
                             '</td>' +
                           '</tr>' +
@@ -467,138 +285,159 @@ function accessPart() {
                       '</table>' +
                     '</div>'
   $('.tabContent').html(eachAccess);
+//GoogleMapの設定//
   var map = new google.maps.Map(document.getElementById('map'),{
-    zoom: 15 ,  // ズーム値
-    center: new google.maps.LatLng( 26.527778888889, 127.93972333333) // 中心の位置座標
+    zoom: 16 ,  // ズーム値
+    center: new google.maps.LatLng( data.location_latitude, data.location_longitude ) // 中心の位置座標
   });
 // マーカーのインスタンスを作成する
   var marker = new google.maps.Marker({
     map: map ,  // 地図
-    position: new google.maps.LatLng( 26.527778888889, 127.93972333333 ) // 位置座標
+    position: new google.maps.LatLng( data.location_latitude, data.location_longitude ) // 位置座標
   });
 };
-
-function reviewPart() {
+//レビューの内容//
+function reviewPart(data) {
   $('.plan').css('border-bottom-color', '#DEDEDE');
   $('.facility').css('border-bottom-color', '#DEDEDE');
   $('.access').css('border-bottom-color', '#DEDEDE');
   $('.review').css('border-bottom-color', '#FFF');
-  var eachReview =  '<div class="gradeBox">' +
-                      '<div class="left">' +
-                        '<p class ="title">' +
-                          '<img src="/assets/grade_title.jpg", alt="Relux Grade">' +
-                          '</img>' +
-                        '</p>' +
-                        '<p class ="star">' +
-                          '<a src="/grade", class="hover">' +
-                            '<img src="/assets/grade_museum.jpg", alt="The MUSEUM">' +
-                            '</img>' +
-                          '</a>' +
-                        '</p>' +
-                        '<img src="/assets/grade_verified.jpg", alt="Relux verified">' +
+  var grade1 =  '<a src="/grade", class="hover">' +
+                  '<img src="/assets/grade_star.jpg" alt="The STAR" width="30" height="28">' +
+                  '</img>' +
+                '</a>'
+  var grade2 =  '<a src="/grade", class="hover">' +
+                  '<img src="/assets/grade_star.jpg" alt="The STAR" width="30" height="28">' +
+                  '</img>' +
+                  '<img src="/assets/grade_star.jpg" alt="The STAR" width="30" height="28">' +
+                  '</img>' +
+                '</a>'
+  var grade3 =  '<a src="/grade", class="hover">' +
+                  '<img src="/assets/grade_star.jpg" alt="The STAR" width="30" height="28">' +
+                  '</img>' +
+                  '<img src="/assets/grade_star.jpg" alt="The STAR" width="30" height="28">' +
+                  '</img>' +
+                  '<img src="/assets/grade_star.jpg" alt="The STAR" width="30" height="28">' +
+                  '</img>' +
+                '</a>'
+  var grade_museum =  '<a src="/grade", class="hover">' +
+                        '<img src="/assets/grade_museum.jpg" alt="The MUSEUM" width="100" height="21">' +
                         '</img>' +
-                      '</div>' +
-                      '<div class="right">' +
-                        '<p class ="description">' +
-                          "芸術といえるほどの、極上の宿泊体験を提供する、世界屈指の宿泊施設です。人々にインスピレーションを与えるおもてなしは、まさに宿泊可能なインスタレーションアート。<br><br>誰もがその価値を認める、宿泊施設コレクションです。" +
-                        '</p>' +
-                        '<p class ="gradeLink">' +
-                          '<a src="/grade", class="hover">' +
-                            "Reluxグレードとは" +
-                          '</a>' +
-                        '</p>' +
-                      '</div>' +
-                    '</div>' +
-                    '<div class="introduction margin-top">' +
-                      '<h3 class="subTitle">' +
-                        "宿泊者のレビュー" +
-                      '</h3>' +
-                    '</div>' +
-                    '<div class="reviewArea">' +
-                      '<div class="reviewList clearfix">' +
-                        '<div class="avatar">' +
-                          '<img src="/assets/icon_nouser.gif" alt="メール会員" class="face">' +
+                      '</a>'
+  var grade_casual =  '<a src="/grade", class="hover">' +
+                        '<img src="/assets/grade_casual.jpg" alt="The CASUAL" width="100" height="21">' +
+                        '</img>' +
+                      '</a>'
+  var rate1 = "★☆☆☆☆"
+  var rate2 = "★★☆☆☆"
+  var rate3 = "★★★☆☆"
+  var rate4 = "★★★★☆"
+  var rate5 = "★★★★★"
+  var noRate = "☆☆☆☆☆"
+  var ReviewBox =  '<div class="gradeBox">' +
+                        '<div class="left">' +
+                          '<p class ="title">' +
+                            '<img src="/assets/grade_title.jpg", alt="Relux Grade">' +
+                            '</img>' +
+                          '</p>' +
+                          '<p class ="star">' +
+                          '</p>' +
+                          '<img src="/assets/grade_verified.jpg", alt="Relux verified">' +
                           '</img>' +
                         '</div>' +
-                        '<div class="review-body">' +
-                          '<div class="review-header clearfix">' +
-                            '<p class="review-rate">' +
-                              "総合点" +
-                              '<span class="on">' +
-                                "" +
-                              '</span>' +
-                              '<span class="on">' +
-                                "★" +
-                              '</span>' +
-                              '<span class="on">' +
-                                "★" +
-                              '</span>' +
-                              '<span class="on">' +
-                                "★" +
-                              '</span>' +
-                              '<span class="on">' +
-                                "★" +
-                              '</span>' +
-                            '</p>' +
-                            '<p class="review-name">' +
-                              '<i class="fa fa-user fa-lg">' +
-                              '</i>' +
-                              "：Y.Nさん(54歳)  " +
-                              '<i class="fa fa-clock-o fa-lg">' +
-                              '</i>' +
-                              "  宿泊日：2016/05/28" +
-                            '</p>' +
-                          '</div>' +
-                          '<p class="review-text">' +
-                            "リッツカールトンシンガポールに続いて同じ月に、リッツカールト沖縄に御世話になりましたが、様々なシチュエーションで沖縄を感じることが出来る、素敵な一日間でした。 高層のシティホテルとは異なる、緑と水と空が一体化されたリッツカールトン沖縄に出合えることが出来たことを、幸せに思います。（三階のテラスに置かれた4席のみのチェアが特に気に入りました） 迂闊にもアフタヌーンティーで満腹になってしまい、ホテルの晩餐は楽しめなかったのですが、朝食のメニューと会場の雰囲気は、とても優雅な雰囲気に浸れました。 今回は仕事の関係で、朝9時にはチェックアウトという、短い滞在時間だったのが残念です。 次回は連泊でお邪魔し、リッツカールトン沖縄により深く浸りたいと思います。 PS ラウンジスタッフの方にリクエストは出しておいたのですが・・・・ アフタヌーンティーのメニューを、妻がしっかり記憶したいと申しておりますので、 教えて頂けると幸いです。" +
+                        '<div class="right">' +
+                          '<p class ="description">' +
+                          '</p>' +
+                          '<p class ="gradeLink">' +
+                            '<a src="/grade", class="hover">' +
+                              "Reluxグレードとは" +
+                            '</a>' +
                           '</p>' +
                         '</div>' +
                       '</div>' +
-                      '<div class="reviewList margin-top clearfix">' +
-                        '<div class="avatar">' +
-                          '<img src="/assets/icon_nouser.gif" alt="メール会員" class="face">' +
-                          '</img>' +
-                        '</div>' +
-                        '<div class="review-body">' +
-                          '<div class="review-header clearfix">' +
-                            '<p class="review-rate">' +
-                              "総合点" +
-                              '<span class="on">' +
-                                "" +
-                              '</span>' +
-                              '<span class="on">' +
-                                "★" +
-                              '</span>' +
-                              '<span class="on">' +
-                                "★" +
-                              '</span>' +
-                              '<span class="on">' +
-                                "★" +
-                              '</span>' +
-                              '<span class="on">' +
-                                "★" +
-                              '</span>' +
-                            '</p>' +
-                            '<p class="review-name">' +
-                              '<i class="fa fa-user fa-lg">' +
-                              '</i>' +
-                              "：K.Tさん(38歳)  " +
-                              '<i class="fa fa-clock-o fa-lg">' +
-                              '</i>' +
-                              "  宿泊日：2016/04/07" +
-                            '</p>' +
-                          '</div>' +
-                          '<p class="review-text">' +
-                            "妻の誕生日に利用しました。スパでは従業員の方からメッセージもいただいて、妻も非常に喜んでくれました。10ヶ月になる娘へも気さくに話しかけていただき、家族で素敵な時間を過ごす事が出来ました。" +
-                          '</p>' +
-                        '</div>' +
+                      '<div class="introduction margin-top">' +
+                        '<h3 class="subTitle">' +
+                          "宿泊者のレビュー" +
+                        '</h3>' +
+                      '</div>' +
+                      '<div class="reviewArea">' +
                       '</div>' +
                     '</div>'
+  $('.tabContent').html(ReviewBox);
+  var data_reviews = data.reviews;
+  $.each(data_reviews, function(i, review){
+    var eachReview =  '<div class="reviewList clearfix margin-top">' +
+                        '<div class="avatar">' +
+                          '<img src="/assets/icon_nouser.gif" alt="メール会員" class="face">' +
+                          '</img>' +
+                        '</div>' +
+                        '<div class="review-body">' +
+                          '<div class="review-header clearfix">' +
+                            '<p class="review-rate">' +
+                              "総合点：" +
+                              '<span class="on">' +
+                                review.rate +
+                              '</span>' +
+                            '</p>' +
+                            '<p class="review-name">' +
+                              '<i class="fa fa-user fa-lg">' +
+                              '</i>' +
+                              review.name +
+                              '<i class="fa fa-clock-o fa-lg">' +
+                              '</i>' +
+                              ("宿泊日：" + review.accommodation_date) +
+                            '</p>' +
+                          '</div>' +
+                          '<p class="review-text">' +
+                            review.body +
+                          '</p>' +
+                        '</div>' +
+                      '</div>'
+    $('.reviewArea').append(eachReview);
+  });
+//レビューの評価処理//
+  function rateFunc(index, element) {
+    var rate = $(element).text();
+    if (rate == 1){
+      $(element).text(rate1);
+    } else if (rate == 2){
+      $(element).text(rate2);
+    } else if (rate == 3){
+      $(element).text(rate3);
+    } else if (rate == 4){
+      $(element).text(rate4);
+    } else if (rate == 5){
+      $(element).text(rate5);
+    } else {
+      $(element).text(noRate);
+    }
+  }
+  $('.review-rate').find('.on').each(rateFunc);
+//グレードの条件分岐//
+  switch (data.grade){
+    case 1: $('.star').html(grade1);
+            $('.right').find('.description').text("都道府県下を代表する旅館・ホテルであり、ちかくに寄る際は、訪れてみたい宿泊施設。");
+            break;
+    case 2: $('.star').html(grade2);
+            $('.right').find('.description').text("その地方を代表する旅館・ホテルであり、すこし遠まわりをしてでも、訪れてみたい宿泊施設。");
+            break;
+    case 3: $('.star').html(grade3);
+            $('.right').find('.description').text("日本を代表する旅館・ホテルであり、どんなに遠くても、人生に一度は訪れてみたい宿泊施設。");
+            break;
+    case 1: $('.star').html(grade_museum);
+            $('.right').find('.description').text("芸術といえるほどの、極上の宿泊体験を提供する、世界屈指の宿泊施設です。人々にインスピレーションを与えるおもてなしは、まさに宿泊可能なインスタレーションアート。<br><br>誰もがその価値を認める、宿泊施設コレクションです。");
+            break;
+    default: $('.star').html(grade_casual);
+            $('.right').find('.description').text("その地区では満足度がとても高い旅館・ホテルであり、カジュアルにもお楽しみいただける宿泊施設。");
+            break;
+  }
 
-  $('.tabContent').html(eachReview);
 };
 //スライドショーの設定//
 $(document).on('turbolinks:load', function(){
+
+  var i = 1;
+
   $('.slideshow-main').slick({
     accessibility: true,
     infinite: true,
@@ -606,6 +445,7 @@ $(document).on('turbolinks:load', function(){
     slidesToScroll: 1,
     arrows: true,
     fade: true,
+    speed: 500,
     asNavFor: '.slideshow-nav'
   });
 
@@ -620,19 +460,83 @@ $(document).on('turbolinks:load', function(){
   $('.facility').css('border-bottom-color', '#FFF');
 //プランタブをクリックした時//
   $('.plan').on('click', function() {
-    planPart();
+    $.ajax({
+        type: "GET",
+        url: window.location.href.json,
+        dataType: "json"
+    })
+    .done(function(data){
+      planPart(data);
+    })
+
+    .fail(function(){
+      console.log("取得できません");
+    });
   });
 //施設タブをクリックした時//
   $('.facility').on('click', function() {
-    facilityPart();
+    $.ajax({
+      type: "GET",
+      url: window.location.href.json,
+      dataType: "json"
+    })
+    .done(function(data){
+      facilityPart(data);
+    })
+
+    .fail(function(){
+      console.log("取得できません");
+    });
   });
   //アクセスタブをクリックした時//
   $('.access').on('click', function() {
-    accessPart();
+    $.ajax({
+      type: "GET",
+      url: window.location.href.json,
+      dataType: "json"
+    })
+    .done(function(data){
+      accessPart(data);
+    })
+
+    .fail(function(){
+      console.log("取得できません");
+    });
   });
   //レビュータブをクリックした時//
   $('.review').on('click', function() {
-    reviewPart();
+    $.ajax({
+      type: "GET",
+      url: window.location.href.json,
+      dataType: "json"
+    })
+    .done(function(data){
+      reviewPart(data);
+    })
+
+    .fail(function(){
+      console.log("取得できません");
+    });
+  });
+  //予約ルームエリアにマウスを乗せた時//
+  $('.eachroom-area').each(function(i, element) {
+    $(element).hover(
+
+      function() {
+        $(element).find('.roomBox').css('display', 'block');
+      },
+
+      function() {
+        $('.roomBox').css('display', 'none');
+      }
+    )
+  });
+
+  $('.room-description').on('click', function() {
+    $(this).css('overflow', 'visible');
+    $(this).find('.body').css('display', 'inline-block');
+    $(this).find('.body').css('-webkit-box-orient', '');
+    $(this).find('.body').css('-webkit-line-clamp', '');
   });
 });
 

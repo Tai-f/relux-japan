@@ -12,6 +12,12 @@
   margin-bottom: 50px;
 }
 
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 /*各ブロックのタイトル*/
 h2 {
   font-size: 18px;
@@ -30,6 +36,10 @@ h2 {
 .grey {
   background-color: #F2F2F0;
 }
+/*暗灰色の背景色*/
+.darkGrey {
+  background-color: #DFDFDF;
+}
 
 /*透明度0.8の背景色*/
 .transparent {
@@ -38,7 +48,6 @@ h2 {
 
 /*メインブロックの装飾*/
 #wrapper {
-  @include clearfix();
   padding-bottom: 30px;
 }
 
@@ -104,14 +113,12 @@ h2 {
 /*インデックスのメインコンテンツの装飾*/
 .indexContents {
   .merit {
-    @include clearfix();
     border-bottom: 1px solid #EFEFEF;
     padding: 0 10px 30px;
     margin: 0 0 50px;
 /*コンテンツ（メリット）の装飾*/
     .melitArea {
       .melitBoxWrap {
-        @include clearfix();
         display: table;
         width: 100%;
         .melitBox {
@@ -165,18 +172,15 @@ h2 {
   }
 /*コンテンツ（セレクション）の装飾*/
   .selections {
-    @include clearfix();
     border-bottom: 1px solid #EFEFEF;
     padding: 0 10px 30px;
     margin: 0 0 50px;
     .selectionsArea {
       margin: 0 20px;
       .container {
-        @include clearfix();
         list-style: none;
         li {
           a {
-            @include clearfix();
             padding: 10px;
             text-decoration: none;
             .thum {
@@ -213,11 +217,19 @@ h2 {
           }
         }
       }
+      .link {
+        clear: both;
+        font-size: 11px;
+        text-align: right;
+        padding-right: 35px;
+        i {
+          color: #000;
+        }
+      }
     }
   }
 /*コンテンツ（各サービス）の装飾*/
   .service {
-    @include clearfix();
     padding: 0 10px 0;
     .serviceArea {
       margin: 0 20px;
@@ -235,7 +247,6 @@ h2 {
       }
     }
     .other {
-      @include clearfix();
       h2 {
         font-weight: bold;
         margin-bottom: 24px;
