@@ -44,6 +44,9 @@
                         =selection.name
                       %p.date
                         =selection.created_at.strftime('%Y/%m/%d')
+          %p.link.hover
+            =link_to selections_path do
+              %i.fa.fa-angle-right バックナンバー
       .service.clearfix
         .serviceArea
           .titleHeader
@@ -52,16 +55,16 @@
             .service-box.row
               %p.thum.col-sm-3
                 =link_to "/r/ranking/", class: "hover", target: "_blank" do
-                  = image_tag asset_path "Ranking.jpg", alt: "ランキング"
+                  = image_tag "https://rlx.jp/img/banner-service-03.jpg?1453108545", alt: "ランキング"
               %p.thum.col-sm-3
                 =link_to "/concierges/request", class: "hover", target: "_blank" do
-                  = image_tag asset_path "Concierge.jpg", alt: "コンシェルジュ"
+                  = image_tag "https://rlx.jp/img/banner-service-02.jpg?1441690621", alt: "コンシェルジュ"
               %p.thum.col-sm-3
                 =link_to "/gift/", class: "hover", target: "_blank" do
-                  = image_tag asset_path "Gift.jpg", alt: "ギフト"
+                  = image_tag "https://rlx.jp/img/banner-service-05.jpg?1479202222", alt: "ギフト"
               %p.thum.col-sm-3
                 =link_to "/theater/", class: "hover", target: "_blank" do
-                  = image_tag asset_path "Theater.jpg", alt: "シアター"
+                  = image_tag "https://rlx.jp/img/banner-service-04.jpg?1453108545", alt: "シアター"
         .other.clearfix
           .left
             %h2 高級旅館・ホテルをエリアから探す
