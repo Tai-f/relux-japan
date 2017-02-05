@@ -34,110 +34,38 @@
             =link_to "line://msg/text/2016年7月、ブランドロゴをリニューアルし、Reluxは新たな一歩を踏みだします。→ https://goo.gl/YjB6Rd" , class: "hover" do
               %i
   .hotelListArea.clearfix
-    .hotel.clearfix
-      .thumb
-        =link_to "/hotels/1", class: "hover" do
-          =image_tag asset_path "hakone.jpg", alt: "箱根花紋"
-      .info
-        %p.name 箱根花紋
-        %p.grade
-          =image_tag asset_path "grade_star.jpg"
-          =image_tag asset_path "grade_star.jpg"
-        %p.area 首都圏 > 神奈川県
-        %p.description 箱根旧街道に佇む、自家源泉が自慢の湯宿
-        %p.detail
-          =link_to "つづきをよむ", "/hotels/1/", class: "btn btn--relux"
-    .hotel.clearfix
-      .thumb
-        =link_to "/hotels/1", class: "hover" do
-          =image_tag asset_path "hakone.jpg", alt: "箱根花紋"
-      .info
-        %p.name 箱根花紋
-        %p.grade
-          =image_tag asset_path "grade_star.jpg"
-          =image_tag asset_path "grade_star.jpg"
-        %p.area 首都圏 > 神奈川県
-        %p.description 箱根旧街道に佇む、自家源泉が自慢の湯宿
-        %p.detail
-          =link_to "つづきをよむ", "/hotels/1/", class: "btn btn--relux"
-    .hotel.clearfix
-      .thumb
-        =link_to "/hotels/1", class: "hover" do
-          =image_tag asset_path "hakone.jpg", alt: "箱根花紋"
-      .info
-        %p.name 箱根花紋
-        %p.grade
-          =image_tag asset_path "grade_star.jpg"
-          =image_tag asset_path "grade_star.jpg"
-        %p.area 首都圏 > 神奈川県
-        %p.description 箱根旧街道に佇む、自家源泉が自慢の湯宿
-        %p.detail
-          =link_to "つづきをよむ", "/hotels/1/", class: "btn btn--relux"
-    .hotel.clearfix
-      .thumb
-        =link_to "/hotels/1", class: "hover" do
-          =image_tag asset_path "hakone.jpg", alt: "箱根花紋"
-      .info
-        %p.name 箱根花紋
-        %p.grade
-          =image_tag asset_path "grade_star.jpg"
-          =image_tag asset_path "grade_star.jpg"
-        %p.area 首都圏 > 神奈川県
-        %p.description 箱根旧街道に佇む、自家源泉が自慢の湯宿
-        %p.detail
-          =link_to "つづきをよむ", "/hotels/1/", class: "btn btn--relux"
-    .hotel.clearfix
-      .thumb
-        =link_to "/hotels/1", class: "hover" do
-          =image_tag asset_path "hakone.jpg", alt: "箱根花紋"
-      .info
-        %p.name 箱根花紋
-        %p.grade
-          =image_tag asset_path "grade_star.jpg"
-          =image_tag asset_path "grade_star.jpg"
-        %p.area 首都圏 > 神奈川県
-        %p.description 箱根旧街道に佇む、自家源泉が自慢の湯宿
-        %p.detail
-          =link_to "つづきをよむ", "/hotels/1/", class: "btn btn--relux"
-    .hotel.clearfix
-      .thumb
-        =link_to "/hotels/1", class: "hover" do
-          =image_tag asset_path "hakone.jpg", alt: "箱根花紋"
-      .info
-        %p.name 箱根花紋
-        %p.grade
-          =image_tag asset_path "grade_star.jpg"
-          =image_tag asset_path "grade_star.jpg"
-        %p.area 首都圏 > 神奈川県
-        %p.description 箱根旧街道に佇む、自家源泉が自慢の湯宿
-        %p.detail
-          =link_to "つづきをよむ", "/hotels/1/", class: "btn btn--relux"
-    .hotel.clearfix
-      .thumb
-        =link_to "/hotels/1", class: "hover" do
-          =image_tag asset_path "hakone.jpg", alt: "箱根花紋"
-      .info
-        %p.name 箱根花紋
-        %p.grade
-          =image_tag asset_path "grade_star.jpg"
-          =image_tag asset_path "grade_star.jpg"
-        %p.area 首都圏 > 神奈川県
-        %p.description 箱根旧街道に佇む、自家源泉が自慢の湯宿
-        %p.detail
-          =link_to "つづきをよむ", "/hotels/1/", class: "btn btn--relux"
-    .hotel.clearfix
-      .thumb
-        =link_to "/hotels/1", class: "hover" do
-          =image_tag asset_path "hakone.jpg", alt: "箱根花紋"
-      .info
-        %p.name 箱根花紋
-        %p.grade
-          =image_tag asset_path "grade_star.jpg"
-          =image_tag asset_path "grade_star.jpg"
-        %p.area 首都圏 > 神奈川県
-        %p.description 箱根旧街道に佇む、自家源泉が自慢の湯宿
-        %p.detail
-          =link_to "つづきをよむ", "/hotels/1/", class: "btn btn--relux"
+    - @hotels.each do |hotel|
+      .hotel.clearfix
+        .thumb
+          =link_to hotel_path(id: hotel.id), class: "hover" do
+            =image_tag hotel.photos.first.image, alt: hotel.name
+        .info
+          %p.name
+            =hotel.name
+          - case hotel.grade
+            - when 1 then
+              %p.grade
+                =image_tag "grade_star.jpg", alt: "The STAR", size: "13x13"
+            - when 2 then
+              %p.grade
+                =image_tag  "grade_star.jpg", alt: "The STAR", size: "13x13"
+                =image_tag  "grade_star.jpg", alt: "The STAR", size: "13x13"
+            - when 3 then
+              %p.grade
+                =image_tag "grade_star.jpg", alt: "The STAR", size: "13x13"
+                =image_tag "grade_star.jpg", alt: "The STAR", size: "13x13"
+                =image_tag "grade_star.jpg", alt: "The STAR", size: "13x13"
+            - when 4 then
+              %p.grade
+                =image_tag "grade_museum.jpg", alt: "The MUSEUM", size: "68x13"
+            - else
+              %p.grade
+                =image_tag "grade_casual.jpg", alt: "The CASUAL", size: "63x12"
+          %p.area 首都圏 > 神奈川県
+          %p.description
+            =hotel.concept
+          %p.detail
+            =link_to "つづきをよむ", hotel_path(id: hotel.id), class: "btn btn--relux"
   .registrationArea
     .registration
       %p.message Reluxは一流旅館・ホテルだけを厳選した宿泊予約サイトです。<br>最低価格保証プラン、Reluxポイントは業界最大の5％還元などが魅力です。<br>会員登録、年会費などは一切無料ですのでご安心くださいませ。
