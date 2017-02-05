@@ -6,5 +6,6 @@ class SelectionsController < ApplicationController
   def show
     @selections = Selection.order("id ASC")
     @selection = Selection.find(params[:id])
+    @hotels = @selection.hotels.order("id ASC")
   end
 end
