@@ -7,71 +7,20 @@
         =link_to "トップページ", root_path
         %i.fa.fa-angle-right
       %li.li_content.hover
-        あたらしい、Reluxへ。
+        =@hotel.name
     .titleArea
       %h2.hotelTitle
-        ザ・リッツ・カールトン沖縄
+        =@hotel.name
     .detailLeft
       .slideshow
         %ul.slideshow-main
-          %li.slideshow-image
-            =image_tag "ritsu_okinawa.jpg", alt: "ザ・リッツ・カールトン沖縄"
-          %li.slideshow-image
-            =image_tag "ritsu_okinawa2.jpg", alt: "ザ・リッツ・カールトン沖縄"
-          %li.slideshow-image
-            =image_tag "ritsu_okinawa3.jpg", alt: "ザ・リッツ・カールトン沖縄"
-          %li.slideshow-image
-            =image_tag "ritsu_okinawa4.jpg", alt: "ザ・リッツ・カールトン沖縄"
-          %li.slideshow-image
-            =image_tag "ritsu_okinawa5.jpg", alt: "ザ・リッツ・カールトン沖縄"
-          %li.slideshow-image
-            =image_tag "ritsu_okinawa6.jpg", alt: "ザ・リッツ・カールトン沖縄"
-          %li.slideshow-image
-            =image_tag "ritsu_okinawa7.jpg", alt: "ザ・リッツ・カールトン沖縄"
-          %li.slideshow-image
-            =image_tag "ritsu_okinawa8.jpg", alt: "ザ・リッツ・カールトン沖縄"
-          %li.slideshow-image
-            =image_tag "ritsu_okinawa9.jpg", alt: "ザ・リッツ・カールトン沖縄"
-          %li.slideshow-image
-            =image_tag "ritsu_okinawa10.jpg", alt: "ザ・リッツ・カールトン沖縄"
-          %li.slideshow-image
-            =image_tag "ritsu_okinawa11.jpg", alt: "ザ・リッツ・カールトン沖縄"
-          %li.slideshow-image
-            =image_tag "ritsu_okinawa12.jpg", alt: "ザ・リッツ・カールトン沖縄"
-          %li.slideshow-image
-            =image_tag "ritsu_okinawa13.jpg", alt: "ザ・リッツ・カールトン沖縄"
-          %li.slideshow-image
-            =image_tag "ritsu_okinawa14.jpg", alt: "ザ・リッツ・カールトン沖縄"
+          - @photos.each do |photo|
+            %li.slideshow-image
+              =image_tag photo.image, alt: @hotel.name
         %ul.slideshow-nav
-          %li.slideshow-image
-            =image_tag "ritsu_okinawa.jpg", alt: "ザ・リッツ・カールトン沖縄"
-          %li.slideshow-image
-            =image_tag "ritsu_okinawa2.jpg", alt: "ザ・リッツ・カールトン沖縄"
-          %li.slideshow-image
-            =image_tag "ritsu_okinawa3.jpg", alt: "ザ・リッツ・カールトン沖縄"
-          %li.slideshow-image
-            =image_tag "ritsu_okinawa4.jpg", alt: "ザ・リッツ・カールトン沖縄"
-          %li.slideshow-image
-            =image_tag "ritsu_okinawa5.jpg", alt: "ザ・リッツ・カールトン沖縄"
-          %li.slideshow-image
-            =image_tag "ritsu_okinawa6.jpg", alt: "ザ・リッツ・カールトン沖縄"
-          %li.slideshow-image
-            =image_tag "ritsu_okinawa7.jpg", alt: "ザ・リッツ・カールトン沖縄"
-          %li.slideshow-image
-            =image_tag "ritsu_okinawa8.jpg", alt: "ザ・リッツ・カールトン沖縄"
-          %li.slideshow-image
-            =image_tag "ritsu_okinawa9.jpg", alt: "ザ・リッツ・カールトン沖縄"
-          %li.slideshow-image
-            =image_tag "ritsu_okinawa10.jpg", alt: "ザ・リッツ・カールトン沖縄"
-          %li.slideshow-image
-            =image_tag "ritsu_okinawa11.jpg", alt: "ザ・リッツ・カールトン沖縄"
-          %li.slideshow-image
-            =image_tag "ritsu_okinawa12.jpg", alt: "ザ・リッツ・カールトン沖縄"
-          %li.slideshow-image
-            =image_tag "ritsu_okinawa13.jpg", alt: "ザ・リッツ・カールトン沖縄"
-          %li.slideshow-image
-            =image_tag "ritsu_okinawa14.jpg", alt: "ザ・リッツ・カールトン沖縄"
-
+          - @photos.each do |photo|
+            %li.slideshow-image
+              =image_tag photo.image, alt: @hotel.name
       .detail_tabwrapper
         %ul.tabArea.clearfix
           %li.facility
@@ -85,22 +34,28 @@
         .tabContent
           .introduction.margin-top
             %h3.subTitle 施設の紹介
-            %p.description 沖縄本島で最も美しいといわれる名護湾を一望し、<br>海のブルーとゴルフヤードのグリーンが溶け合う場所。<br>そんな喜瀬の高台に佇むのがザ・リッツ・カールトン沖縄です。<br><br>最高の"癒・食・泊"、そのすべてをお届けするために、<br>こころ温まるおもてなしで皆さまをお迎えいたします。<br><br>陽光を弾いて輝くプール、涼やかな風の流れるライブラリー、<br>そして木々の茂る庭の一角に佇むスパエリア。<br>そこは、喧騒をわすれて過ごすための上質な空間。<br>お気に入りの場所で、あなただけの非日常を体験しましょう。<br><br>枠に捉われない現代感覚で島独特の個性を引き出すレストラン、<br>開放的なラウンジ、夜のくつろぎを演出する風格あるバーなど、<br>いずれの場所でも至福の味と時間をご堪能ください。<br><br>全97室のゲストルームは、名護湾を望むロケーションが魅力。<br>ブルーとグリーンのコントラストを愉しみながら過ごす、<br>誰にも気兼ねのいらない夢のようなホテルステイが叶います。<br><br>自分らしい沖縄ステイを愉しむためのリゾートホテルで、<br>ゆったりと流れる時間とともに、心から満足できる1日を。<br>ザ・リッツ・カールトン沖縄が、そのお手伝いをいたします。
+            %p.description
+              =sanitize(@hotel.description)
           .introduction
             %h3.subTitle 施設・サービス
             %table.hotel_detail
               %tbody
                 %tr
                   %th 施設名
-                  %td ザ・リッツ・カールトン沖縄
+                  %td
+                    =@hotel.name
                 %tr.space
                 %tr
                   %th ふりがな
-                  %td ざ・りっつ・かーるとんおきなわ
+                  %td
+                    =@hotel.hiragana_name
                 %tr.space
                 %tr
                   %th 住所
-                  %td 沖縄県名護市喜瀬1343-1
+                  %td
+                    =@hotel.prefecture
+                    =@hotel.city
+                    =@hotel.street
                 %tr.space
                 %tr
                   %th 電話番号（予約専用）
@@ -108,123 +63,93 @@
                 %tr.space
                 %tr
                   %th 電話番号（質問専用）
-                  %td 0980-43-5555
+                  %td
+                    =@hotel.phone_number
                 %tr.space
                 %tr
                   %th ホームページ
                   %td
-                    =link_to "www.ritzcarltonjapan.com", "https://www.ritzcarltonjapan.com/"
+                    =link_to @hotel.url, @hotel.url
                 %tr.space
                 %tr
                   %th チェックイン時間
-                  %td 15:00
+                  %td
+                    =@hotel.check_in_time
                 %tr.space
                 %tr
                   %th チェックアウト時間
-                  %td 12:00
+                  %td
+                    =@hotel.check_out_time
                 %tr.space
                 %tr
                   %th 総部屋数
-                  %td 97室
+                  %td
+                    =@hotel.total_rooms
+                    室
                 %tr.space
                 %tr
                   %th クレジットカード
-                  %td VISA / MASTER / AMEX / JCB / DINERS / NICOS / UC / DC
+                  %td
+                    =@hotel.card_type
                 %tr.space
           .introduction
             %h3.subTitle 施設の特徴
-            %table.amenity
-              %tbody
-                %tr
-                  %th.off 入湯税
-                  %td.off ×
-                  %th お子様の宿泊
-                  %td ○
-                  %th.off ルームサービス
-                  %td.off ×
-                %tr
-                  %th.off 送迎サービス
-                  %td.off ×
-                  %th パーキング
-                  %td ○
-                  %th.off 温泉
-                  %td.off ×
-                %tr
-                  %th.off 源泉掛け流し
-                  %td.off ×
-                  %th.off 露天風呂付き客室
-                  %td.off ×
-                  %th.off 大浴場
-                  %td.off ×
-                %tr
-                  %th.off 貸切風呂
-                  %td.off ×
-                  %th プールあり（屋内）
-                  %td ○
-                  %th プールあり（屋外）
-                  %td ○
-                %tr
-                  %th エステ・スパ施設
-                  %td ○
-                  %th フィットネス施設
-                  %td ○
-                  %th バリアフリー対応
-                  %td ○
-                %tr
-                  %th.off ペットもOK
-                  %td.off ×
-                  %th.off お部屋で朝食
-                  %td.off ×
-                  %th.off お部屋で夕食
-                  %td.off ×
-                %tr
-                  %th.off 大浴場に露天風呂
-                  %td.off ×
-                  %th.off 夜景自慢の客室
-                  %td.off ×
-                  %th 海が見える客室
-                  %td ○
-                %tr
-                  %th.off 離れ/コテージ
-                  %td.off ×
-                  %th 割引が使える
-                  %td ○
-            %p.notes 施設の特徴は一般的な設備を表すもので、宿泊施設によって設備内容やサービスの範囲は異なります。<br>詳細は宿泊施設へ直接ご確認のうえ、ご予約くださいませ。
-            %p.notes ◆備考
-            %p.childnotes《お子様のご宿泊料金について》<br>・小学生（低・高学年）のお子様：添い寝の場合は、施設使用料5,000円／税・サービス料別を現地にてご清算いただきます。ご予約時、ご利用人数に含めずご予約ください。<br>・幼児のお子様：添い寝の場合は、無料にてご利用いただけます。
+            =@hotel.amenity.html_safe
+            %p.remarks 施設の特徴は一般的な設備を表すもので、宿泊施設によって設備内容やサービスの範囲は異なります。<br>詳細は宿泊施設へ直接ご確認のうえ、ご予約くださいませ。
+            %p.remarks ◆備考
+            %p.childremarks
+              =sanitize(@hotel.remark)
             .gradeBox
               .left
                 %p.title
                   =image_tag "grade_title.jpg", alt: "Relux Grade"
-                %p.star
-                  =link_to "/grade", class: "hover" do
-                    =image_tag "grade_museum.jpg", alt: "The MUSEUM"
+                - case @hotel.grade
+                - when 1 then
+                  %p.star
+                    =link_to "/grade", class: "hover" do
+                      =image_tag "grade_star.jpg", alt: "The STAR", size: "30x28"
+                - when 2 then
+                  %p.star
+                    =link_to "/grade", class: "hover" do
+                      =image_tag "grade_star.jpg", alt: "The STAR", size: "30x28"
+                      =image_tag "grade_star.jpg", alt: "The STAR", size: "30x28"
+                - when 3 then
+                  %p.star
+                    =link_to "/grade", class: "hover" do
+                      =image_tag "grade_star.jpg", alt: "The STAR", size: "30x28"
+                      =image_tag "grade_star.jpg", alt: "The STAR", size: "30x28"
+                      =image_tag "grade_star.jpg", alt: "The STAR", size: "30x28"
+                - when 4 then
+                  %p.star
+                    =link_to "/grade", class: "hover" do
+                      =image_tag "grade_museum.jpg", alt: "The MUSEUM", size: "135x26"
+                - else
+                  %p.star
+                    =link_to "/grade", class: "hover" do
+                      =image_tag "grade_casual.jpg", alt: "The CASUAL", size: "100x21"
                 =image_tag "grade_verified.jpg", alt: "Relux verified"
               .right
-                %p.description
-                  芸術といえるほどの、極上の宿泊体験を提供する、世界屈指の宿泊施設です。人々にインスピレーションを与えるおもてなしは、まさに宿泊可能なインスタレーションアート。<br><br>誰もがその価値を認める、宿泊施設コレクションです。
+                - case @hotel.grade
+                - when 1 then
+                  %p.description
+                    都道府県下を代表する旅館・ホテルであり、ちかくに寄る際は、訪れてみたい宿泊施設。
+                - when 2 then
+                  %p.description
+                    その地方を代表する旅館・ホテルであり、すこし遠まわりをしてでも、訪れてみたい宿泊施設。
+                - when 3 then
+                  %p.description
+                    日本を代表する旅館・ホテルであり、どんなに遠くても、人生に一度は訪れてみたい宿泊施設。
+                - when 4 then
+                  %p.description
+                    芸術といえるほどの、極上の宿泊体験を提供する、世界屈指の宿泊施設です。人々にインスピレーションを与えるおもてなしは、まさに宿泊可能なインスタレーションアート。<br><br>誰もがその価値を認める、宿泊施設コレクションです。
+                - else
+                  %p.description
+                    その地区では満足度がとても高い旅館・ホテルであり、カジュアルにもお楽しみいただける宿泊施設。
                 %p.gradeLink
                   =link_to "Reluxグレードとは", "/grade/", class: "hover"
           .introduction
             %h3.subTitle キャンセルポリシー
-            %table.hotel_cancel
-              %tbody
-                %tr
-                  %th 7日〜4日前
-                  %td 宿泊料金の20%
-                %tr.space
-                %tr
-                  %th 3日〜1日前
-                  %td 宿泊料金の50%
-                %tr.space
-                %tr
-                  %th 当日
-                  %td 宿泊料金の100%
-                %tr.space
-                %tr
-                  %th 無連絡キャンセル
-                  %td 宿泊料金の100%
-                %tr.space
+            =@hotel.cancel.html_safe
             %p.notes やむをえない理由によりキャンセル頂く場合は、ご予約頂いた料金に対して、キャンセル料金を頂戴しております。<br>予めご確認の上、ご予約をお願いいたします。
         .registration
           %p
@@ -242,42 +167,38 @@
             %p チェックイン日をご指定いただくと、料金・残室数が表示されます。
           .reservednum-area
           .reservedroom-area
-            .eachroom-area
-              .radioarea
-                %input{type: "radio", name: "hyouka",  value:"good"}
-              %label{class: "info"}
-                .detail
-                  %h4 カバナルーム
-                  %span ¥-
-                  %span.totalP 総額（税抜）
-                  %p.description 屋外プールに面したカバナルームは、客室から直接、屋外プールへのアクセスが可能で、泳ぎ疲れたらドアひとつで緑陰のジェットバスもお使いいただけます。水着で気ままにデイベッドで
-            .eachroom-area
-              .radioarea
-                %input{type: "radio", name: "hyouka",  value:"good"}
-              %label{class: "info"}
-                .detail
-                  %h4 プレミアデラックスルーム
-                  %span ¥-
-                  %span.totalP 総額（税抜）
-                  %p.description ゆったりと落ち着く広いリビングスペースとワイドな開放感をもった、角部屋プレミアデラックスルーム。東側のお部屋からはやんばるの森から上がる神秘的な日の出の光景、西側のお部屋
-            .eachroom-area
-              .radioarea
-                %input{type: "radio", name: "hyouka",  value:"good"}
-              %label{class: "info"}
-                .detail
-                  %h4 ベイデラックスルーム
-                  %span ¥-
-                  %span.totalP 総額（税抜）
-                  %p.description ホテル5・6階の高層階に位置し、東シナ海・名護湾や本部半島、晴れた日には遠く伊江島までを見渡せる、豊かな眺望を誇る客室です。全室に緑越しに海と空を望むことができるバス、自然
-            .eachroom-area
-              .radioarea
-                %input{type: "radio", name: "hyouka",  value:"good"}
-              %label{class: "info"}
-                .detail
-                  %h4 デラックスルーム
-                  %span ¥-
-                  %span.roomP 総額（税抜）
-                  %p.description 45㎡のゆったりとしたゲストルーム。沖縄本島で最も美しい海といわれる名護湾を望み、東側客室からは燦々とふりそそぐ朝日にきらめく波の美しさ、西側客室からは落ちていく夕日ととも
+            - @hotel.rooms.each do |room|
+              .eachroom-area
+                .radioarea
+                  %input{type: "radio", name: "hyouka",  value:"good", checked: "checked"}
+                %label{class: "info"}
+                  .detail
+                    %h4
+                      =room.name
+                    %span
+                      =number_to_currency(room.price, precision: 0, unit: "¥", delimeter: ",")
+                    %span.roomP
+                      総額（税抜）
+                    %p.description
+                      =room.room_type
+                .roomBox
+                  .room-detail.clearfix
+                    .roomPhoto
+                      =image_tag room.image, alt: room.name
+                      %ul.smoke
+                        %li 喫煙可
+                    .right
+                      .room-description
+                        %p.title.mincho
+                          =room.name
+                        %p.body.mincho
+                          =room.body
+                      .room-amenity
+                        %p.title.mincho 部屋タイプの特徴
+                        %ul.body.mincho.clearfix
+                          =room.feature.html_safe
+                  .room_arrow
+                    =image_tag "https://rlx.jp/img/hoverpop_balloons2.png?1410244431", alt: room.name
             .food-area
               %p お食事内容
               %ul.clearfix
@@ -319,7 +240,6 @@
         %p.reception 株式会社Loco Partners Reluxデスク
         %p.body お電話でのご予約も承っております。また、こちらのフォームより、コンシェルジュがオリジナルの旅行プランのご提案も可能です。お気軽にご相談ください。
       %p.margin-top 現在、閲覧履歴はありません。
-
 =render partial: "footer"
 
 
