@@ -17,7 +17,6 @@
     }
   }
   .selectionArea {
-    @include clearfix();
     width: 940px;
     margin: 0 auto;
     overflow: hidden;
@@ -51,12 +50,10 @@
 }
 /*各ホテル情報の装飾*/
 .hotelListArea {
-  @include clearfix();
   width: 940px;
   margin: 0 auto;
   overflow: hidden;
   .hotel {
-    @include clearfix();
     margin-bottom: 30px;
     position: relative;
     background-color: #FFF;
@@ -81,7 +78,6 @@
       .grade {
         float: right;
         img {
-          height: 13px;
           margin-right: 2px;
         }
       }
