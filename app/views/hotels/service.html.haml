@@ -6,13 +6,13 @@
       .logoArea
         %h1 about Relux
     .mainBlock
-      .eachBlock.promise
+      .eachBlock.promise.clearfix
         %h2 Reluxについて
         .right
           %p.explain もっと心地よい旅を
           %p
             Reluxをご覧いただき、誠にありがとうございます。<br><br>Reluxは旅館・ホテルのみを厳選した、会員制の宿泊予約サービスです。全国各地の一流旅館・ホテルを泊り歩いてきたReluxの審査委員による厳しい審査を通して、心からお薦めできる宿泊施設だけを厳選してご紹介しています。<br><br>また、ただ宿泊施設をご紹介するだけではなく、すべての宿泊施設との交渉・打ち合わせを重ね、よりお得に特別な宿泊を体験できるRelux限定プランをご提供いたします。<br><br>Reluxで、もっと心地よい旅をおたのしみください。わたしたちが、責任をもってご紹介いたします。
-      .eachBlock.promise
+      .eachBlock.promise.clearfix
         %h2 Reluxの三つのお約束
         .right
           %p.explain 大切な人と過ごすかけがえのない時間が、より素晴らしいものとなるように、わたしたちは3つのお約束をいたします。
@@ -28,7 +28,7 @@
             %h3 3. より特別なおもてなし
             %p
               Reluxを通じて宿泊すると、5％のReluxポイントを還元します。1ポイント＝1円単位で、次回の宿泊予約からご利用いただけます。また、特別な旅行の相談にReluxコンシェルジュデスクをご利用いただけるほか、Relux会員様だけにご利用いただける特別な宿泊プランをご提供。  大切な日を彩るための、さまざまなサービスをご体験ください。 （詳しくはこちら）
-      .eachBlock.advantage
+      .eachBlock.advantage.clearfix
         %h2 Relux会員のメリット
         .right
           %ol
@@ -38,75 +38,27 @@
             %li 特典が付いた宿泊プランでご宿泊いただけます。
             %li 会員限定のお得な情報や特別キャンペーンにご招待いたします。
 
-      .eachBlock.hotel
+      .eachBlock.hotel.clearfix
         %h2 Reluxの掲載施設
         .right
           %p
             Reluxの選定委員会によって選ばれた、満足度の高い一流の旅館・ホテルのみをご紹介。すべての会員様は、そんな宿泊施設を検索・予約することができます。<br><br>さらに、館内のしつらえやお部屋、お料理、お風呂、おもてなしなどの観点から宿泊施設を評価し、5つに分類したRelux独自の指標としてReluxグレードもご用意。すべては、皆さまにぴったりの宿泊施設を見つけていただくため。どうぞ、旅行の目的や期待する体験にあわせて宿泊施設をお選びください。<br>(詳しくはこちら）
           %h4 掲載施設例（一部）
           %ul.hotelList
-            %li
-              = link_to "/23625/", class: "thum hover" do
-                = image_tag "hotel1.jpg", alt: "別邸 仙寿庵"
-              %p.name
-                =link_to "別邸 仙寿庵", "/23625/", class: "thum hover"
-              %p.text
-                名峰・谷川岳の懐に抱かれたシャトー加盟宿
-            %li
-              =link_to "/23625/", class: "thum hover" do
-                = image_tag "hotel1.jpg", alt: "別邸 仙寿庵"
-              %p.name
-                =link_to "別邸 仙寿庵", "/23625/", class: "thum hover"
-              %p.text
-                名峰・谷川岳の懐に抱かれたシャトー加盟宿
-            %li
-              =link_to "/23625/", class: "thum hover" do
-                = image_tag "hotel1.jpg", alt: "別邸 仙寿庵"
-              %p.name
-                =link_to "別邸 仙寿庵", "/23625/", class: "thum hover"
-              %p.text
-                名峰・谷川岳の懐に抱かれたシャトー加盟宿
-            %li
-              =link_to "/23625/", class: "thum hover" do
-                = image_tag "hotel1.jpg", alt: "別邸 仙寿庵"
-              %p.name
-                =link_to "別邸 仙寿庵", "/23625/", class: "thum hover"
-              %p.text
-                名峰・谷川岳の懐に抱かれたシャトー加盟宿
-            %li
-              =link_to "/23625/", class: "thum hover" do
-                = image_tag "hotel1.jpg", alt: "別邸 仙寿庵"
-              %p.name
-                =link_to "別邸 仙寿庵", "/23625/", class: "thum hover"
-              %p.text
-                名峰・谷川岳の懐に抱かれたシャトー加盟宿
-            %li
-              =link_to "/23625/", class: "thum hover" do
-                = image_tag "hotel1.jpg", alt: "別邸 仙寿庵"
-              %p.name
-                =link_to "別邸 仙寿庵", "/23625/", class: "thum hover"
-              %p.text
-                名峰・谷川岳の懐に抱かれたシャトー加盟宿
-            %li
-              =link_to "/23625/", class: "thum hover" do
-                = image_tag "hotel1.jpg", alt: "別邸 仙寿庵"
-              %p.name
-                =link_to "別邸 仙寿庵", "/23625/", class: "thum hover"
-              %p.text
-                名峰・谷川岳の懐に抱かれたシャトー加盟宿
-            %li
-              =link_to "/23625/", class: "thum hover" do
-                = image_tag "hotel1.jpg", alt: "別邸 仙寿庵"
-              %p.name
-                =link_to "別邸 仙寿庵", "/23625/", class: "thum hover"
-              %p.text
-                名峰・谷川岳の懐に抱かれたシャトー加盟宿
-      .eachBlock.brand
+            - @hotels.each do |hotel|
+              %li
+                = link_to hotel_path(id: hotel.id), class: "thum hover" do
+                  = image_tag hotel.photos.first.image, alt: hotel.name
+                %p.name
+                  =link_to hotel.name, hotel_path(id: hotel.id), class: "thum hover"
+                %p.text
+                  =hotel.concept
+      .eachBlock.brand.clearfix
         %h2 Reluxのブランドロゴ
         .right
           %p
             2016年7月。わたしたちは、旅のすべての瞬間に特別な体験を届けるために、新たな一歩を踏みだし、Reluxのブランドロゴをリニューアルしました。<br><br>「Relux Japan Blue」と名付けたブランドカラーや、旅に関する様々なイメージを表す7本のライン。そこには、わたしたちの決意や思いを込めました。旅のひとときが一人ひとりの特別な日であることを願って。Reluxは、さらなる進化を続けていきます。<br><br>(詳しくはこちら）
-      .eachBlock.smartphone
+      .eachBlock.smartphone.clearfix
         %h2 Reluxのスマートフォンアプリ
         .right
           .thumb
@@ -116,7 +68,7 @@
             いつでもどこでも、一流旅館・ホテルの検索・予約ができる、便利なスマートフォンアプリもご用意。シンプルな操作で、地域や日付から泊まってみたかった旅館・ホテルがすぐに見つかります。気になる旅館・ホテルが見つかったら、その場でお気に入りに登録。旅館・ホテルの情報を家族や友人と共有することもできます。スマートフォンのReluxで、快適で素敵な旅をおたのしみください。
           %p.otherDevice
             iOS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:高級旅館・高級ホテルの宿泊予約サービス ReluxのiOSアプリ<br>Android&nbsp;&nbsp;&nbsp;:高級旅館・高級ホテルの宿泊予約サービス ReluxのAndroidアプリ<br>WEB&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;:http://rlx.jp/sp/
-      .eachBlock.push
+      .eachBlock.push.clearfix
         %h2 Reluxからのおすすめ情報
         .right
           %p.explain おすすめの宿泊施設や旬の情報は、Reluxメールマガジン（会員限定）をはじめ、Facebook、Twitter、Instagram、LINE＠でも配信しております。たくさんある中から宿泊施設をさがすのは大変、という方にもおすすめ。ぜひチェックしてみてください。
@@ -133,7 +85,7 @@
             %li
               =link_to "https://line.me/R/ti/p/%40zus0399u", class: "hover" do
                 =image_tag "icon-line.png", alt: "Line", class: "line"
-      .eachBlock
+      .eachBlock.clearfix
         %h2 よくあるご質問
         .right
           %p.explain Q１. Reluxとは？
@@ -144,10 +96,10 @@
           %p.explain Q６. Reluxポイントとは？
           %p.explain Q７. Reluxコンシェルジュとは？
           %p その他の質問はこちら
-      .eachBlock
+      .eachBlock.clearfix
         %h2 新規会員登録
         .right
-      .eachBlock
+      .eachBlock.clearfix
         %h2 メディア掲載
         .right
           =image_tag "media-logos.png", alt: "Relux"
