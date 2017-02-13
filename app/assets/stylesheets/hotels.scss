@@ -125,6 +125,24 @@ button.slick-prev, button.slick-next {
     }
     .star {
       margin-bottom: 15px;
+      .star-size {
+        img {
+          width: 30px;
+          height: 28px;
+        }
+      }
+      .museum {
+        img {
+          width: 135px;
+          height: 26px;
+        }
+      }
+      .casual {
+        img {
+          width: 100px;
+          height: 21px;
+        }
+      }
     }
   }
   .right {

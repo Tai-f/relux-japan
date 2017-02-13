@@ -106,27 +106,27 @@
                 - case @hotel.grade
                 - when 1 then
                   %p.star
-                    =link_to "/grade", class: "hover" do
-                      =image_tag asset_path "grade_star.jpg", alt: "The STAR", size: "30x28"
+                    =link_to "/grade", class: "hover star-size" do
+                      =image_tag asset_path "grade_star.jpg", alt: "The STAR"
                 - when 2 then
                   %p.star
-                    =link_to "/grade", class: "hover" do
-                      =image_tag asset_path "grade_star.jpg", alt: "The STAR", size: "30x28"
-                      =image_tag asset_path "grade_star.jpg", alt: "The STAR", size: "30x28"
+                    =link_to "/grade", class: "hover star-size" do
+                      =image_tag asset_path "grade_star.jpg", alt: "The STAR"
+                      =image_tag asset_path "grade_star.jpg", alt: "The STAR"
                 - when 3 then
                   %p.star
-                    =link_to "/grade", class: "hover" do
-                      =image_tag asset_path "grade_star.jpg", alt: "The STAR", size: "30x28"
-                      =image_tag asset_path "grade_star.jpg", alt: "The STAR", size: "30x28"
-                      =image_tag asset_path "grade_star.jpg", alt: "The STAR", size: "30x28"
+                    =link_to "/grade", class: "hover star-size" do
+                      =image_tag asset_path "grade_star.jpg", alt: "The STAR"
+                      =image_tag asset_path "grade_star.jpg", alt: "The STAR"
+                      =image_tag asset_path "grade_star.jpg", alt: "The STAR"
                 - when 4 then
                   %p.star
-                    =link_to "/grade", class: "hover" do
-                      =image_tag asset_path "grade_museum.jpg", alt: "The MUSEUM", size: "135x26"
+                    =link_to "/grade", class: "hover museum" do
+                      =image_tag asset_path "grade_museum.jpg", alt: "The MUSEUM"
                 - else
                   %p.star
-                    =link_to "/grade", class: "hover" do
-                      =image_tag asset_path"grade_casual.jpg", alt: "The CASUAL", size: "100x21"
+                    =link_to "/grade", class: "hover casual" do
+                      =image_tag asset_path"grade_casual.jpg", alt: "The CASUAL"
                 =image_tag asset_path "grade_verified.jpg", alt: "Relux verified"
               .right
                 - case @hotel.grade
@@ -189,27 +189,27 @@
               - case @hotel.grade
               - when 1 then
                 %p.star
-                  =link_to "/grade", class: "hover" do
-                    =image_tag asset_path "grade_star.jpg", alt: "The STAR", size: "30x28"
+                  =link_to "/grade", class: "hover star-size" do
+                    =image_tag asset_path "grade_star.jpg", alt: "The STAR"
               - when 2 then
                 %p.star
-                  =link_to "/grade", class: "hover" do
-                    =image_tag asset_path "grade_star.jpg", alt: "The STAR", size: "30x28"
-                    =image_tag asset_path "grade_star.jpg", alt: "The STAR", size: "30x28"
+                  =link_to "/grade", class: "hover star-size" do
+                    =image_tag asset_path "grade_star.jpg", alt: "The STAR"
+                    =image_tag asset_path "grade_star.jpg", alt: "The STAR"
               - when 3 then
                 %p.star
-                  =link_to "/grade", class: "hover" do
-                    =image_tag asset_path "grade_star.jpg", alt: "The STAR", size: "30x28"
-                    =image_tag asset_path "grade_star.jpg", alt: "The STAR", size: "30x28"
-                    =image_tag asset_path "grade_star.jpg", alt: "The STAR", size: "30x28"
+                  =link_to "/grade", class: "hover star-size" do
+                    =image_tag asset_path "grade_star.jpg", alt: "The STAR"
+                    =image_tag asset_path "grade_star.jpg", alt: "The STAR"
+                    =image_tag asset_path "grade_star.jpg", alt: "The STAR"
               - when 4 then
                 %p.star
-                  =link_to "/grade", class: "hover" do
-                    =image_tag asset_path "grade_museum.jpg", alt: "The MUSEUM", size: "135x26"
+                  =link_to "/grade", class: "hover museum" do
+                    =image_tag asset_path "grade_museum.jpg", alt: "The MUSEUM"
               - else
                 %p.star
-                  =link_to "/grade", class: "hover" do
-                    =image_tag asset_path "grade_casual.jpg", alt: "The CASUAL", size: "100x21"
+                  =link_to "/grade", class: "hover museum" do
+                    =image_tag asset_path "grade_casual.jpg", alt: "The CASUAL"
               =image_tag asset_path "grade_verified.jpg", alt: "Relux verified"
             .right
               - case @hotel.grade
