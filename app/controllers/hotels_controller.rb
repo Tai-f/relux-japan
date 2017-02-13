@@ -6,7 +6,6 @@ class HotelsController < ApplicationController
 
   def show
     @hotel = Hotel.includes([:reviews, :rooms, :photos]). find(params[:id])
-    @photos = @hotel.photos
     respond_to do |format|
       format.html
       format.json

@@ -83,6 +83,22 @@ button.slick-prev, button.slick-next {
   color: #333;
   text-align: center;
 }
+/*宿泊施設ディスプレイの設定*/
+#facility {
+  display: none;
+}
+/*宿泊プランディスプレイの設定*/
+#plan {
+  display: none;
+}
+/*アクセスディスプレイの設定*/
+#access {
+  display: none;
+}
+/*レビューディスプレイの設定*/
+#review {
+  display: none;
+}
 /*宿泊プランの説明の装飾*/
 .relux-p {
   line-height: 2.0;
