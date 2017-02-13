@@ -166,11 +166,6 @@ button.slick-prev, button.slick-next {
     }
   }
 }
-/* レビューのの装飾*/
-.face {
-  width: 70px;
-  border-radius: 70px;
-}
 /*--------------------------------------左エリアの装飾-------------------------------------------------*/
 .detailLeft {
   width: 693px;
@@ -361,6 +356,10 @@ button.slick-prev, button.slick-next {
   .avatar {
     float: left;
     margin-right: 30px;
+    img {
+      width: 70px;
+      border-radius: 70px;
+    }
   }
   .review-body {
     float: left;
