@@ -14,11 +14,11 @@
     .detailLeft
       .slideshow
         %ul.slideshow-main
-          - @photos.each do |photo|
+          - @hotel.photos.each do |photo|
             %li.slideshow-image
               =image_tag photo.image, alt: @hotel.name
         %ul.slideshow-nav
-          - @photos.each do |photo|
+          - @hotel.photos.each do |photo|
             %li.slideshow-image
               =image_tag photo.image, alt: @hotel.name
       .detail_tabwrapper
@@ -31,7 +31,7 @@
             %span アクセス
           %li.review
             %span レビュー
-        .tabContent
+        #facility.tabContent
           .introduction.margin-top
             %h3.subTitle 施設の紹介
             %p.description
@@ -151,6 +151,105 @@
             %h3.subTitle キャンセルポリシー
             =@hotel.cancel.html_safe
             %p.notes やむをえない理由によりキャンセル頂く場合は、ご予約頂いた料金に対して、キャンセル料金を頂戴しております。<br>予めご確認の上、ご予約をお願いいたします。
+        #plan.tabContent
+          =@hotel.plan.html_safe
+        #access.tabContent
+          #map
+          =link_to "GoogleMapで開く", "https://maps.google.co.jp/maps?q=26.527778888889,127.93972333333", class: "googleMap"
+          .introduction
+            %table.hotel_detail
+              %tbody
+                %tr
+                  %th 施設名
+                  %td
+                    =@hotel.name
+                  %tr.space
+                  %tr
+                    %th 住所
+                    %td
+                      =(@hotel.prefecture + @hotel.city + @hotel.street)
+                  %tr.space
+                  %tr
+                    %th 公共交通機関でのアクセス
+                    %td
+                      %p.description
+                        =sanitize(@hotel.access_by_public)
+                  %tr.space
+                  %tr
+                    %th お車でのアクセス
+                    %td
+                      %p.description
+                        =sanitize(@hotel.access_by_car)
+                  %tr.space
+        #review.tabContent
+          .gradeBox
+            .left
+              %p.title
+                =image_tag "grade_title.jpg", alt: "Relux Grade"
+              - case @hotel.grade
+              - when 1 then
+                %p.star
+                  =link_to "/grade", class: "hover" do
+                    =image_tag "grade_star.jpg", alt: "The STAR", size: "30x28"
+              - when 2 then
+                %p.star
+                  =link_to "/grade", class: "hover" do
+                    =image_tag "grade_star.jpg", alt: "The STAR", size: "30x28"
+                    =image_tag "grade_star.jpg", alt: "The STAR", size: "30x28"
+              - when 3 then
+                %p.star
+                  =link_to "/grade", class: "hover" do
+                    =image_tag "grade_star.jpg", alt: "The STAR", size: "30x28"
+                    =image_tag "grade_star.jpg", alt: "The STAR", size: "30x28"
+                    =image_tag "grade_star.jpg", alt: "The STAR", size: "30x28"
+              - when 4 then
+                %p.star
+                  =link_to "/grade", class: "hover" do
+                    =image_tag "grade_museum.jpg", alt: "The MUSEUM", size: "135x26"
+              - else
+                %p.star
+                  =link_to "/grade", class: "hover" do
+                    =image_tag "grade_casual.jpg", alt: "The CASUAL", size: "100x21"
+              =image_tag "grade_verified.jpg", alt: "Relux verified"
+            .right
+              - case @hotel.grade
+              - when 1 then
+                %p.description
+                  都道府県下を代表する旅館・ホテルであり、ちかくに寄る際は、訪れてみたい宿泊施設。
+              - when 2 then
+                %p.description
+                  その地方を代表する旅館・ホテルであり、すこし遠まわりをしてでも、訪れてみたい宿泊施設。
+              - when 3 then
+                %p.description
+                  日本を代表する旅館・ホテルであり、どんなに遠くても、人生に一度は訪れてみたい宿泊施設。
+              - when 4 then
+                %p.description
+                  芸術といえるほどの、極上の宿泊体験を提供する、世界屈指の宿泊施設です。人々にインスピレーションを与えるおもてなしは、まさに宿泊可能なインスタレーションアート。<br><br>誰もがその価値を認める、宿泊施設コレクションです。
+              - else
+                %p.description
+                  その地区では満足度がとても高い旅館・ホテルであり、カジュアルにもお楽しみいただける宿泊施設。
+              %p.gradeLink
+                =link_to "Reluxグレードとは", "/grade/", class: "hover"
+          .introduction.margin-top
+            %h3.subTitle 宿泊者のレビュー
+            .reviewArea
+              - @hotel.reviews.each do |review|
+                .reviewList.clearfix.margin-top
+                  .avatar
+                    =image_tag "/assets/icon_nouser.gif", alt: "メール会員", class: "face"
+                  .review-body
+                    .review-header.clearfix
+                      %p.review-rate
+                        %span.on
+                          =review.rate
+                      %p.review-name
+                        %i.fa.fa-user.fa-lg
+                          =review.name
+                        %i.fa.fa-clock-o.fa-lg
+                          宿泊日：
+                          =review.accommodation_date
+                    %p.review-text
+                      =review.body
         .registration
           %p
             Reluxは会員制宿泊予約サービスです。<br>
