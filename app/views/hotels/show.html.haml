@@ -126,7 +126,7 @@
                 - else
                   %p.star
                     =link_to "/grade", class: "hover" do
-                      =image_tag "grade_casual.jpg", alt: "The CASUAL", size: "100x21"
+                      =image_tag asset_path"grade_casual.jpg", alt: "The CASUAL", size: "100x21"
                 =image_tag asset_path "grade_verified.jpg", alt: "Relux verified"
               .right
                 - case @hotel.grade
@@ -209,7 +209,7 @@
               - else
                 %p.star
                   =link_to "/grade", class: "hover" do
-                    =image_tag "grade_casual.jpg", alt: "The CASUAL", size: "100x21"
+                    =image_tag asset_path "grade_casual.jpg", alt: "The CASUAL", size: "100x21"
               =image_tag asset_path "grade_verified.jpg", alt: "Relux verified"
             .right
               - case @hotel.grade
